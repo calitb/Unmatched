@@ -22,13 +22,12 @@ export default function Card(props: Props) {
   return (
     <View style={styles.itemContainer}>
       <Text style={styles.title}>
-        {`${amount}x${value != undefined ? ` ${VALUES[value]}` : ''}${typeIcon} ${
-          boost > 0 ? BOOST.padStart(boost * BOOST.length, BOOST) : ''
-        } ${name}`}
-        <Text style={styles.description}>
-          {'\n'}
-          {descripcion}
-        </Text>
+        {amount}x{value != undefined ? ` ${VALUES[value]}${typeIcon}` : ''}
+        {type === 'scheme' ? ` ${typeIcon}` : ''}
+        {boost > 0 ? ` ${VALUES[boost]}${BOOST}` : ''}
+        {` ${name}${character !== 'any' ? ` (${character})` : ''}`}
+        {'\n'}
+        <Text style={styles.description}>{descripcion}</Text>
       </Text>
     </View>
   );
@@ -53,11 +52,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   title: {
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: 'bold',
   },
   description: {
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: 'normal',
   },
 });
