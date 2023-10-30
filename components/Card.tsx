@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import type { UnmatchedCard } from 'assets/unmatched';
+import type { UnmatchedCard } from 'types';
 
 interface Props {
   card: UnmatchedCard;
@@ -22,34 +22,42 @@ export default function Card(props: Props) {
   return (
     <View style={styles.itemContainer}>
       <Text style={styles.title}>
-        {name}
-        {character !== 'any' && <Text style={styles.title}> ({character})</Text>}
-        {'\n'}
-        <Text style={styles.subtitle}>
-          {amount > 1 ? `${amount}x ` : ''}
-          {type !== 'scheme' && value > 0 ? typeIcon.padStart(value * typeIcon.length, typeIcon) : `(${type})`}
-          {boost > 0 ? BOOST.padStart(boost * BOOST.length, BOOST) : ''}
+        {`${amount}x${value != undefined ? ` ${VALUES[value]}` : ''}${typeIcon} ${
+          boost > 0 ? BOOST.padStart(boost * BOOST.length, BOOST) : ''
+        } ${name}`}
+        <Text style={styles.description}>
+          {'\n'}
+          {descripcion}
         </Text>
       </Text>
-      <Text style={styles.description}>{descripcion}</Text>
     </View>
   );
 }
+
+const VALUES = {
+  0: '0️⃣',
+  1: '1️⃣',
+  2: '2️⃣',
+  3: '3️⃣',
+  4: '4️⃣',
+  5: '5️⃣',
+  6: '6️⃣',
+  7: '7️⃣',
+  8: '8️⃣',
+  9: '9️⃣',
+  10: '🔟',
+};
 
 const styles = StyleSheet.create({
   itemContainer: {
     paddingHorizontal: 10,
   },
   title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  subtitle: {
     fontSize: 16,
     fontWeight: 'bold',
   },
   description: {
-    marginTop: 16,
-    fontSize: 18,
+    fontSize: 14,
+    fontWeight: 'normal',
   },
 });

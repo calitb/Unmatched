@@ -52,7 +52,7 @@ export default function Details() {
           titleStyle={styles.accordionTitle}
           title={`${character.amount} Cartas`}
         >
-          <View style={{ gap: 16, paddingHorizontal: 16 }}>
+          <View style={styles.cardContainer}>
             {character.cards.map((card) => (
               <Card key={card.name} card={card} />
             ))}
@@ -79,5 +79,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
     textAlign: 'center',
+  },
+  cardContainer: {
+    gap: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 4,
   },
 });

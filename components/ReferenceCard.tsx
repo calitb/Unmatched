@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import type { Character } from 'assets/unmatched';
+import type { Character } from 'types';
 
 interface Props {
   character: Character;
