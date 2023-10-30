@@ -223,9 +223,9 @@ export const unmatched: Character[] = [
         amount: 2,
         boost: 3,
         description:
-          "Play this card face up. Predict the printed attack value of the opponent's card.\n\nDuring combat: If you predicted the correct value, cancel all effects on your opponent's card and ignore its attack value.",
+          "Play this card face up. Predict the printed attack value of the opponent's card.\nDuring combat: If you predicted the correct value, cancel all effects on your opponent's card and ignore its attack value.",
         descripcion:
-          'Juega esta carta boca arriba. Intenta predecir el valor de ataque impreso en la carta de tu oponente.\n\nDurante el combate: Si atinaste al valor, cancela todos los efectos de la carta de tu oponente e ignore su valor de ataque.',
+          'Juega esta carta boca arriba. Intenta predecir el valor de ataque impreso en la carta de tu oponente.\nDurante el combate: Si atinaste al valor, cancela todos los efectos de la carta de tu oponente e ignore su valor de ataque.',
       },
       {
         name: 'Eliminate the Impossible',
@@ -302,8 +302,8 @@ export const unmatched: Character[] = [
     image: require('assets/backs/jekyll.jpg'),
     amount: 30,
     ability: {
-      en: 'Start the game as Dr. Jekyll. At the start of your turn, you may transform into Dr. Jekyll or Mr. Hyde.\n\nWhile Mr. Hyde: After you Maneuver, take 1 damage.\n\nUse the transformation token to indicate what he currently is.',
-      es: 'Comienza el juego como Dr. Jekyll. Al comienzo de tu turno, puedes transformarte en Dr. Jekyll o Mr. Hyde.\n\nMientras eres Mr. Hyde: Después de realizar un Maniobra, toma 1 de daño.\n\nUsa el token de transformación para indicar qué eres actualmente.',
+      en: 'Start the game as Dr. Jekyll. At the start of your turn, you may transform into Dr. Jekyll or Mr. Hyde.\nWhile Mr. Hyde: After you Maneuver, take 1 damage.\nUse the transformation token to indicate what he currently is.',
+      es: 'Comienza el juego como Dr. Jekyll. Al comienzo de tu turno, puedes transformarte en Dr. Jekyll o Mr. Hyde.\nMientras eres Mr. Hyde: Después de realizar un Maniobra, toma 1 de daño.\nUsa el token de transformación para indicar qué eres actualmente.',
     },
     cards: [
       {
@@ -451,8 +451,8 @@ export const unmatched: Character[] = [
     name: 'Invisible Man',
     image: require('assets/backs/invisible.jpg'),
     ability: {
-      en: "At the start of the game, after you place Invisible Man, place 3 fog tokens in separate spaces in his zone.\n\nWhen Invisible Man is on a space with a fog token, add 1 to the value of his defense cards.\n\nInvisible Man may move between two spaces with fog tokens as if they were adjacent.\n\n\nWhen placing fog tokens at the start of the game, place them exactly like you would sidekick tokens (they cannot be placed in a space with a fighter, including Invisible Man.) During the game, fog tokens can only be moved by Invisible Man's card effects. They may move through or end their movement in spaces with fighters or other tokens.",
-      es: 'Al comienzo del juego, después de colocar a Invisible Man, coloca 3 tokens de niebla en espacios separados en su zona.\n\nCuando Invisible Man esté en un espacio con un token de niebla, suma 1 al valor de sus cartas de defensa.\n\nInvisible Man puede moverse entre dos espacios con tokens de niebla como si fueran adyacentes.\n\n\nAl colocar tokens de niebla al comienzo del juego, colóquelos exactamente como lo haría con las fichas de aliados (no se pueden colocar en un espacio con un luchador, incluido Invisible Man). Durante el juego, los tokens de niebla solo se pueden mover mediante los efectos de las cartas de Invisible Man. Pueden moverse o terminar su movimiento en espacios con guerreros u otras fichas.',
+      en: "At the start of the game, after you place Invisible Man, place 3 fog tokens in separate spaces in his zone.\nWhen Invisible Man is on a space with a fog token, add 1 to the value of his defense cards.\nInvisible Man may move between two spaces with fog tokens as if they were adjacent.\n\nWhen placing fog tokens at the start of the game, place them exactly like you would sidekick tokens (they cannot be placed in a space with a fighter, including Invisible Man.) During the game, fog tokens can only be moved by Invisible Man's card effects. They may move through or end their movement in spaces with fighters or other tokens.",
+      es: 'Al comienzo del juego, después de colocar a Invisible Man, coloca 3 tokens de niebla en espacios separados en su zona.\nCuando Invisible Man esté en un espacio con un token de niebla, suma 1 al valor de sus cartas de defensa.\nInvisible Man puede moverse entre dos espacios con tokens de niebla como si fueran adyacentes.\n\nAl colocar tokens de niebla al comienzo del juego, colóquelos exactamente como lo haría con las fichas de aliados (no se pueden colocar en un espacio con un luchador, incluido Invisible Man). Durante el juego, los tokens de niebla solo se pueden mover mediante los efectos de las cartas de Invisible Man. Pueden moverse o terminar su movimiento en espacios con guerreros u otras fichas.',
     },
     amount: 30,
     cards: [
@@ -548,9 +548,9 @@ export const unmatched: Character[] = [
         value: 2,
         boost: 2,
         description:
-          'After combat: Draw 1 card and choose 1 effect\n\n - move Invisible Man to a space with a fog token\n\n - move 1 fog token up to 3 spaces',
+          'After combat: Draw 1 card and choose 1 effect\n - move Invisible Man to a space with a fog token\n - move 1 fog token up to 3 spaces',
         descripcion:
-          'Después del combate: Toma 1 carta de tu mazo y escoge un efecto:\n\n - mueve Invisible Man a un espacio con un token de niebla\n\n - mueve 1 token de niebla hasta 3 espacios',
+          'Después del combate: Toma 1 carta de tu mazo y escoge un efecto:\n - mueve Invisible Man a un espacio con un token de niebla\n - mueve 1 token de niebla hasta 3 espacios',
       },
       {
         name: 'Reign of Terror',
@@ -602,9 +602,9 @@ export const unmatched: Character[] = [
         value: 5,
         boost: 1,
         description:
-          "Immediately: Cancel all effects on your opponent's card.\n\nAfter combat: If Invisible Man is on a space with a fog token, move that fog token to another space.",
+          "Immediately: Cancel all effects on your opponent's card.\nAfter combat: If Invisible Man is on a space with a fog token, move that fog token to another space.",
         descripcion:
-          'Inmediatamente: Cancela todos los efectos de la carta de tu oponente.\n\nDespués del combate: Si Invisible Man está en un espacio con un token de niebla, mueve ese token de niebla a otro espacio.',
+          'Inmediatamente: Cancela todos los efectos de la carta de tu oponente.\nDespués del combate: Si Invisible Man está en un espacio con un token de niebla, mueve ese token de niebla a otro espacio.',
       },
       {
         name: 'Vanish',
@@ -879,8 +879,8 @@ export const unmatched: Character[] = [
     image: require('assets/backs/ingen.jpg'),
     amount: 30,
     ability: {
-      en: "At the start of your turn, you may place a trap.\nWhenever one of your traps is returned to the box, draw a card.\nMuldoon starts with 8 traps.\n\nYou may place a trap token in any unoccupied space in Muldoon's zone. If Muldoon's space is in more than one zone, you may pick a space in any of them. The target space cannot contain any fighters or other tokens, including other traps.\n\nWhen an opposing fighter enters a space with a trap, the trap goes off. The fighter must immediately stop moving and takes 1 damage. After the trap goes off, return it to the box.\n\nMuldoon's and his allies may land on or move through traps freely without setting them off.",
-      es: 'Al comienzo de tu turno, puedes colocar una trampa.\nCuando una de tus trampas vuelva a la caja, toma una carta.\nMuldoon comienza con 8 trampas.\n\nPuedes colocar un token de trampa en cualquier espacio vacío en la zona de Muldoon. Si Muldoon está en más de una zona, puedes elegir un espacio en cualquiera de ellas. El espacio elegido no puede contener luchadores u otros token, incluidas otras trampas.\n\nCuando un luchador oponente entra en un espacio con una trampa, la trampa se activa. El luchador debe detenerse y recibir 1 de daño. Después de que la trampa se activa, devuélvela a la caja (para no volver a ser usada).\n\nMuldoon y sus aliados pueden caer en o moverse por trampas sin activarlas.',
+      en: "At the start of your turn, you may place a trap.\nWhenever one of your traps is returned to the box, draw a card.\nMuldoon starts with 8 traps.\nYou may place a trap token in any unoccupied space in Muldoon's zone. If Muldoon's space is in more than one zone, you may pick a space in any of them. The target space cannot contain any fighters or other tokens, including other traps.\nWhen an opposing fighter enters a space with a trap, the trap goes off. The fighter must immediately stop moving and takes 1 damage. After the trap goes off, return it to the box.\nMuldoon's and his allies may land on or move through traps freely without setting them off.",
+      es: 'Al comienzo de tu turno, puedes colocar una trampa.\nCuando una de tus trampas vuelva a la caja, toma una carta.\nMuldoon comienza con 8 trampas.\nPuedes colocar un token de trampa en cualquier espacio vacío en la zona de Muldoon. Si Muldoon está en más de una zona, puedes elegir un espacio en cualquiera de ellas. El espacio elegido no puede contener luchadores u otros token, incluidas otras trampas.\nCuando un luchador oponente entra en un espacio con una trampa, la trampa se activa. El luchador debe detenerse y recibir 1 de daño. Después de que la trampa se activa, devuélvela a la caja (para no volver a ser usada).\nMuldoon y sus aliados pueden caer en o moverse por trampas sin activarlas.',
     },
     cards: [
       {
@@ -892,7 +892,7 @@ export const unmatched: Character[] = [
         description:
           "Choose 2 different effects: - place up to 3 traps - place all of your defeated InGen Workers (if any) in Muldoon's zone - draw 2 cards",
         descripcion:
-          'Escoge 2 efectos diferentes:\n\n- coloca hasta 3 trampas\n\n- coloca todos tus InGen Workers derrotados (si hay) en la zona de Muldoon\n\n - toma 2 cartas del mazo',
+          'Escoge 2 efectos diferentes:\n- coloca hasta 3 trampas\n- coloca todos tus InGen Workers derrotados (si hay) en la zona de Muldoon\n - toma 2 cartas del mazo',
       },
       {
         name: 'Feint',
@@ -1205,9 +1205,9 @@ export const unmatched: Character[] = [
         value: 3,
         boost: 3,
         description:
-          "During combat: If either fighter started this turn in a different space, this card's value is 5 instead.\n\nAfter combat: Gain 1 action.",
+          "During combat: If either fighter started this turn in a different space, this card's value is 5 instead.\nAfter combat: Gain 1 action.",
         descripcion:
-          'Durante el combate: Si cualquiera de los luchadores inició este turno en un espacio diferente, el valor de esta carta es 5.\n\nDespués del combate: Gana 1 acción.',
+          'Durante el combate: Si cualquiera de los luchadores inició este turno en un espacio diferente, el valor de esta carta es 5.\nDespués del combate: Gana 1 acción.',
       },
       {
         name: 'Jeet Kune Do: Intercepting Fist',
@@ -1216,9 +1216,9 @@ export const unmatched: Character[] = [
         character: 'any',
         value: 3,
         boost: 2,
-        description: "Immediately: Cancel all effects on your opponent's card.\n\nAfter combat: Gain 1 action.",
+        description: "Immediately: Cancel all effects on your opponent's card.\nAfter combat: Gain 1 action.",
         descripcion:
-          'Inmediatamente: Cancela todos los efectos de la carta de tu oponente.\n\nDespués del combate: Gana 1 acción.',
+          'Inmediatamente: Cancela todos los efectos de la carta de tu oponente.\nDespués del combate: Gana 1 acción.',
       },
       {
         name: 'Jeet Kune Do: Short Lead Hook',
@@ -1248,9 +1248,9 @@ export const unmatched: Character[] = [
         value: 2,
         boost: 3,
         description:
-          'During combat: If your hand is empty, the value of this card is 6 instead.\n\nAfter combat: Draw 2 cards.',
+          'During combat: If your hand is empty, the value of this card is 6 instead.\nAfter combat: Draw 2 cards.',
         descripcion:
-          'Durante el combate: Si tu mano está vacía, el valor de esta carta es 6.\n\nDespués del combate: Toma 2 cartas de tu mazo.',
+          'Durante el combate: Si tu mano está vacía, el valor de esta carta es 6.\nDespués del combate: Toma 2 cartas de tu mazo.',
       },
       {
         name: 'Momentous Shift',
@@ -1352,9 +1352,9 @@ export const unmatched: Character[] = [
         value: 3,
         boost: 2,
         description:
-          "During combat: If your opponent's name is on this card, its value is 4.\n\nAfter combat: Your opponent writes their name on this card if it's not there already.",
+          "During combat: If your opponent's name is on this card, its value is 4.\nAfter combat: Your opponent writes their name on this card if it's not there already.",
         descripcion:
-          'Durante el combate: Si el nombre de tu oponente está en esta carta, su valor es 4.\n\nDespués del combate: Tu oponente escribe su nombre en esta carta si no está escrito.',
+          'Durante el combate: Si el nombre de tu oponente está en esta carta, su valor es 4.\nDespués del combate: Tu oponente escribe su nombre en esta carta si no está escrito.',
       },
       {
         name: 'Cha-Ching!',
@@ -1404,9 +1404,9 @@ export const unmatched: Character[] = [
         value: 2,
         boost: 2,
         description:
-          'Tee-hee!\n\nImmediately: Say "eat me" to your opponent.\n\nDuring combat: Say "eat me" to your opponent.\n\nAfter combat: If you lost combat, say "eat me" to your opponent.',
+          'Tee-hee!\nImmediately: Say "eat me" to your opponent.\nDuring combat: Say "eat me" to your opponent.\nAfter combat: If you lost combat, say "eat me" to your opponent.',
         descripcion:
-          'Tee-hee!\n\nInmediatamente: Di "eat me" a tu oponente.\n\nDurante el combate: Di "eat me" a tu oponente.\n\nDespués del combate: Si perdiste el combate, di "eat me" a tu oponente.',
+          'Tee-hee!\nInmediatamente: Di "eat me" a tu oponente.\nDurante el combate: Di "eat me" a tu oponente.\nDespués del combate: Si perdiste el combate, di "eat me" a tu oponente.',
       },
       {
         name: 'Excuse me while I grow some limbs.',
@@ -1498,9 +1498,9 @@ export const unmatched: Character[] = [
         value: 2,
         boost: 1,
         description:
-          "During combat: If this card isn't sleeved, its value is 5.\n\nAfter combat: If you're not wearing any pants, go put some on.",
+          "During combat: If this card isn't sleeved, its value is 5.\nAfter combat: If you're not wearing any pants, go put some on.",
         descripcion:
-          'Durante el combate: Si esta carta no está cubierta con plástico, su valor es 5.\n\nDespués del combate: Si no estás usando pantalones, ve y ponte unos.',
+          'Durante el combate: Si esta carta no está cubierta con plástico, su valor es 5.\nDespués del combate: Si no estás usando pantalones, ve y ponte unos.',
       },
       {
         name: "Klunkin' Heads",
@@ -1562,9 +1562,9 @@ export const unmatched: Character[] = [
         value: 4,
         boost: 2,
         description:
-          "This card can't be canceled!\n\nImmediately: Cancel all effects on your opponent's card.\n\nAfter combat: Draw 1 card.",
+          "This card can't be canceled!\nImmediately: Cancel all effects on your opponent's card.\nAfter combat: Draw 1 card.",
         descripcion:
-          'Esta carta no puede ser cancelada!\n\nInmediatamente: Cancela todos los efectos de la carta de tu oponente.\n\nDespués del combate: Toma 1 carta.',
+          'Esta carta no puede ser cancelada!\nInmediatamente: Cancela todos los efectos de la carta de tu oponente.\nDespués del combate: Toma 1 carta.',
       },
       {
         name: 'Sweeet!',
@@ -1647,8 +1647,8 @@ export const unmatched: Character[] = [
     amount: 30,
     image: require('assets/backs/achilles.jpg'),
     ability: {
-      en: "When Patroclus is defeated, discard 2 random cards.\n\nWhile Patroclus is defeated: Add +2 to the value of all Achilles' attacks and if Achilles wins combat, draw 1 card.\n\nWhile Patroclus is defeated, if Achilles wins combat he draws 1 card after any AFTER COMBAT effects have resolved.",
-      es: 'Cuando Patroclus es derrotado, descarta 2 cartas al azar.\n\nMientras Patroclus está derrotado: Añade +2 al valor de todos los ataques de Achilles y si Achilles gana el combate, toma 1 carta.\n\nMientras Patroclus está derrotado, si Achilles gana el combate, toma 1 carta después de que se resuelvan todos los efectos DESPUÉS DEL COMBATE.',
+      en: "When Patroclus is defeated, discard 2 random cards.\nWhile Patroclus is defeated: Add +2 to the value of all Achilles' attacks and if Achilles wins combat, draw 1 card.\nWhile Patroclus is defeated, if Achilles wins combat he draws 1 card after any AFTER COMBAT effects have resolved.",
+      es: 'Cuando Patroclus es derrotado, descarta 2 cartas al azar.\nMientras Patroclus está derrotado: Añade +2 al valor de todos los ataques de Achilles y si Achilles gana el combate, toma 1 carta.\nMientras Patroclus está derrotado, si Achilles gana el combate, toma 1 carta después de que se resuelvan todos los efectos DESPUÉS DEL COMBATE.',
     },
     cards: [
       {
@@ -1809,9 +1809,9 @@ export const unmatched: Character[] = [
         character: 'any',
         boost: 2,
         description:
-          "During combat: You may increase or decrease the value of this card by 1.\n\nAfter combat: If the value of this card matches your opponent's card, draw 1 card and the opposing fighter takes 2 damage.",
+          "During combat: You may increase or decrease the value of this card by 1.\nAfter combat: If the value of this card matches your opponent's card, draw 1 card and the opposing fighter takes 2 damage.",
         descripcion:
-          'Durante el combate: Puedes aumentar o disminuir el valor de esta carta en 1.\n\nDespués del combate: Si el valor de esta carta coincide con el de la carta de tu oponente, toma 1 carta y el oponente toma 2 de daño.',
+          'Durante el combate: Puedes aumentar o disminuir el valor de esta carta en 1.\nDespués del combate: Si el valor de esta carta coincide con el de la carta de tu oponente, toma 1 carta y el oponente toma 2 de daño.',
       },
       {
         name: 'Closer Than She Appears',
@@ -1850,9 +1850,9 @@ export const unmatched: Character[] = [
         character: 'any',
         boost: 2,
         description:
-          'During combat: You may BOOST this attack.\n\nAfter combat: If this is your third action this turn, recover 3 health.',
+          'During combat: You may BOOST this attack.\nAfter combat: If this is your third action this turn, recover 3 health.',
         descripcion:
-          'Durante el combate: Puedes BOOST este ataque.\n\nDespués del combate: Si es tu tercera acción de este turno, recupera 3 de salud.',
+          'Durante el combate: Puedes BOOST este ataque.\nDespués del combate: Si es tu tercera acción de este turno, recupera 3 de salud.',
       },
       {
         name: 'Infinity Mirror',
@@ -1894,9 +1894,9 @@ export const unmatched: Character[] = [
         character: 'any',
         boost: 2,
         description:
-          "During combat: Your opponent discards 1 random card. Add its BOOST value to this card's value.\n\nAfter combat: If this is your third action, draw 1 card.",
+          "During combat: Your opponent discards 1 random card. Add its BOOST value to this card's value.\nAfter combat: If this is your third action, draw 1 card.",
         descripcion:
-          'Durante el combate: Tu oponente descarta 1 carta aleatoria. Añade su BOOST al valor de esta carta.\n\nDespués del combate: Si es tu tercera acción, toma 1 carta.',
+          'Durante el combate: Tu oponente descarta 1 carta aleatoria. Añade su BOOST al valor de esta carta.\nDespués del combate: Si es tu tercera acción, toma 1 carta.',
       },
       {
         name: 'Speak Three Times',
@@ -1956,9 +1956,9 @@ export const unmatched: Character[] = [
         character: 'any',
         amount: 2,
         boost: 2,
-        description: 'During combat: Prevent all damage\n\nAfter combat: You may place your fighter in any space.',
+        description: 'During combat: Prevent all damage\nAfter combat: You may place your fighter in any space.',
         descripcion:
-          'Después del combate: Previene cualquier daño\n\nDespués del combate: Puedes colocar tu luchador en cualquier espacio.',
+          'Después del combate: Previene cualquier daño\nDespués del combate: Puedes colocar tu luchador en cualquier espacio.',
       },
       {
         name: 'Fiery Eyes That See',
@@ -1990,9 +1990,9 @@ export const unmatched: Character[] = [
         amount: 3,
         boost: 2,
         description:
-          'During combat: For each other friendly fighter adjacent to the opposing fighter, increase the value of this card by +1.\n\nAfter combat: Gain 1 action.',
+          'During combat: For each other friendly fighter adjacent to the opposing fighter, increase the value of this card by +1.\nAfter combat: Gain 1 action.',
         descripcion:
-          'Durante el combate: Por cada luchador aliado adyacente al luchador contrario, aumenta el valor de esta carta en +1.\n\nDespués del combate: Gana 1 acción.',
+          'Durante el combate: Por cada luchador aliado adyacente al luchador contrario, aumenta el valor de esta carta en +1.\nDespués del combate: Gana 1 acción.',
       },
       {
         name: 'Ox Form',
@@ -2002,9 +2002,9 @@ export const unmatched: Character[] = [
         amount: 2,
         boost: 2,
         description:
-          "This card's effects cannot be canceled.\n\nDuring combat: If your opponent played a card, they may BOOST it.",
+          "This card's effects cannot be canceled.\nDuring combat: If your opponent played a card, they may BOOST it.",
         descripcion:
-          'Los efectos de esta carta no pueden ser cancelados.\n\nDurante el combate: Si tu oponente jugó una carta, puede hacerle BOOST.',
+          'Los efectos de esta carta no pueden ser cancelados.\nDurante el combate: Si tu oponente jugó una carta, puede hacerle BOOST.',
       },
       {
         name: 'Phoenix Form',
@@ -2077,8 +2077,8 @@ export const unmatched: Character[] = [
     image: require('assets/backs/yennenga.jpg'),
     amount: 30,
     ability: {
-      en: 'If Yennenga would take damage, you may assign any amount of that damage to one or more Archers in her zone instead. (You may not assign more damage to an Archer than their remaining health.)\n\nIf damage would be dealt to Yennenga and an Archer at the same time, Yennenga cannot assign damage from herself to that Archer if the Archer would already be defeated by the damage it took. (Yennenga cannot use her ability to make damage disappear.)',
-      es: 'Si Yennenga va a recibir daño, puedes asignar cualquier cantidad de ese daño a uno o más Arqueros en su zona en su lugar. (No puedes asignar más daño a un Arquero que su salud restante.)\n\nSi el daño se le va a hacer a Yennenga y a un Arquero al mismo tiempo, Yennenga no puede asignar daño de ella misma a ese Arquero si el Arquero ya estaría derrotado por el daño que recibió. (Yennenga no puede usar su habilidad para hacer que el daño desaparezca.)',
+      en: 'If Yennenga would take damage, you may assign any amount of that damage to one or more Archers in her zone instead. (You may not assign more damage to an Archer than their remaining health.)\nIf damage would be dealt to Yennenga and an Archer at the same time, Yennenga cannot assign damage from herself to that Archer if the Archer would already be defeated by the damage it took. (Yennenga cannot use her ability to make damage disappear.)',
+      es: 'Si Yennenga va a recibir daño, puedes asignar cualquier cantidad de ese daño a uno o más Arqueros en su zona en su lugar. (No puedes asignar más daño a un Arquero que su salud restante.)\nSi el daño se le va a hacer a Yennenga y a un Arquero al mismo tiempo, Yennenga no puede asignar daño de ella misma a ese Arquero si el Arquero ya estaría derrotado por el daño que recibió. (Yennenga no puede usar su habilidad para hacer que el daño desaparezca.)',
     },
     cards: [
       {
@@ -2219,8 +2219,8 @@ export const unmatched: Character[] = [
     image: require('assets/backs/luke.jpg'),
     amount: 30,
     ability: {
-      en: "Luke Cage takes 2 less combat damage from attacks.\n\n(When defending, Luke Cage wins combat if he takes no damage, even if he didn't play a card.)",
-      es: 'Luke Cage recibe 2 menos de daño de ataque.\n\n(Cuando se defiende, Luke Cage gana el combate si no recibe daño, incluso si no jugó una carta.)',
+      en: "Luke Cage takes 2 less combat damage from attacks.\n(When defending, Luke Cage wins combat if he takes no damage, even if he didn't play a card.)",
+      es: 'Luke Cage recibe 2 menos de daño de ataque.\n(Cuando se defiende, Luke Cage gana el combate si no recibe daño, incluso si no jugó una carta.)',
     },
     cards: [
       {
@@ -2351,9 +2351,9 @@ export const unmatched: Character[] = [
         boost: 1,
         character: 'Luke Cage',
         description:
-          "Immediately: Cancel all effects on your opponent's card.\n\nAfter combat: If you won the combat, end the turn.",
+          "Immediately: Cancel all effects on your opponent's card.\nAfter combat: If you won the combat, end the turn.",
         descripcion:
-          'Inmediatamente: Cancela todos los efectos de la carta del oponente.\n\nDespués del combate: Si ganaste el combate, termina el turno (no se activan más efectos).',
+          'Inmediatamente: Cancela todos los efectos de la carta del oponente.\nDespués del combate: Si ganaste el combate, termina el turno (no se activan más efectos).',
       },
       {
         name: "Where's My Money?",
@@ -2511,8 +2511,8 @@ export const unmatched: Character[] = [
     image: require('assets/backs/moonknight.jpg'),
     amount: 30,
     ability: {
-      en: 'Moon Knight\nAt the start of your turn, move up to 2 spaces.\n\nKhonshu\nKhonshu adds +2 to the value of his attack cards. He does not take damage from effects other than combat damage.\n\nMr. Knight\nMr. Knight adds +1 to all his defense values.\n\nAt the end of your turn, change to your next identity (In order, Moon Knight -> Khonshu -> Mr. Knight, repeating).\n\nStart the game as Moon Knight.',
-      es: 'Moon Knight\nAl comienzo de tu turno, muévete hasta 2 espacios.\n\nKhonshu\nKhonshu añade +2 al valor de sus cartas de ataque. No recibe daño de efectos que no sean de combate.\n\nMr. Knight\nMr. Knight añade +1 a todos sus valores de defensa.\n\nAl final de tu turno, cambia a tu siguiente identidad (En orden, Moon Knight -> Khonshu -> Mr. Knight, repitiendo).\n\nComienza el juego como Moon Knight.',
+      en: 'Moon Knight\nAt the start of your turn, move up to 2 spaces.\nKhonshu\nKhonshu adds +2 to the value of his attack cards. He does not take damage from effects other than combat damage.\nMr. Knight\nMr. Knight adds +1 to all his defense values.\nAt the end of your turn, change to your next identity (In order, Moon Knight -> Khonshu -> Mr. Knight, repeating).\nStart the game as Moon Knight.',
+      es: 'Moon Knight\nAl comienzo de tu turno, muévete hasta 2 espacios.\nKhonshu\nKhonshu añade +2 al valor de sus cartas de ataque. No recibe daño de efectos que no sean de combate.\nMr. Knight\nMr. Knight añade +1 a todos sus valores de defensa.\nAl final de tu turno, cambia a tu siguiente identidad (En orden, Moon Knight -> Khonshu -> Mr. Knight, repitiendo).\nComienza el juego como Moon Knight.',
     },
     cards: [
       {
@@ -2645,8 +2645,8 @@ export const unmatched: Character[] = [
     amount: 30,
     image: require('assets/backs/sattler.jpg'),
     ability: {
-      en: "After Dr. Sattler or Dr. Malcolm move, place an insight token in their new space. You have 5 insight tokens.\n\nWhenever either of your fighters moves to a new space, place and insight token in their new space. Tokens may be placed in spaces with other tokens, including other insight tokens.\n\nThese tokens have no effect themselves but any of your cards interact with them. When you remove insight tokens from the board, return them to your supply. You can place them on the board again in the future.\n\nIf you would place an insight token but don't have any in your supply, nothing happens.",
-      es: 'Después de mover a Dr. Sattler o Dr. Malcolm, coloca un token de inspección en su nuevo espacio. Tienes 5 token de inspección.\n\nCada vez que uno de tus luchadores se mueve a un nuevo espacio, coloca un token de inspección en su nuevo espacio. Los token de inspección pueden ser colocadas en espacios con otros token, incluyendo otros token de inspección.\n\nLos token de inspección no tienen efecto propio, pero cualquiera de tus cartas interactúan con ellas. Cuando remuevas token de inspección del tablero, devuelvelos a tu repositorio. Puedes colocarlos de nuevo en el tablero en el futuro.\n\nSi no tienes token de inspección en tu repositorio, no pasa nada.',
+      en: "After Dr. Sattler or Dr. Malcolm move, place an insight token in their new space. You have 5 insight tokens.\nWhenever either of your fighters moves to a new space, place and insight token in their new space. Tokens may be placed in spaces with other tokens, including other insight tokens.\nThese tokens have no effect themselves but any of your cards interact with them. When you remove insight tokens from the board, return them to your supply. You can place them on the board again in the future.\nIf you would place an insight token but don't have any in your supply, nothing happens.",
+      es: 'Después de mover a Dr. Sattler o Dr. Malcolm, coloca un token de inspección en su nuevo espacio. Tienes 5 token de inspección.\nCada vez que uno de tus luchadores se mueve a un nuevo espacio, coloca un token de inspección en su nuevo espacio. Los token de inspección pueden ser colocadas en espacios con otros token, incluyendo otros token de inspección.\nLos token de inspección no tienen efecto propio, pero cualquiera de tus cartas interactúan con ellas. Cuando remuevas token de inspección del tablero, devuelvelos a tu repositorio. Puedes colocarlos de nuevo en el tablero en el futuro.\nSi no tienes token de inspección en tu repositorio, no pasa nada.',
     },
     cards: [
       {
@@ -2742,9 +2742,9 @@ export const unmatched: Character[] = [
         amount: 2,
         boost: 2,
         description:
-          'During combat: If the opposing fighter is a hero, the value of this card is 4 instead.\n\nAfter combat: You may move Dr. Sattler 1 space.',
+          'During combat: If the opposing fighter is a hero, the value of this card is 4 instead.\nAfter combat: You may move Dr. Sattler 1 space.',
         descripcion:
-          'Durante el combate: Si el luchador contrario es un héroe, el valor de esta carta es 4.\n\nDespués del combate: Puedes mover a Dr. Sattler 1 espacio.',
+          'Durante el combate: Si el luchador contrario es un héroe, el valor de esta carta es 4.\nDespués del combate: Puedes mover a Dr. Sattler 1 espacio.',
       },
       {
         name: 'The Concept of Attraction',
@@ -2816,9 +2816,9 @@ export const unmatched: Character[] = [
         character: 'any',
         amount: 2,
         boost: 3,
-        description: "During combat: Ignore the value of your opponent's card.\n\nAfter combat: Take 2 damage.",
+        description: "During combat: Ignore the value of your opponent's card.\nAfter combat: Take 2 damage.",
         descripcion:
-          'Durante el combate: Ignora el valor de la carta de tu oponente.\n\nDespués del combate: Toma 2 de daño.',
+          'Durante el combate: Ignora el valor de la carta de tu oponente.\nDespués del combate: Toma 2 de daño.',
       },
       {
         name: '65 Million Years of Gut Instinct',
@@ -2837,8 +2837,8 @@ export const unmatched: Character[] = [
         character: 'any',
         amount: 3,
         boost: 2,
-        description: 'Move your fighter up to 1 space.\n\nDraw 1 card.\n\nGain 1 action.',
-        descripcion: 'Mueve tu peleador hasta 1 espacio.\n\nToma 1 carta.\n\nGana 1 acción.',
+        description: 'Move your fighter up to 1 space.\nDraw 1 card.\nGain 1 action.',
+        descripcion: 'Mueve tu peleador hasta 1 espacio.\nToma 1 carta.\nGana 1 acción.',
       },
       {
         name: 'Commanding Impact',
@@ -2901,9 +2901,9 @@ export const unmatched: Character[] = [
         amount: 3,
         boost: 2,
         description:
-          "During combat: You may BOOST this card.\n\nAfter combat: If you won the combat, deal 1 damage to each opposing fighter in T-Rex's zone.",
+          "During combat: You may BOOST this card.\nAfter combat: If you won the combat, deal 1 damage to each opposing fighter in T-Rex's zone.",
         descripcion:
-          'Durante el combate: Puedes BOOST esta carta.\n\nDespués del combate: Si ganaste el combate, haz 1 de daño a cada luchador contrario en la zona de T-Rex.',
+          'Durante el combate: Puedes BOOST esta carta.\nDespués del combate: Si ganaste el combate, haz 1 de daño a cada luchador contrario en la zona de T-Rex.',
       },
       {
         name: 'When Dinosaurs Ruled the Earth',
@@ -2913,9 +2913,9 @@ export const unmatched: Character[] = [
         amount: 4,
         boost: 3,
         description:
-          'During combat: You may BOOST this card.\n\nAfter combat: If you won the combat, draw 1 card, gain 1 action, and take 2 damage.',
+          'During combat: You may BOOST this card.\nAfter combat: If you won the combat, draw 1 card, gain 1 action, and take 2 damage.',
         descripcion:
-          'Durante el combate: Puedes BOOST esta carta.\n\nDespués del combate: Si ganaste el combate, toma 1 carta, gana 1 acción y recibe 2 de daño.',
+          'Durante el combate: Puedes BOOST esta carta.\nDespués del combate: Si ganaste el combate, toma 1 carta, gana 1 acción y recibe 2 de daño.',
       },
       {
         name: "You're Just Making Her Angry",
@@ -2925,9 +2925,9 @@ export const unmatched: Character[] = [
         amount: 2,
         boost: 1,
         description:
-          'During combat: You may BOOST this card.\n\nAfter combat: If you won the combat, return this card to your hand.',
+          'During combat: You may BOOST this card.\nAfter combat: If you won the combat, return this card to your hand.',
         descripcion:
-          'Durante el combate: Puedes BOOST esta carta.\n\nDespués del combate: Si ganaste el combate, devuelve esta carta a tu mano.',
+          'Durante el combate: Puedes BOOST esta carta.\nDespués del combate: Si ganaste el combate, devuelve esta carta a tu mano.',
       },
     ],
   },
@@ -2936,8 +2936,8 @@ export const unmatched: Character[] = [
     amount: 30,
     image: require('assets/backs/alice.jpg'),
     ability: {
-      en: 'When you place Alice, choose whether she starts the game BIG or SMALL.\n\nWhen Alice is BIG, add 2 to the value of her attack cards.\n\nWhen Alice is SMALL, add 1 to the value of her defense cards.',
-      es: 'Cuando colocas a Alice, elige si comienza el juego GRANDE o PEQUEÑA.\n\nCuando Alice es GRANDE, añade 2 al valor de sus cartas de ataque.\n\nCuando Alice es PEQUEÑA, añade 1 al valor de sus cartas de defensa.',
+      en: 'When you place Alice, choose whether she starts the game BIG or SMALL.\nWhen Alice is BIG, add 2 to the value of her attack cards.\nWhen Alice is SMALL, add 1 to the value of her defense cards.',
+      es: 'Cuando colocas a Alice, elige si comienza el juego GRANDE o PEQUEÑA.\nCuando Alice es GRANDE, añade 2 al valor de sus cartas de ataque.\nCuando Alice es PEQUEÑA, añade 1 al valor de sus cartas de defensa.',
     },
     cards: [
       {
@@ -3007,9 +3007,9 @@ export const unmatched: Character[] = [
         boost: 4,
         character: 'ALICE',
         description:
-          'After combat: Choose 2 different effects:\n\n- draw 2 cards\n\n- Alice recovers 3 health\n\n- place Alice in any other space',
+          'After combat: Choose 2 different effects:\n- draw 2 cards\n- Alice recovers 3 health\n- place Alice in any other space',
         descripcion:
-          'Después del combate: Elige 2 efectos diferentes:\n\n- toma 2 cartas\n\n- Alice se recupera 3 de salud\n\n- coloca a Alice en cualquier otro espacio',
+          'Después del combate: Elige 2 efectos diferentes:\n- toma 2 cartas\n- Alice se recupera 3 de salud\n- coloca a Alice en cualquier otro espacio',
       },
       {
         name: 'Mad as a Hatter',
@@ -3215,9 +3215,9 @@ export const unmatched: Character[] = [
         boost: 2,
         character: 'MEDUSA',
         description:
-          "Move each of your fighters up to 3 spaces. You may move them through spaces containing opposing fighters.\n\nThen, return a defeated Harpy (if any) to any space in Medusa's zone.",
+          "Move each of your fighters up to 3 spaces. You may move them through spaces containing opposing fighters.\nThen, return a defeated Harpy (if any) to any space in Medusa's zone.",
         descripcion:
-          'Mueve cada uno de tus luchadores hasta 3 espacios. Puedes moverlos a través de espacios que contengan luchadores contrarios.\n\nLuego, devuelve un Harpy derrotado (si hay alguno) a cualquier espacio en la zona de Medusa.',
+          'Mueve cada uno de tus luchadores hasta 3 espacios. Puedes moverlos a través de espacios que contengan luchadores contrarios.\nLuego, devuelve un Harpy derrotado (si hay alguno) a cualquier espacio en la zona de Medusa.',
       },
     ],
   },
@@ -3331,9 +3331,9 @@ export const unmatched: Character[] = [
         boost: 1,
         character: 'Sinbad',
         description:
-          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\n\nAfter combat: Take all other VOYAGE cards from your discard pile and add them to your hand.",
+          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\nAfter combat: Take all other VOYAGE cards from your discard pile and add them to your hand.",
         descripcion:
-          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\n\nDespués del combate: Toma todas las otras cartas VOYAGE de tu descarte y agrégalas a tu mano.',
+          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\nDespués del combate: Toma todas las otras cartas VOYAGE de tu descarte y agrégalas a tu mano.',
       },
       {
         name: 'Voyage to the Cannibals With the Root of Madness',
@@ -3343,9 +3343,9 @@ export const unmatched: Character[] = [
         boost: 0,
         character: 'Sinbad',
         description:
-          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\n\nAfter combat: You may move Sinbad up to 2 spaces.",
+          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\nAfter combat: You may move Sinbad up to 2 spaces.",
         descripcion:
-          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\n\nDespués del combate: Puedes mover a Sinbad hasta 2 espacios.',
+          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\nDespués del combate: Puedes mover a Sinbad hasta 2 espacios.',
       },
       {
         name: 'Voyage to the City of the King of Serendib',
@@ -3355,9 +3355,9 @@ export const unmatched: Character[] = [
         boost: 0,
         character: 'Sinbad',
         description:
-          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\n\nAfter combat: Draw 1 card.",
+          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\nAfter combat: Draw 1 card.",
         descripcion:
-          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\n\nDespués del combate: Toma 1 carta.',
+          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\nDespués del combate: Toma 1 carta.',
       },
       {
         name: 'Voyage to the City of the Man-Eating Apes',
@@ -3367,9 +3367,9 @@ export const unmatched: Character[] = [
         boost: 0,
         character: 'Sinbad',
         description:
-          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\n\nAfter combat: Deal 2 damage to the opposing fighter.",
+          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\nAfter combat: Deal 2 damage to the opposing fighter.",
         descripcion:
-          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\n\nDespués del combate: Hace 2 daño al luchador enemigo.',
+          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\nDespués del combate: Hace 2 daño al luchador enemigo.',
       },
       {
         name: 'Voyage to the Creature With Eyes Like Coals of Fire',
@@ -3379,9 +3379,9 @@ export const unmatched: Character[] = [
         boost: 0,
         character: 'Sinbad',
         description:
-          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\n\nAfter combat: Your opponent discards 1 random card.",
+          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\nAfter combat: Your opponent discards 1 random card.",
         descripcion:
-          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\n\nDespués del combate: El oponente descarta 1 carta aleatoria.',
+          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\nDespués del combate: El oponente descarta 1 carta aleatoria.',
       },
       {
         name: 'Voyage to the Island That Was a Whale',
@@ -3391,9 +3391,9 @@ export const unmatched: Character[] = [
         boost: 0,
         character: 'Sinbad',
         description:
-          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\n\nAfter combat: Sinbad recovers 2 health.",
+          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\nAfter combat: Sinbad recovers 2 health.",
         descripcion:
-          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\n\nDespués del combate: Recupera 2 salud a Sinbad.',
+          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\nDespués del combate: Recupera 2 salud a Sinbad.',
       },
       {
         name: 'Voyage to the Valley of the Giant Snakes',
@@ -3403,9 +3403,9 @@ export const unmatched: Character[] = [
         boost: 0,
         character: 'Sinbad',
         description:
-          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\n\nAfter combat: Look at your opponent's hand.",
+          "During combat: This card's value is +1 for each other VOYAGE card in your discard pile.\nAfter combat: Look at your opponent's hand.",
         descripcion:
-          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\n\nDespués del combate: Observa las cartas en la mano del oponente.',
+          'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\nDespués del combate: Observa las cartas en la mano del oponente.',
       },
     ],
   },
@@ -3414,8 +3414,8 @@ export const unmatched: Character[] = [
     amount: 30,
     image: require('assets/backs/kingarthur.jpg'),
     ability: {
-      en: 'When King Arthur attacks, you may BOOST that attack. Play the BOOST card, face down, along with your attack card.\n\nIf your opponent cancels the effects on your attack card, the BOOST is discarded without effect.\n\nExcalibur can still be cancelled even though it does not have a card effect. This will cause any BOOST played with Excalibur to be discarded without effect.',
-      es: 'Cuando King Arthur ataca, puedes BOOST al ataque. Juega la carta BOOST boca abajo, junto con tu carta de ataque.\n\nSi tu oponente cancela los efectos de tu carta de ataque, el BOOST se descarta sin hacer efecto.\n\nExcalibur puede ser cancelada, aunque no tenga un efecto de carta. Esto causará que cualquier BOOST jugado con Excalibur sea descartado sin hacer efecto.',
+      en: 'When King Arthur attacks, you may BOOST that attack. Play the BOOST card, face down, along with your attack card.\nIf your opponent cancels the effects on your attack card, the BOOST is discarded without effect.\nExcalibur can still be cancelled even though it does not have a card effect. This will cause any BOOST played with Excalibur to be discarded without effect.',
+      es: 'Cuando King Arthur ataca, puedes BOOST al ataque. Juega la carta BOOST boca abajo, junto con tu carta de ataque.\nSi tu oponente cancela los efectos de tu carta de ataque, el BOOST se descarta sin hacer efecto.\nExcalibur puede ser cancelada, aunque no tenga un efecto de carta. Esto causará que cualquier BOOST jugado con Excalibur sea descartado sin hacer efecto.',
     },
     cards: [
       {
@@ -3435,9 +3435,9 @@ export const unmatched: Character[] = [
         value: 0,
         boost: 2,
         character: 'MERLIN',
-        description: 'During combat: Prevent all damage\n\nAfter combat: You may place your fighter in any space.',
+        description: 'During combat: Prevent all damage\nAfter combat: You may place your fighter in any space.',
         descripcion:
-          'Durante el combate: Evita todo el daño\n\nDespués del combate: Puedes colocar a tu luchador en cualquier espacio.',
+          'Durante el combate: Evita todo el daño\nDespués del combate: Puedes colocar a tu luchador en cualquier espacio.',
       },
       {
         name: 'Command the Storms',
@@ -3595,8 +3595,8 @@ export const unmatched: Character[] = [
     amount: 30,
     image: require('assets/backs/buffy.jpg'),
     ability: {
-      en: 'Buffy may move through spaces containing opposing fighters (including when she is moved by effects).\n\nAt the start of the game, after heroes have been placed in their starting spaces, choose Xander or Giles as your sidekick and shuffle their 5 cards into your base deck of 25 cards, before drawing your starting hand.',
-      es: 'Buffy puede moverse por espacios que contengan luchadores enemigos (incluyendo cuando se mueve por efectos).\n\nAl comienzo del juego, después de que se hayan colocado los heroes en sus espacios iniciales, elige a Xander o Giles como tu compañero y baraja sus 5 cartas en tu mazo base de 25 cartas, antes de tomar tu mano inicial.',
+      en: 'Buffy may move through spaces containing opposing fighters (including when she is moved by effects).\nAt the start of the game, after heroes have been placed in their starting spaces, choose Xander or Giles as your sidekick and shuffle their 5 cards into your base deck of 25 cards, before drawing your starting hand.',
+      es: 'Buffy puede moverse por espacios que contengan luchadores enemigos (incluyendo cuando se mueve por efectos).\nAl comienzo del juego, después de que se hayan colocado los heroes en sus espacios iniciales, elige a Xander o Giles como tu compañero y baraja sus 5 cartas en tu mazo base de 25 cartas, antes de tomar tu mano inicial.',
     },
     cards: [
       {
@@ -4021,8 +4021,8 @@ export const unmatched: Character[] = [
     amount: 30,
     image: require('assets/backs/willow.jpg'),
     ability: {
-      en: 'When Willow or Tara is dealt damage, Willow becomes Dark Willow.\n\nAt the end of your turn, if Dark Willow is adjacent to Tara, she becomes Willow.',
-      es: 'Cuando Willow o Tara sufren daño, Willow se convierte en Dark Willow.\n\nAl final de tu turno, si Dark Willow está adyacente a Tara, ella se convierte en Willow.',
+      en: 'When Willow or Tara is dealt damage, Willow becomes Dark Willow.\nAt the end of your turn, if Dark Willow is adjacent to Tara, she becomes Willow.',
+      es: 'Cuando Willow o Tara sufren daño, Willow se convierte en Dark Willow.\nAl final de tu turno, si Dark Willow está adyacente a Tara, ella se convierte en Willow.',
     },
     cards: [
       {
@@ -4167,8 +4167,8 @@ export const unmatched: Character[] = [
     amount: 22,
     image: require('assets/backs/daredevil.jpg'),
     ability: {
-      en: "DURING COMBAT: If you have 2 or fewer cards in your hand, you may BLIND BOOST your attack or defense.\n\n(If you have other DURING COMBAT effects, choose the order.)\n\nWhen you BLIND BOOST, you discard the top card of your deck and add its BOOST value onto the card you played in combat.\n\nDaredevil's ability cannot be canceled.",
-      es: 'DURANTE EL COMBATE: Si tienes 2 o menos cartas en tu mano, puedes BLIND BOOST tu ataque o defensa.\n\n(Si tienes otros efectos DURANTE EL COMBATE, elige el orden.)\n\nCuando haces BLIND BOOST, descartas la carta superior de tu mazo y añades su valor de BOOST a la carta que jugaste en el combate.\n\nLa habilidad de Daredevil no se puede cancelar.',
+      en: "DURING COMBAT: If you have 2 or fewer cards in your hand, you may BLIND BOOST your attack or defense.\n(If you have other DURING COMBAT effects, choose the order.)\nWhen you BLIND BOOST, you discard the top card of your deck and add its BOOST value onto the card you played in combat.\nDaredevil's ability cannot be canceled.",
+      es: 'DURANTE EL COMBATE: Si tienes 2 o menos cartas en tu mano, puedes BLIND BOOST tu ataque o defensa.\n(Si tienes otros efectos DURANTE EL COMBATE, elige el orden.)\nCuando haces BLIND BOOST, descartas la carta superior de tu mazo y añades su valor de BOOST a la carta que jugaste en el combate.\nLa habilidad de Daredevil no se puede cancelar.',
     },
     cards: [
       {
@@ -4188,9 +4188,9 @@ export const unmatched: Character[] = [
         boost: 3,
         character: 'any',
         description:
-          'During combat: If you have no cards in your deck, the value of this card is 8 instead.\n\nAfter combat: Shuffle this card and the top four cards of your discard pile into your deck.',
+          'During combat: If you have no cards in your deck, the value of this card is 8 instead.\nAfter combat: Shuffle this card and the top four cards of your discard pile into your deck.',
         descripcion:
-          'Durante el combate: Si no tienes cartas en tu mazo, el valor de esta carta es 8 en vez de 4.\n\nDespués del combate: Baraja esta carta y las cuatro cartas superiores de tu descarte en tu mazo.',
+          'Durante el combate: Si no tienes cartas en tu mazo, el valor de esta carta es 8 en vez de 4.\nDespués del combate: Baraja esta carta y las cuatro cartas superiores de tu descarte en tu mazo.',
       },
       {
         name: 'Feint',
@@ -4263,8 +4263,8 @@ export const unmatched: Character[] = [
     amount: 30,
     image: require('assets/backs/bullseye.jpg'),
     ability: {
-      en: "Bullseye can attack from up to 5 spaces away (ignoring zones).\n\nBullseye's special 5 space attack range is in addition to also being able to attack any opposing fighter in his zone.",
-      es: 'Bullseye puede atacar desde hasta 5 espacios de distancia (ignorando zonas).\n\nLa distancia de ataque especial de Bullseye es adicional a poder atacar cualquier luchador en su zona.',
+      en: "Bullseye can attack from up to 5 spaces away (ignoring zones).\nBullseye's special 5 space attack range is in addition to also being able to attack any opposing fighter in his zone.",
+      es: 'Bullseye puede atacar desde hasta 5 espacios de distancia (ignorando zonas).\nLa distancia de ataque especial de Bullseye es adicional a poder atacar cualquier luchador en su zona.',
     },
     cards: [
       {
@@ -4398,8 +4398,8 @@ export const unmatched: Character[] = [
     image: require('assets/backs/elektra.jpg'),
     amount: 20,
     ability: {
-      en: 'The first time Elektra would be defeated, remove her and all Hand from the board. She is not defeated. At the start of your next turn, Resurrect her. (Ignore effects with the RESURRECTED symbol.)\n\nWhen Elektra Resurrects: Flip your health dial. Shuffle your discard pile into your deck.\n\nPlace Elektra and all Hand back onto the board with each fighter in a different zone. (You must resolve effects with the RESURRECTED symbol.)\n\nWhen resurrecting, only your discard pile is shuffled into your deck, not your hand of cards. When placing your fighters after you resurrect, you may place them in zones containing opposing fighters, you just cannot place two of your own fighters in the same zone as each other.',
-      es: 'La primera vez que Elektra sería derrotada, retírala y a todos los Hand del tablero. Ella no es derrotada. Al comienzo de tu próximo turno, resucítala. (Ignora los efectos con el símbolo RESURRECTED.)\n\nCuando Elektra resucita: Voltea tu marcador de salud. Baraja tu descarte en tu mazo.\n\nColoca a Elektra y a todos los Hand de vuelta en el tablero con cada luchador en una zona diferente. (Debes resolver los efectos con el símbolo RESURRECTED.)\n\nCuando resucitas, solo tu descarte se baraja en tu mazo, no tu mano de cartas. Cuando colocas a tus luchadores después de resucitar, puedes colocarlos en zonas que contengan luchadores oponentes, solo que no puedes colocar dos de tus propios luchadores en la misma zona.',
+      en: 'The first time Elektra would be defeated, remove her and all Hand from the board. She is not defeated. At the start of your next turn, Resurrect her. (Ignore effects with the RESURRECTED symbol.)\nWhen Elektra Resurrects: Flip your health dial. Shuffle your discard pile into your deck.\nPlace Elektra and all Hand back onto the board with each fighter in a different zone. (You must resolve effects with the RESURRECTED symbol.)\nWhen resurrecting, only your discard pile is shuffled into your deck, not your hand of cards. When placing your fighters after you resurrect, you may place them in zones containing opposing fighters, you just cannot place two of your own fighters in the same zone as each other.',
+      es: 'La primera vez que Elektra sería derrotada, retírala y a todos los Hand del tablero. Ella no es derrotada. Al comienzo de tu próximo turno, resucítala. (Ignora los efectos con el símbolo RESURRECTED.)\nCuando Elektra resucita: Voltea tu marcador de salud. Baraja tu descarte en tu mazo.\nColoca a Elektra y a todos los Hand de vuelta en el tablero con cada luchador en una zona diferente. (Debes resolver los efectos con el símbolo RESURRECTED.)\nCuando resucitas, solo tu descarte se baraja en tu mazo, no tu mano de cartas. Cuando colocas a tus luchadores después de resucitar, puedes colocarlos en zonas que contengan luchadores oponentes, solo que no puedes colocar dos de tus propios luchadores en la misma zona.',
     },
     cards: [
       {
@@ -4410,9 +4410,9 @@ export const unmatched: Character[] = [
         boost: 1,
         character: 'ELEKTRA',
         description:
-          "Immediately: Cancel all effects on your opponent's card.\n\nAfter combat: RESURRECTED: Move Elektra up to 3 spaces.",
+          "Immediately: Cancel all effects on your opponent's card.\nAfter combat: RESURRECTED: Move Elektra up to 3 spaces.",
         descripcion:
-          'Inmediatamente: Cancela todos los efectos de la carta del oponente.\n\nDespués del combate: RESURRECTED: Mueve a Elektra hasta 3 espacios.',
+          'Inmediatamente: Cancela todos los efectos de la carta del oponente.\nDespués del combate: RESURRECTED: Mueve a Elektra hasta 3 espacios.',
       },
       {
         name: 'Hands of Red',
@@ -4517,8 +4517,8 @@ export const unmatched: Character[] = [
     amount: 30,
     image: require('assets/backs/beowulf.jpg'),
     ability: {
-      en: 'Beowulf starts with 1 Rage.\n\nWhen Beowulf is dealt damage, he gains 1 Rage.\n\nBeowulf has a maximum of 3 rage.',
-      es: 'Beowulf empieza con 1 Rabia.\n\nCuando Beowulf recibe daño, gana 1 Rabia.\n\nBeowulf tiene un máximo de 3 Rabia.',
+      en: 'Beowulf starts with 1 Rage.\nWhen Beowulf is dealt damage, he gains 1 Rage.\nBeowulf has a maximum of 3 rage.',
+      es: 'Beowulf empieza con 1 Rabia.\nCuando Beowulf recibe daño, gana 1 Rabia.\nBeowulf tiene un máximo de 3 Rabia.',
     },
     cards: [
       {
@@ -4529,9 +4529,9 @@ export const unmatched: Character[] = [
         boost: 2,
         character: 'BEOWULF',
         description:
-          "Immediately: Gain 1 Rage.\n\nDuring combat: This card's value is +1 for each Rage you have. (You do not spend Rage for this effect.)",
+          "Immediately: Gain 1 Rage.\nDuring combat: This card's value is +1 for each Rage you have. (You do not spend Rage for this effect.)",
         descripcion:
-          'Inmediatamente: Gana 1 Rabia.\n\nDurante el combate: El valor de esta carta es +1 por cada Rabia que tengas. (No gastas Rabia para este efecto.)',
+          'Inmediatamente: Gana 1 Rabia.\nDurante el combate: El valor de esta carta es +1 por cada Rabia que tengas. (No gastas Rabia para este efecto.)',
       },
       {
         name: 'Fatal Struggle',
@@ -4562,9 +4562,9 @@ export const unmatched: Character[] = [
         boost: 3,
         character: 'BEOWULF',
         description:
-          'Spend any amount of Rage. Choose a different effect for each Rage spent:\n\n- draw 2 cards\n\n- move Beowulf up to 4 spaces\n\n- Beowulf recovers 2 health.',
+          'Spend any amount of Rage. Choose a different effect for each Rage spent:\n- draw 2 cards\n- move Beowulf up to 4 spaces\n- Beowulf recovers 2 health.',
         descripcion:
-          'Gasta cualquier cantidad de Rabia. Elige un efecto diferente por cada Rabia gastada:\n\n- roba 2 cartas\n\n- mueve a Beowulf hasta 4 espacios\n\n- Beowulf se recupera 2 de salud.',
+          'Gasta cualquier cantidad de Rabia. Elige un efecto diferente por cada Rabia gastada:\n- roba 2 cartas\n- mueve a Beowulf hasta 4 espacios\n- Beowulf se recupera 2 de salud.',
       },
       {
         name: 'Hot for the Battle',
@@ -4619,9 +4619,9 @@ export const unmatched: Character[] = [
         boost: 1,
         character: 'BEOWULF',
         description:
-          "This card's effects cannot be canceled.\n\nDuring combat: You may spend 2 Rage to make this card's value 5 instead. You may spend 1 Rage to BOOST this card. (You may do both.)",
+          "This card's effects cannot be canceled.\nDuring combat: You may spend 2 Rage to make this card's value 5 instead. You may spend 1 Rage to BOOST this card. (You may do both.)",
         descripcion:
-          'Los efectos de esta carta no pueden ser cancelados.\n\nDurante el combate: Puedes gastar 2 Rabia para hacer que el valor de esta carta sea 5 en vez de 3. Puedes gastar 1 Rabia para BOOST esta carta. (Puedes hacer ambas cosas.)',
+          'Los efectos de esta carta no pueden ser cancelados.\nDurante el combate: Puedes gastar 2 Rabia para hacer que el valor de esta carta sea 5 en vez de 3. Puedes gastar 1 Rabia para BOOST esta carta. (Puedes hacer ambas cosas.)',
       },
       {
         name: 'The Equal of Grendel',
@@ -4663,8 +4663,8 @@ export const unmatched: Character[] = [
     amount: 30,
     image: require('assets/backs/littlered.jpg'),
     ability: {
-      en: "Resolve an effect on a card you play if the symbol next to the effect matches the item in your basket. At the start of the game, place LITTLE RED's BASKET in your discard pile.\n\nLittle Red's Basket: This starts in your discard pile. It does not count as a card.",
-      es: 'Resuelve un efecto sobre una carta que juegas si el símbolo junto a ese efecto coincide con el objeto en tu cesta. Al comienzo del juego, coloca la cesta de Little Red en tu descarte.\n\nCesta de Little Red: Esta carta no cuenta como una carta.',
+      en: "Resolve an effect on a card you play if the symbol next to the effect matches the item in your basket. At the start of the game, place LITTLE RED's BASKET in your discard pile.\nLittle Red's Basket: This starts in your discard pile. It does not count as a card.",
+      es: 'Resuelve un efecto sobre una carta que juegas si el símbolo junto a ese efecto coincide con el objeto en tu cesta. Al comienzo del juego, coloca la cesta de Little Red en tu descarte.\nCesta de Little Red: Esta carta no cuenta como una carta.',
     },
     cards: [
       {
@@ -4673,8 +4673,8 @@ export const unmatched: Character[] = [
         amount: 2,
         character: 'HUNTSMAN',
         boost: 3,
-        description: 'Little Red Recovers 2 health.\n\n🐺 Little Red recovers 4 health instead.',
-        descripcion: 'Little Red recupera 2 de vida.\n\n🐺 Little Red recupera 4 de vida en vez de 2.',
+        description: 'Little Red Recovers 2 health.\n🐺 Little Red recovers 4 health instead.',
+        descripcion: 'Little Red recupera 2 de vida.\n🐺 Little Red recupera 4 de vida en vez de 2.',
       },
       {
         name: 'Into the Woods 🐺🌹⚔️',
@@ -4704,9 +4704,9 @@ export const unmatched: Character[] = [
         character: 'LITTLE RED',
         boost: 1,
         description:
-          "🐺 Place Little Red in any space. Gain 1 action.\n\n⚔️ Deal 2 damage to each opposing fighter in Little Red's zone.\n\n🌹 Draw 3 cards.",
+          "🐺 Place Little Red in any space. Gain 1 action.\n⚔️ Deal 2 damage to each opposing fighter in Little Red's zone.\n🌹 Draw 3 cards.",
         descripcion:
-          '🐺 Coloca a Little Red en cualquier espacio. Gana 1 acción.\n\n⚔️ Haz 2 de daño a cada luchador contrario en la zona de Little Red.\n\n🌹 Toma 3 cartas.',
+          '🐺 Coloca a Little Red en cualquier espacio. Gana 1 acción.\n⚔️ Haz 2 de daño a cada luchador contrario en la zona de Little Red.\n🌹 Toma 3 cartas.',
       },
       {
         name: 'Once Upon a Time 🌹',
@@ -4715,8 +4715,8 @@ export const unmatched: Character[] = [
         amount: 2,
         character: 'any',
         boost: 1,
-        description: 'After combat:\n\n⚔️ Deal 3 damage to the opposing fighter.',
-        descripcion: 'Después del combate:\n\n⚔️ Haz 3 de daño a el luchador contrario.',
+        description: 'After combat:\n⚔️ Deal 3 damage to the opposing fighter.',
+        descripcion: 'Después del combate:\n⚔️ Haz 3 de daño a el luchador contrario.',
       },
       {
         name: 'Stones in the Belly 🌹',
@@ -4726,9 +4726,9 @@ export const unmatched: Character[] = [
         character: 'any',
         boost: 1,
         description:
-          "During combat:\n\n⚔️ Your opponent discards 1 random card. Add its BOOST value to this card's value.",
+          "During combat:\n⚔️ Your opponent discards 1 random card. Add its BOOST value to this card's value.",
         descripcion:
-          'Durante el combate:\n\n⚔️ Tu oponente descarta 1 carta aleatoria. Añade su valor BOOST a el valor de esta carta.',
+          'Durante el combate:\n⚔️ Tu oponente descarta 1 carta aleatoria. Añade su valor BOOST a el valor de esta carta.',
       },
       {
         name: "The Wolf's Skin ⚔️",
@@ -4737,8 +4737,8 @@ export const unmatched: Character[] = [
         amount: 3,
         character: 'any',
         boost: 2,
-        description: 'After combat:\n\n🐺 Draw 2 cards.',
-        descripcion: 'Después del combate:\n\n🐺 Toma 2 cartas.',
+        description: 'After combat:\n🐺 Draw 2 cards.',
+        descripcion: 'Después del combate:\n🐺 Toma 2 cartas.',
       },
       {
         name: 'What a Terrible Big Mouth You Have',
@@ -4747,9 +4747,8 @@ export const unmatched: Character[] = [
         amount: 2,
         character: 'LITTLE RED',
         boost: 2,
-        description:
-          'After combat:\n\n🐺 Deal damage to the opposing fighter equal to the printed value of their card.',
-        descripcion: 'Después del combate:\n\n🐺 Haz daño a el luchador contrario igual al valor de su carta.',
+        description: 'After combat:\n🐺 Deal damage to the opposing fighter equal to the printed value of their card.',
+        descripcion: 'Después del combate:\n🐺 Haz daño a el luchador contrario igual al valor de su carta.',
       },
       {
         name: 'What Big Ears You Have 🐺',
@@ -4769,9 +4768,9 @@ export const unmatched: Character[] = [
         character: 'LITTLE RED',
         boost: 2,
         description:
-          "Immediately: Cancel all effects on your opponent's card.\n\n🌹 Also ignore the value of your opponent's card.",
+          "Immediately: Cancel all effects on your opponent's card.\n🌹 Also ignore the value of your opponent's card.",
         descripcion:
-          'Inmediatamente: Cancela todos los efectos de la carta del oponente.\n\n🌹 También ignora el valor de la carta del oponente.',
+          'Inmediatamente: Cancela todos los efectos de la carta del oponente.\n🌹 También ignora el valor de la carta del oponente.',
       },
       {
         name: 'What Large Hands You Have 🐺',
@@ -4781,9 +4780,9 @@ export const unmatched: Character[] = [
         character: 'LITTLE RED',
         boost: 3,
         description:
-          'After combat: You may return this card to your hand.\n\n🌹 Instead, you may return the top card of your discard pile to your hand.',
+          'After combat: You may return this card to your hand.\n🌹 Instead, you may return the top card of your discard pile to your hand.',
         descripcion:
-          'Después del combate: Puedes devolver esta carta a tu mano.\n\n🌹 En vez de ello, puedes devolver la carta superior de tu pila de descarte a tu mano.',
+          'Después del combate: Puedes devolver esta carta a tu mano.\n🌹 En vez de ello, puedes devolver la carta superior de tu pila de descarte a tu mano.',
       },
       {
         name: "What's That In My Basket? 🌟",
@@ -4813,9 +4812,9 @@ export const unmatched: Character[] = [
         character: 'HOUDINI',
         boost: 4,
         description:
-          'Draw 2 cards. Gain 1 action.\n\nIf an effect would let an opponent look at your hand, you may reveal this card and cancel that effect.',
+          'Draw 2 cards. Gain 1 action.\nIf an effect would let an opponent look at your hand, you may reveal this card and cancel that effect.',
         descripcion:
-          'Roba 2 cartas. Gana 1 acción.\n\nSi un efecto permitiría a un oponente mirar tu mano, puedes revelar esta carta y cancelar ese efecto.',
+          'Roba 2 cartas. Gana 1 acción.\nSi un efecto permitiría a un oponente mirar tu mano, puedes revelar esta carta y cancelar ese efecto.',
       },
       {
         name: 'All Part of the Show',
@@ -4825,9 +4824,9 @@ export const unmatched: Character[] = [
         character: 'any',
         boost: 2,
         description:
-          "BOOSTED WITH: Houdini recovers 2 health.\n\nThis card's effect cannot be canceled.\n\nAfter combat: If your fighter was defeated, set their health to 4 instead and place them in any space. (This effect happens even if Houdini was defeated.)",
+          "BOOSTED WITH: Houdini recovers 2 health.\nThis card's effect cannot be canceled.\nAfter combat: If your fighter was defeated, set their health to 4 instead and place them in any space. (This effect happens even if Houdini was defeated.)",
         descripcion:
-          'EFECTO BOOST: Houdini recupera 2 de salud.\n\nLos efectos de esta carta no pueden ser cancelados.\n\nDespués del combate: Si tu luchador fue derrotado, establece su salud en 4 en vez de 0 y colócalo en cualquier espacio. (Este efecto ocurre incluso si Houdini fue derrotado.)',
+          'EFECTO BOOST: Houdini recupera 2 de salud.\nLos efectos de esta carta no pueden ser cancelados.\nDespués del combate: Si tu luchador fue derrotado, establece su salud en 4 en vez de 0 y colócalo en cualquier espacio. (Este efecto ocurre incluso si Houdini fue derrotado.)',
       },
       {
         name: 'An Illusion of My Own Design',
@@ -4836,9 +4835,8 @@ export const unmatched: Character[] = [
         amount: 2,
         character: 'HOUDINI',
         boost: 1,
-        description: 'Immediately: Your opponent may BOOST their card.\n\nDuring combat: You may BOOST this card.',
-        descripcion:
-          'Inmediatamente: Tu oponente puede BOOST su carta.\n\nDurante el combate: Puedes BOOST esta carta.',
+        description: 'Immediately: Your opponent may BOOST their card.\nDuring combat: You may BOOST this card.',
+        descripcion: 'Inmediatamente: Tu oponente puede BOOST su carta.\nDurante el combate: Puedes BOOST esta carta.',
       },
       {
         name: 'And the Beautiful Bess!',
@@ -4848,9 +4846,9 @@ export const unmatched: Character[] = [
         character: 'BESS',
         boost: 1,
         description:
-          "BOOSTED WITH: If it's your turn, gain 1 action.\n\nIf you discard this card as a result of an opponent's effect, draw 1 card.",
+          "BOOSTED WITH: If it's your turn, gain 1 action.\nIf you discard this card as a result of an opponent's effect, draw 1 card.",
         descripcion:
-          'EFECTO BOOST: Si es tu turno, gana 1 acción.\n\nSi descartas esta carta como resultado de un efecto del oponente, roba 1 carta.',
+          'EFECTO BOOST: Si es tu turno, gana 1 acción.\nSi descartas esta carta como resultado de un efecto del oponente, roba 1 carta.',
       },
       {
         name: 'Flourish',
@@ -4859,8 +4857,8 @@ export const unmatched: Character[] = [
         amount: 4,
         character: 'any',
         boost: 2,
-        description: 'BOOSTED WITH: Draw 1 card.\n\nDuring combat: You may BOOST this card.',
-        descripcion: 'EFECTO BOOST: Roba 1 carta.\n\nDurante el combate: Puedes BOOST esta carta.',
+        description: 'BOOSTED WITH: Draw 1 card.\nDuring combat: You may BOOST this card.',
+        descripcion: 'EFECTO BOOST: Roba 1 carta.\nDurante el combate: Puedes BOOST esta carta.',
       },
       {
         name: 'For My Next Trick',
@@ -4880,9 +4878,9 @@ export const unmatched: Character[] = [
         character: 'HOUDINI',
         boost: 3,
         description:
-          'During combat: You may BOOST this card.\n\nAfter combat: If you won the combat, place your fighter in any space.',
+          'During combat: You may BOOST this card.\nAfter combat: If you won the combat, place your fighter in any space.',
         descripcion:
-          'Durante el combate: Puedes BOOST esta carta.\n\nDespués del combate: Si ganaste el combate, coloca a tu luchador en cualquier espacio.',
+          'Durante el combate: Puedes BOOST esta carta.\nDespués del combate: Si ganaste el combate, coloca a tu luchador en cualquier espacio.',
       },
       {
         name: 'Misdirection',
@@ -4892,9 +4890,9 @@ export const unmatched: Character[] = [
         character: 'any',
         boost: 1,
         description:
-          "BOOSTED WITH: Deal 2 damage to any fighter.\n\nImmediately: Cancel all effects on your opponent's card.",
+          "BOOSTED WITH: Deal 2 damage to any fighter.\nImmediately: Cancel all effects on your opponent's card.",
         descripcion:
-          'EFECTO BOOST: Haz 2 de daño a cualquier luchador.\n\nInmediatamente: Cancela todos los efectos de la carta del oponente.',
+          'EFECTO BOOST: Haz 2 de daño a cualquier luchador.\nInmediatamente: Cancela todos los efectos de la carta del oponente.',
       },
       {
         name: 'Set the Stage',
@@ -4903,9 +4901,9 @@ export const unmatched: Character[] = [
         character: 'BESS',
         boost: 2,
         description:
-          "BOOSTED WITH: Look at an opponent's hand and choose a card for them to discard.\n\nDraw 3 cards. Then, put a card in your hand on top of your deck.",
+          "BOOSTED WITH: Look at an opponent's hand and choose a card for them to discard.\nDraw 3 cards. Then, put a card in your hand on top of your deck.",
         descripcion:
-          'EFECTO BOOST: Mira la mano de un oponente y elige una carta para que la descarte.\n\nRoba 3 cartas. Luego, pon una carta de tu mano en la parte superior de tu mazo.',
+          'EFECTO BOOST: Mira la mano de un oponente y elige una carta para que la descarte.\nRoba 3 cartas. Luego, pon una carta de tu mano en la parte superior de tu mazo.',
       },
       {
         name: 'Sleight of Hand',
@@ -4915,9 +4913,9 @@ export const unmatched: Character[] = [
         character: 'any',
         boost: 3,
         description:
-          'BOOSTED WITH: Draw 1 card.\n\nImmediately: You may return this card to your hand and choose a different card to play. Resolve all effects on that card as normal.',
+          'BOOSTED WITH: Draw 1 card.\nImmediately: You may return this card to your hand and choose a different card to play. Resolve all effects on that card as normal.',
         descripcion:
-          'EFECTO BOOST: Roba 1 carta.\n\nInmediatamente: Puedes devolver esta carta a tu mano y elegir una carta diferente para jugar. Resuelve todos los efectos de esa carta como de costumbre.',
+          'EFECTO BOOST: Roba 1 carta.\nInmediatamente: Puedes devolver esta carta a tu mano y elegir una carta diferente para jugar. Resuelve todos los efectos de esa carta como de costumbre.',
       },
       {
         name: 'Smoke and Mirrors',
@@ -4939,9 +4937,9 @@ export const unmatched: Character[] = [
         character: 'HOUDINI',
         boost: 3,
         description:
-          'During combat: You may BOOST this card twice.\n\nAfter combat: Return one card you boosted with to your hand.',
+          'During combat: You may BOOST this card twice.\nAfter combat: Return one card you boosted with to your hand.',
         descripcion:
-          'Durante el combate: Puedes BOOST esta carta dos veces.\n\nDespués del combate: Devuelve una carta con la que hayas BOOST a tu mano.',
+          'Durante el combate: Puedes BOOST esta carta dos veces.\nDespués del combate: Devuelve una carta con la que hayas BOOST a tu mano.',
       },
       {
         name: 'Vanishing Act',
@@ -5065,9 +5063,9 @@ export const unmatched: Character[] = [
         boost: 3,
         character: 'any',
         description:
-          "Gain 1 action and choose one effect:\n\n- draw 5 cards\n\n- for the rest of your turn, your cards' values are 4 and cannot be changed\n\n- each opponent discards 2 cards",
+          "Gain 1 action and choose one effect:\n- draw 5 cards\n- for the rest of your turn, your cards' values are 4 and cannot be changed\n- each opponent discards 2 cards",
         descripcion:
-          'Gana 1 acción y elige un efecto:\n\n- roba 5 cartas\n\n- por el resto de tu turno, los valores de tus cartas son 4 y no pueden ser cambiados\n\n- cada oponente descarta 2 cartas',
+          'Gana 1 acción y elige un efecto:\n- roba 5 cartas\n- por el resto de tu turno, los valores de tus cartas son 4 y no pueden ser cambiados\n- cada oponente descarta 2 cartas',
       },
       {
         name: 'Wishing For More Wishes',
@@ -5096,8 +5094,8 @@ export const unmatched: Character[] = [
     image: require('assets/backs/blackpanther.jpg'),
     amount: 30,
     ability: {
-      en: 'Whenever you BOOST, draw 1 card.\n\nCards stored in your VIBRANIUM SUIT can only be used to BOOST.',
-      es: 'Siempre que hagas BOOST, roba 1 carta.\n\nLas cartas almacenadas en tu TRAJE DE VIBRANIUM sólo se pueden usar para BOOST.',
+      en: 'Whenever you BOOST, draw 1 card.\nCards stored in your VIBRANIUM SUIT can only be used to BOOST.',
+      es: 'Siempre que hagas BOOST, roba 1 carta.\nLas cartas almacenadas en tu TRAJE DE VIBRANIUM sólo se pueden usar para BOOST.',
     },
     cards: [
       {
@@ -5248,8 +5246,8 @@ export const unmatched: Character[] = [
     image: require('assets/backs/blackwidow.jpg'),
     amount: 31,
     ability: {
-      en: 'Before drawing your starting hand, add THE MOSCOW PROTOCOL card to your hand.\n\nThen, shuffle your deck and draw 5 cards. (Your starting hand if 6 cards instead of 5.)',
-      es: 'Antes de robar tu mano inicial, añade la carta THE MOSCOW PROTOCOL a tu mano.\n\nLuego, baraja tu mazo y roba 5 cartas. (Tu mano inicial es de 6 cartas en vez de 5.)',
+      en: 'Before drawing your starting hand, add THE MOSCOW PROTOCOL card to your hand.\nThen, shuffle your deck and draw 5 cards. (Your starting hand if 6 cards instead of 5.)',
+      es: 'Antes de robar tu mano inicial, añade la carta THE MOSCOW PROTOCOL a tu mano.\nLuego, baraja tu mazo y roba 5 cartas. (Tu mano inicial es de 6 cartas en vez de 5.)',
     },
     cards: [
       {
@@ -5260,9 +5258,9 @@ export const unmatched: Character[] = [
         boost: 3,
         character: 'MARIA HILL',
         description:
-          'After combat: Move each of your fighters up to 3 spaces. They may move through opposing fighters.\n\nThen, shuffle 1 scheme from your discard pile into your deck.',
+          'After combat: Move each of your fighters up to 3 spaces. They may move through opposing fighters.\nThen, shuffle 1 scheme from your discard pile into your deck.',
         descripcion:
-          'Después del combate: Mueve a cada uno de tus luchadores hasta 3 espacios. Pueden moverse a través de luchadores oponentes.\n\nLuego, baraja 1 carta scheme de tu pila de descarte en tu mazo.',
+          'Después del combate: Mueve a cada uno de tus luchadores hasta 3 espacios. Pueden moverse a través de luchadores oponentes.\nLuego, baraja 1 carta scheme de tu pila de descarte en tu mazo.',
       },
       {
         name: 'Caught in a Web',
@@ -5325,9 +5323,9 @@ export const unmatched: Character[] = [
         boost: 4,
         character: 'BLACK WIDOW',
         description:
-          'Mission: You have 2 or fewer other cards in your hand.\n\nDraw 5 cards. Each opponent discards 1 random card. Acquire a new mission.',
+          'Mission: You have 2 or fewer other cards in your hand.\nDraw 5 cards. Each opponent discards 1 random card. Acquire a new mission.',
         descripcion:
-          'Misión: Tienes 2 o menos cartas en tu mano.\n\nRoba 5 cartas. Cada oponente descarta 1 carta al azar. Adquiere una nueva misión.',
+          'Misión: Tienes 2 o menos cartas en tu mano.\nRoba 5 cartas. Cada oponente descarta 1 carta al azar. Adquiere una nueva misión.',
       },
       {
         name: 'The Firenze Agenda',
@@ -5336,9 +5334,9 @@ export const unmatched: Character[] = [
         boost: 4,
         character: 'BLACK WIDOW',
         description:
-          "Mission: Black Widow is adjacent to an opposing hero.\n\nDeal 2 damage to each opposing fighter in Black Widow's zone. Acquire a new mission.",
+          "Mission: Black Widow is adjacent to an opposing hero.\nDeal 2 damage to each opposing fighter in Black Widow's zone. Acquire a new mission.",
         descripcion:
-          'Misión: Black Widow está adyacente a un héroe oponente.\n\nHaz 2 de daño a cada luchador contrario en la zona de Black Widow. Adquiere una nueva misión.',
+          'Misión: Black Widow está adyacente a un héroe oponente.\nHaz 2 de daño a cada luchador contrario en la zona de Black Widow. Adquiere una nueva misión.',
       },
       {
         name: 'The Kinshasa Directive',
@@ -5347,9 +5345,9 @@ export const unmatched: Character[] = [
         boost: 4,
         character: 'BLACK WIDOW',
         description:
-          'Mission: Black Widow is in your starting space.\n\nChoose an opponent. They discard 2 cards. Acquire a new mission.',
+          'Mission: Black Widow is in your starting space.\nChoose an opponent. They discard 2 cards. Acquire a new mission.',
         descripcion:
-          'Misión: Black Widow está en tu espacio inicial.\n\nElige a un oponente. Ese oponente descarta 2 cartas. Adquiere una nueva misión.',
+          'Misión: Black Widow está en tu espacio inicial.\nElige a un oponente. Ese oponente descarta 2 cartas. Adquiere una nueva misión.',
       },
       {
         name: 'The Madripoor Sanction',
@@ -5358,9 +5356,9 @@ export const unmatched: Character[] = [
         boost: 4,
         character: 'BLACK WIDOW',
         description:
-          "Mission: Black Widow is in an opponent's starting space.\n\nDeal 2 damage to each of that opponent's fighters. Acquire a new mission.",
+          "Mission: Black Widow is in an opponent's starting space.\nDeal 2 damage to each of that opponent's fighters. Acquire a new mission.",
         descripcion:
-          'Misión: Black Widow está en el espacio inicial de un oponente.\n\nHaz 2 de daño a cada uno de los luchadores de ese oponente. Adquiere una nueva misión.',
+          'Misión: Black Widow está en el espacio inicial de un oponente.\nHaz 2 de daño a cada uno de los luchadores de ese oponente. Adquiere una nueva misión.',
       },
       {
         name: 'The Moscow Protocol',
@@ -5369,9 +5367,9 @@ export const unmatched: Character[] = [
         boost: 4,
         character: 'BLACK WIDOW',
         description:
-          'Mission: An opposing fighter took damage this turn.\n\nDraw 1 card and gain 1 action. Acquire a new mission.',
+          'Mission: An opposing fighter took damage this turn.\nDraw 1 card and gain 1 action. Acquire a new mission.',
         descripcion:
-          'Misión: Un luchador contrario recibió daño este turno.\n\nRoba 1 carta y gana 1 acción. Adquiere una nueva misión.',
+          'Misión: Un luchador contrario recibió daño este turno.\nRoba 1 carta y gana 1 acción. Adquiere una nueva misión.',
       },
       {
         name: "Widow's Bite",
@@ -5441,9 +5439,9 @@ export const unmatched: Character[] = [
         boost: 1,
         character: 'any',
         description:
-          'During combat: If Winter Soldier is adjacent to the opposing fighter, the value of this card is 6 instead.\n\nAfter combat: {RED ROOM} Your opponent moves each of their fighters up to 5 spaces.',
+          'During combat: If Winter Soldier is adjacent to the opposing fighter, the value of this card is 6 instead.\nAfter combat: {RED ROOM} Your opponent moves each of their fighters up to 5 spaces.',
         descripcion:
-          'Durante el combate: Si Winter Soldier está adyacente al luchador contrario, el valor de esta carta es 6 en vez de 2.\n\nDespués del combate: {RED ROOM} Tu oponente mueve a cada uno de sus luchadores hasta 5 espacios.',
+          'Durante el combate: Si Winter Soldier está adyacente al luchador contrario, el valor de esta carta es 6 en vez de 2.\nDespués del combate: {RED ROOM} Tu oponente mueve a cada uno de sus luchadores hasta 5 espacios.',
       },
       {
         name: 'Born in the Barracks',
@@ -5463,9 +5461,9 @@ export const unmatched: Character[] = [
         boost: 2,
         character: 'any',
         description:
-          'During combat: You may BOOST this card.\n\nAfter combat: Deal damage to the opposing fighter equal to the amount of combat damage you took.',
+          'During combat: You may BOOST this card.\nAfter combat: Deal damage to the opposing fighter equal to the amount of combat damage you took.',
         descripcion:
-          'Durante el combate: Puedes BOOST esta carta.\n\nDespués del combate: Haz daño al luchador contrario igual a la cantidad de daño de combate que recibiste.',
+          'Durante el combate: Puedes BOOST esta carta.\nDespués del combate: Haz daño al luchador contrario igual a la cantidad de daño de combate que recibiste.',
       },
       {
         name: 'Feint',
@@ -5484,9 +5482,9 @@ export const unmatched: Character[] = [
         boost: 3,
         character: 'any',
         description:
-          'Draw until you have 5 cards in your hand.\n\n{RED ROOM} Each opponent may draw until they have 5 cards in their hand.',
+          'Draw until you have 5 cards in your hand.\n{RED ROOM} Each opponent may draw until they have 5 cards in their hand.',
         descripcion:
-          'Roba hasta que tengas 5 cartas en tu mano.\n\n{RED ROOM} Cada oponente puede robar hasta que tenga 5 cartas en su mano.',
+          'Roba hasta que tengas 5 cartas en tu mano.\n{RED ROOM} Cada oponente puede robar hasta que tenga 5 cartas en su mano.',
       },
       {
         name: 'Marksman',
@@ -5706,9 +5704,9 @@ export const unmatched: Character[] = [
         boost: 2,
         character: 'any',
         description:
-          "Immediately: Cancel all effects on your opponent's card.\n\nDuring combat: If you are attacking, the value of this card is 4 instead.",
+          "Immediately: Cancel all effects on your opponent's card.\nDuring combat: If you are attacking, the value of this card is 4 instead.",
         descripcion:
-          'Inmediatamente: Cancela todos los efectos de la carta del oponente.\n\nDurante el combate: Si estás atacando, el valor de esta carta es 4 en vez de 1.',
+          'Inmediatamente: Cancela todos los efectos de la carta del oponente.\nDurante el combate: Si estás atacando, el valor de esta carta es 4 en vez de 1.',
       },
       {
         name: 'Double Jeopardy',
@@ -5849,9 +5847,9 @@ export const unmatched: Character[] = [
         boost: 3,
         character: 'any',
         description:
-          'During combat: You may BLIND BOOST this card.\n\nAfter combat: If you won the combat, gain 1 action.',
+          'During combat: You may BLIND BOOST this card.\nAfter combat: If you won the combat, gain 1 action.',
         descripcion:
-          'Durante el combate: Puedes BLIND BOOST a esta carta.\n\nDespués del combate: Si ganaste el combate, gana 1 acción.',
+          'Durante el combate: Puedes BLIND BOOST a esta carta.\nDespués del combate: Si ganaste el combate, gana 1 acción.',
       },
       {
         name: 'Cloak of Levitation',
@@ -5913,9 +5911,9 @@ export const unmatched: Character[] = [
         boost: 2,
         character: 'DOCTOR STRANGE',
         description:
-          'If the value of this card is above 7, ignore its value.\n\nDuring combat: You may BLIND BOOST this card up to two times.',
+          'If the value of this card is above 7, ignore its value.\nDuring combat: You may BLIND BOOST this card up to two times.',
         descripcion:
-          'Si el valor de esta carta es superior a 7, ignora su valor.\n\nDurante el combate: Puedes BLIND BOOST a esta carta hasta dos veces.',
+          'Si el valor de esta carta es superior a 7, ignora su valor.\nDurante el combate: Puedes BLIND BOOST a esta carta hasta dos veces.',
       },
       {
         name: 'Steadfast Disciple',
@@ -5972,8 +5970,8 @@ export const unmatched: Character[] = [
     image: require('assets/backs/tesla.jpg'),
     amount: 30,
     ability: {
-      en: 'Start the game with 1 coil charged.\n\nAt the end of your turn, charge 1 coil.\n\nAt the start of your turn, if both coils are charged, deal 1 damage to each opposing fighter adjacent to Tesla and move them up to 1 space.',
-      es: 'Empieza el juego con 1 bobina cargada.\n\nAl final de tu turno, carga 1 bobina.\n\nAl comienzo de tu turno, si ambas bobinas están cargadas, inflige 1 de daño a cada luchador opuesto adyacente a Tesla y muévelos hasta 1 espacio.',
+      en: 'Start the game with 1 coil charged.\nAt the end of your turn, charge 1 coil.\nAt the start of your turn, if both coils are charged, deal 1 damage to each opposing fighter adjacent to Tesla and move them up to 1 space.',
+      es: 'Empieza el juego con 1 bobina cargada.\nAl final de tu turno, carga 1 bobina.\nAl comienzo de tu turno, si ambas bobinas están cargadas, inflige 1 de daño a cada luchador opuesto adyacente a Tesla y muévelos hasta 1 espacio.',
     },
     cards: [
       {
@@ -5983,10 +5981,9 @@ export const unmatched: Character[] = [
         value: 4,
         boost: 3,
         character: 'any',
-        description:
-          'After combat: You may discharge coils:\n\n- 1 Coil: Gain 1 action.\n\n- 2 Coils: Also, draw 1 card.',
+        description: 'After combat: You may discharge coils:\n- 1 Coil: Gain 1 action.\n- 2 Coils: Also, draw 1 card.',
         descripcion:
-          'Después del combate: Puedes descargar bobinas:\n\n- 1 Bobina: Gana 1 acción.\n\n- 2 Bobinas: Además, roba 1 carta.',
+          'Después del combate: Puedes descargar bobinas:\n- 1 Bobina: Gana 1 acción.\n- 2 Bobinas: Además, roba 1 carta.',
       },
       {
         name: 'Death Ray',
@@ -5996,9 +5993,9 @@ export const unmatched: Character[] = [
         boost: 4,
         character: 'any',
         description:
-          "During combat: You may discharge coils:\n\n- 1 Coil: This card's value is 5.\n\n- 2 Coils: Instead, this card's value is 7.",
+          "During combat: You may discharge coils:\n- 1 Coil: This card's value is 5.\n- 2 Coils: Instead, this card's value is 7.",
         descripcion:
-          'Durante el combate: Puedes descargar bobinas:\n\n- 1 Bobina: El valor de esta carta es 5.\n\n- 2 Bobinas: En vez de ello, el valor de esta carta es 7.',
+          'Durante el combate: Puedes descargar bobinas:\n- 1 Bobina: El valor de esta carta es 5.\n- 2 Bobinas: En vez de ello, el valor de esta carta es 7.',
       },
       {
         name: 'Fully Charged',
@@ -6017,9 +6014,9 @@ export const unmatched: Character[] = [
         boost: 2,
         character: 'any',
         description:
-          'After combat: Draw 1 card. You may discharge coils:\n\n- 1 Coil: Instead, draw 2 cards.\n\n- 2 Coils: Instead, draw 3 cards and Tesla recovers 1 health.',
+          'After combat: Draw 1 card. You may discharge coils:\n- 1 Coil: Instead, draw 2 cards.\n- 2 Coils: Instead, draw 3 cards and Tesla recovers 1 health.',
         descripcion:
-          'Después del combate: Roba 1 carta. Puedes descargar bobinas:\n\n- 1 Bobina: En vez de ello, roba 2 cartas.\n\n- 2 Bobinas: En vez de ello, roba 3 cartas y Tesla recupera 1 de salud.',
+          'Después del combate: Roba 1 carta. Puedes descargar bobinas:\n- 1 Bobina: En vez de ello, roba 2 cartas.\n- 2 Bobinas: En vez de ello, roba 3 cartas y Tesla recupera 1 de salud.',
       },
       {
         name: 'Kinetic Induction',
@@ -6039,9 +6036,9 @@ export const unmatched: Character[] = [
         boost: 1,
         character: 'any',
         description:
-          'After combat: You may discharge coils:\n\n- 1 Coil: Deal 1 damage to each opposing fighter in your zone.\n\n- 2 Coils: Instead, deal 2 damage.',
+          'After combat: You may discharge coils:\n- 1 Coil: Deal 1 damage to each opposing fighter in your zone.\n- 2 Coils: Instead, deal 2 damage.',
         descripcion:
-          'Después del combate: Puedes descargar bobinas:\n\n- 1 Bobina: Inflige 1 de daño a cada luchador opuesto en tu zona.\n\n- 2 Bobinas: En vez de ello, inflige 2 de daño.',
+          'Después del combate: Puedes descargar bobinas:\n- 1 Bobina: Inflige 1 de daño a cada luchador opuesto en tu zona.\n- 2 Bobinas: En vez de ello, inflige 2 de daño.',
       },
       {
         name: 'Polyphase Coils',
@@ -6051,9 +6048,9 @@ export const unmatched: Character[] = [
         boost: 1,
         character: 'any',
         description:
-          "Immediately: You may discharge coils:\n\n- 1 Coil: Cancel all effects on your opponent's card.\n\n- 2 Coils: Also, ignore that card's value.",
+          "Immediately: You may discharge coils:\n- 1 Coil: Cancel all effects on your opponent's card.\n- 2 Coils: Also, ignore that card's value.",
         descripcion:
-          'Inmediatamente: Puedes descargar bobinas:\n\n- 1 Bobina: Cancela todos los efectos de la carta del oponente.\n\n- 2 Bobinas: Además, ignora el valor de esa carta.',
+          'Inmediatamente: Puedes descargar bobinas:\n- 1 Bobina: Cancela todos los efectos de la carta del oponente.\n- 2 Bobinas: Además, ignora el valor de esa carta.',
       },
       {
         name: 'Remote Control',
@@ -6072,9 +6069,9 @@ export const unmatched: Character[] = [
         boost: 2,
         character: 'any',
         description:
-          'After combat: Move the opposing fighter up to 2 spaces. You may discharge coils:\n\n- 1 Coil: Also, move Tesla up to 2 spaces.\n\n- 2 Coils: Also, your opponent discards 1 random card.',
+          'After combat: Move the opposing fighter up to 2 spaces. You may discharge coils:\n- 1 Coil: Also, move Tesla up to 2 spaces.\n- 2 Coils: Also, your opponent discards 1 random card.',
         descripcion:
-          'Después del combate: Mueve al luchador opuesto hasta 2 espacios. Puedes descargar bobinas:\n\n- 1 Bobina: Además, mueve a Tesla hasta 2 espacios.\n\n- 2 Bobinas: Además, tu oponente descarta 1 carta al azar.',
+          'Después del combate: Mueve al luchador opuesto hasta 2 espacios. Puedes descargar bobinas:\n- 1 Bobina: Además, mueve a Tesla hasta 2 espacios.\n- 2 Bobinas: Además, tu oponente descarta 1 carta al azar.',
       },
       {
         name: 'The Alternating Current',
@@ -6084,9 +6081,9 @@ export const unmatched: Character[] = [
         boost: 3,
         character: 'any',
         description:
-          'After combat: Choose one:\n\n- Charge both coils\n\n- Discharge both coils to have Tesla recover 2 health',
+          'After combat: Choose one:\n- Charge both coils\n- Discharge both coils to have Tesla recover 2 health',
         descripcion:
-          'Después del combate: Elige uno:\n\n- Carga ambas bobinas\n\n- Descarga ambas bobinas para que Tesla recupere 2 de salud',
+          'Después del combate: Elige uno:\n- Carga ambas bobinas\n- Descarga ambas bobinas para que Tesla recupere 2 de salud',
       },
       {
         name: 'X-Ray Radiation',
@@ -6096,9 +6093,9 @@ export const unmatched: Character[] = [
         boost: 1,
         character: 'any',
         description:
-          "During combat: Reveal the top card of your opponent's deck. You may discharge coils:\n\n- 1 Coil: Discard that card.\n\n- 2 Coils: Also, add its boost value to this card's value.",
+          "During combat: Reveal the top card of your opponent's deck. You may discharge coils:\n- 1 Coil: Discard that card.\n- 2 Coils: Also, add its boost value to this card's value.",
         descripcion:
-          'Durante el combate: Revela la carta superior del mazo de tu oponente. Puedes descargar bobinas:\n\n- 1 Bobina: Descarta esa carta.\n\n- 2 Bobinas: Además, añade su valor de boost al valor de esta carta.',
+          'Durante el combate: Revela la carta superior del mazo de tu oponente. Puedes descargar bobinas:\n- 1 Bobina: Descarta esa carta.\n- 2 Bobinas: Además, añade su valor de boost al valor de esta carta.',
       },
     ],
   },
@@ -6107,8 +6104,8 @@ export const unmatched: Character[] = [
     image: require('assets/backs/trent.jpg'),
     amount: 30,
     ability: {
-      en: "At the start of your turn, activate one of your gadgets. Whenever Jill Trent attacks, resolve the active gadget's effect.\n\nHypnoray Blaster\nDURING COMBAT: If your card's printed value is lower than your opponent's, reveal the top card of your opponent's deck. Increase the value of your attack by the BOOST value of the revealed card.\n\nUltrabiotic Tonic\nAFTER COMBAT: If your card's printed value is higher than your opponent's, Jill Trent Recovers 1 health.",
-      es: 'Al comienzo de tu turno, activa uno de tus gadgets. Siempre que Jill Trent ataque, resuelve el efecto del gadget activo.\n\nHypnoray Blaster\nDURANTE EL COMBATE: Si el valor impreso de tu carta es menor que el de tu oponente, revela la carta superior del mazo de tu oponente. Aumenta el valor de tu ataque por el valor BOOST de la carta revelada.\n\nUltrabiotic Tonic\nDESPUÉS DEL COMBATE: Si el valor impreso de tu carta es mayor que el de tu oponente, Jill Trent recupera 1 de salud.',
+      en: "At the start of your turn, activate one of your gadgets. Whenever Jill Trent attacks, resolve the active gadget's effect.\nHypnoray Blaster\nDURING COMBAT: If your card's printed value is lower than your opponent's, reveal the top card of your opponent's deck. Increase the value of your attack by the BOOST value of the revealed card.\nUltrabiotic Tonic\nAFTER COMBAT: If your card's printed value is higher than your opponent's, Jill Trent Recovers 1 health.",
+      es: 'Al comienzo de tu turno, activa uno de tus gadgets. Siempre que Jill Trent ataque, resuelve el efecto del gadget activo.\nHypnoray Blaster\nDURANTE EL COMBATE: Si el valor impreso de tu carta es menor que el de tu oponente, revela la carta superior del mazo de tu oponente. Aumenta el valor de tu ataque por el valor BOOST de la carta revelada.\nUltrabiotic Tonic\nDESPUÉS DEL COMBATE: Si el valor impreso de tu carta es mayor que el de tu oponente, Jill Trent recupera 1 de salud.',
     },
     cards: [
       {
@@ -6253,9 +6250,9 @@ export const unmatched: Character[] = [
         boost: 3,
         character: 'JILL TRENT',
         description:
-          'After combat: Choose one:\n\n-Jill Trent recovers 1 health,\n\n-Move Jill Trent 1 space,\n\n-Draw 1 card',
+          'After combat: Choose one:\n-Jill Trent recovers 1 health,\n-Move Jill Trent 1 space,\n-Draw 1 card',
         descripcion:
-          'Después del combate: Elige uno:\n\n-Jill Trent recupera 1 de salud,\n\n-Mueve a Jill Trent 1 espacio,\n\n-Roba 1 carta',
+          'Después del combate: Elige uno:\n-Jill Trent recupera 1 de salud,\n-Mueve a Jill Trent 1 espacio,\n-Roba 1 carta',
       },
     ],
   },
@@ -6339,9 +6336,9 @@ export const unmatched: Character[] = [
         boost: 2,
         character: 'any',
         description:
-          "During combat: If Golden Bat shares no zones with the space he started this turn in, this card's value is 4 instead.\n\nAfter combat: Move Golden Bat up to 5 spaces.",
+          "During combat: If Golden Bat shares no zones with the space he started this turn in, this card's value is 4 instead.\nAfter combat: Move Golden Bat up to 5 spaces.",
         descripcion:
-          'Durante el combate: Si Golden Bat no comparte zonas con el espacio en el que comenzó este turno, el valor de esta carta es 4 en vez de 2.\n\nDespués del combate: Mueve a Golden Bat hasta 5 espacios.',
+          'Durante el combate: Si Golden Bat no comparte zonas con el espacio en el que comenzó este turno, el valor de esta carta es 4 en vez de 2.\nDespués del combate: Mueve a Golden Bat hasta 5 espacios.',
       },
       {
         name: 'Sight Beyond Sight',
