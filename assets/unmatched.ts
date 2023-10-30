@@ -2074,6 +2074,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Yennenga',
+    image: require('assets/backs/yennenga.jpg'),
     amount: 30,
     ability: {
       en: 'If Yennenga would take damage, you may assign any amount of that damage to one or more Archers in her zone instead. (You may not assign more damage to an Archer than their remaining health.)\n\nIf damage would be dealt to Yennenga and an Archer at the same time, Yennenga cannot assign damage from herself to that Archer if the Archer would already be defeated by the damage it took. (Yennenga cannot use her ability to make damage disappear.)',
@@ -2507,6 +2508,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Moon Knight',
+    image: require('assets/backs/moonknight.jpg'),
     amount: 30,
     ability: {
       en: 'Moon Knight\nAt the start of your turn, move up to 2 spaces.\n\nKhonshu\nKhonshu adds +2 to the value of his attack cards. He does not take damage from effects other than combat damage.\n\nMr. Knight\nMr. Knight adds +1 to all his defense values.\n\nAt the end of your turn, change to your next identity (In order, Moon Knight -> Khonshu -> Mr. Knight, repeating).\n\nStart the game as Moon Knight.',
@@ -3100,6 +3102,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Medusa',
+    image: require('assets/backs/medusa.jpg'),
     amount: 30,
     ability: {
       en: "At the start of your turn, you may deal 1 damage to an opposing fighter in Medusa's zone.",
@@ -4392,6 +4395,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Elektra',
+    image: require('assets/backs/elektra.jpg'),
     amount: 20,
     ability: {
       en: 'The first time Elektra would be defeated, remove her and all Hand from the board. She is not defeated. At the start of your next turn, Resurrect her. (Ignore effects with the RESURRECTED symbol.)\n\nWhen Elektra Resurrects: Flip your health dial. Shuffle your discard pile into your deck.\n\nPlace Elektra and all Hand back onto the board with each fighter in a different zone. (You must resolve effects with the RESURRECTED symbol.)\n\nWhen resurrecting, only your discard pile is shuffled into your deck, not your hand of cards. When placing your fighters after you resurrect, you may place them in zones containing opposing fighters, you just cannot place two of your own fighters in the same zone as each other.',
@@ -4795,6 +4799,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Houdini',
+    image: require('assets/backs/houdini.jpg'),
     amount: 30,
     ability: {
       en: 'When you take the maneuver action and BOOST, you may place Houdini in any space instead of moving. (Bess moves as normal.)',
@@ -4954,6 +4959,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'The Genie',
+    image: require('assets/backs/genie.jpg'),
     amount: 30,
     ability: {
       en: 'At the start of your turn, you may discard 1 card to gain 1 action.',
@@ -5087,6 +5093,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Black Panther',
+    image: require('assets/backs/blackpanther.jpg'),
     amount: 30,
     ability: {
       en: 'Whenever you BOOST, draw 1 card.\n\nCards stored in your VIBRANIUM SUIT can only be used to BOOST.',
@@ -5238,6 +5245,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Black Widow',
+    image: require('assets/backs/blackwidow.jpg'),
     amount: 31,
     ability: {
       en: 'Before drawing your starting hand, add THE MOSCOW PROTOCOL card to your hand.\n\nThen, shuffle your deck and draw 5 cards. (Your starting hand if 6 cards instead of 5.)',
@@ -5409,6 +5417,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Winter Soldier',
+    image: require('assets/backs/wintersoldier.jpg'),
     amount: 30,
     ability: {
       en: "Effects on Winter Soldier's cards cannot be canceled.",
@@ -5545,6 +5554,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Spider-Man',
+    image: require('assets/backs/spiderman.jpg'),
     amount: 30,
     ability: {
       en: 'When an opponent attacks Spider-Man, before you play a defense card, they must tell you the printed value of their card.',
@@ -5681,6 +5691,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'She-Hulk',
+    image: require('assets/backs/shehulk.jpg'),
     amount: 30,
     ability: {
       en: 'At the start of your turn, you may discard a card to deal damage equal to its BOOST value to a fighter in your zone.',
@@ -5823,6 +5834,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Doctor Strange',
+    image: require('assets/backs/strange.jpg'),
     amount: 30,
     ability: {
       en: 'After each combat, if Doctor Strange played a card, you may deal 1 damage to him. If you do, put that card on the bottom of your deck and draw 1 card.',
@@ -5957,6 +5969,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Nikola Tesla',
+    image: require('assets/backs/tesla.jpg'),
     amount: 30,
     ability: {
       en: 'Start the game with 1 coil charged.\n\nAt the end of your turn, charge 1 coil.\n\nAt the start of your turn, if both coils are charged, deal 1 damage to each opposing fighter adjacent to Tesla and move them up to 1 space.',
@@ -6091,6 +6104,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Dr. Jill Trent',
+    image: require('assets/backs/trent.jpg'),
     amount: 30,
     ability: {
       en: "At the start of your turn, activate one of your gadgets. Whenever Jill Trent attacks, resolve the active gadget's effect.\n\nHypnoray Blaster\nDURING COMBAT: If your card's printed value is lower than your opponent's, reveal the top card of your opponent's deck. Increase the value of your attack by the BOOST value of the revealed card.\n\nUltrabiotic Tonic\nAFTER COMBAT: If your card's printed value is higher than your opponent's, Jill Trent Recovers 1 health.",
@@ -6247,6 +6261,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Golden Bat',
+    image: require('assets/backs/goldenbat.jpg'),
     amount: 30,
     ability: {
       en: "If you haven't taken a Maneuver action this turn, add +2 to the value of Golden Bat's attacks.",
@@ -6385,6 +6400,7 @@ export const unmatched: Character[] = [
   },
   {
     name: 'Annie Christmas',
+    image: require('assets/backs/annie.jpg'),
     amount: 30,
     ability: {
       en: "Add +2 to the value of Annie's attacks if she has less health than the defender.",
