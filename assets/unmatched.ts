@@ -1,4 +1,4 @@
-import { Character, FightCard, SchemeCard } from '@/types';
+import { Character, FightCard, SchemeCard } from 'types';
 
 export const unmatched: Character[] = [
   {

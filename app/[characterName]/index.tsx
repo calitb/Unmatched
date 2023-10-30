@@ -10,14 +10,14 @@ import Card from 'components/Card';
 import ReferenceCard from 'components/ReferenceCard';
 
 export default function Details() {
-  const { character_name } = useLocalSearchParams();
-  const character = unmatched.filter((character) => character.name === character_name)[0];
+  const { characterName } = useLocalSearchParams();
+  const selectedCharacter = unmatched.filter((character) => character.name === characterName)[0];
 
   return (
     <SafeAreaView style={styles.container}>
       <Stack.Screen
         options={{
-          title: character.name,
+          title: selectedCharacter.name,
           headerBackTitle: 'Volver',
         }}
       />
@@ -28,7 +28,7 @@ export default function Details() {
           titleStyle={styles.accordionTitle}
           title="Habilidad"
         >
-          <Ability character={character} />
+          <Ability character={selectedCharacter} />
         </List.Accordion>
         <List.Accordion
           style={styles.accordion}
@@ -36,7 +36,7 @@ export default function Details() {
           titleStyle={styles.accordionTitle}
           title="En tu Turno"
         >
-          <ReferenceCard character={character} />
+          <ReferenceCard />
         </List.Accordion>
         <List.Accordion
           style={styles.accordion}
@@ -44,16 +44,16 @@ export default function Details() {
           titleStyle={styles.accordionTitle}
           title="Secuencia de Ataque"
         >
-          <Attack character={character} />
+          <Attack />
         </List.Accordion>
         <List.Accordion
           style={styles.accordion}
           theme={{ colors: { onSurfaceVariant: 'white' } }}
           titleStyle={styles.accordionTitle}
-          title={`${character.amount} Cartas`}
+          title={`${selectedCharacter.amount} Cartas`}
         >
           <View style={styles.cardContainer}>
-            {character.cards.map((card) => (
+            {selectedCharacter.cards.map((card) => (
               <Card key={card.name} card={card} />
             ))}
           </View>

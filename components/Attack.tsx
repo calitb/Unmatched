@@ -1,17 +1,12 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import type { Character } from 'types';
 import { ActionRow, Line } from './ReferenceCard';
 
-interface Props {
-  character: Character;
-}
-
-export default function Attack(props: Props) {
+export default function Attack() {
   return (
     <View style={styles.container}>
-      <ActionRow title={`OBJETIVO`}>
+      <ActionRow title="OBJETIVO">
         Anuncia tu luchador
         {'\n'}
         <Text style={styles.subtext}>(Debes tener una carta de ataque en tu mano que pueda usar tu luchador)</Text>

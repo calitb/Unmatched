@@ -1,13 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import type { Character } from 'types';
-
-interface Props {
-  character: Character;
-}
-
-export default function ReferenceCard(props: Props) {
+export default function ReferenceCard() {
   return (
     <View style={styles.container}>
       <View style={styles.whiteContainer}>
@@ -15,7 +9,7 @@ export default function ReferenceCard(props: Props) {
           Debes tomar 2 acciones. Puedes escoger dos acciones diferentes o la misma acción dos veces.
         </Text>
       </View>
-      <ActionRow title={`MANIOBRAR`}>
+      <ActionRow title="MANIOBRAR">
         Toma una carta. (Obligatorio){'\n'}Mueve tus luchadores (opcional){'\n'}
         Puedes descartar una carta para aplicar BOOST a tu movimiento.
       </ActionRow>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import type { UnmatchedCard } from 'types';
+import { SchemeCard, type UnmatchedCard } from 'types';
 
 interface Props {
   card: UnmatchedCard;
@@ -22,8 +22,8 @@ export default function Card(props: Props) {
   return (
     <View style={styles.itemContainer}>
       <Text style={styles.title}>
-        {amount}x{value != undefined ? ` ${VALUES[value]}${typeIcon}` : ''}
-        {type === 'scheme' ? ` ${typeIcon}` : ''}
+        {amount}x{value !== undefined ? ` ${VALUES[value]}${typeIcon}` : ''}
+        {type === SchemeCard.scheme ? ` ${typeIcon}` : ''}
         {boost > 0 ? ` ${VALUES[boost]}${BOOST}` : ''}
         {` ${name}${character !== 'any' ? ` (${character})` : ''}`}
         {'\n'}

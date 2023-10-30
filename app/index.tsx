@@ -2,16 +2,16 @@ import { useRouter } from 'expo-router';
 import * as React from 'react';
 import { Image, Platform, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { Character } from '@/types';
 import { unmatched } from 'assets/unmatched';
 import { useState } from 'react';
+import { Character } from 'types';
 
 const DEFAULT_CARD = { width: 124.4, height: 175 };
 const WIDTH = DEFAULT_CARD.width * (Platform.OS === 'web' ? 1 : 0.75);
 const HEIGHT = DEFAULT_CARD.height * (Platform.OS === 'web' ? 1 : 0.75);
 
 export default function Home() {
-  const [character, setCharacter] = useState<Character>();
+  const [hoveredCharacter, setHoveredCharacter] = useState<Character>();
 
   const router = useRouter();
 
@@ -26,7 +26,7 @@ export default function Home() {
               router.push(`/${character.name}`);
             }}
             onHoverIn={() => {
-              setCharacter(character);
+              setHoveredCharacter(character);
             }}
           >
             {character.image ? <Image source={character.image} style={styles.card} /> : <View style={styles.card} />}
@@ -34,9 +34,9 @@ export default function Home() {
           </Pressable>
         ))}
       </ScrollView>
-      {character && (
+      {hoveredCharacter && (
         <View style={styles.infoContainer}>
-          <Text>{character?.ability?.es}</Text>
+          <Text>{hoveredCharacter?.ability?.es}</Text>
         </View>
       )}
     </SafeAreaView>

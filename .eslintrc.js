@@ -20,7 +20,6 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier'],
-  ignorePatterns: ['__mocks__'],
   rules: {
     'prettier/prettier': 'error',
     indent: 'off',
@@ -30,7 +29,8 @@ module.exports = {
     'no-console': ['error', { allow: ['warn', 'error'] }],
     eqeqeq: 'error',
     camelcase: ['error', { ignoreImports: true }],
-    'no-shadow': ['error'],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
     '@typescript-eslint/no-unsafe-assignment': 'off',
     'react/prop-types': 'off',
     'react/jsx-uses-react': 'off',
