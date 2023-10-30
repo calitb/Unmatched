@@ -1,44 +1,4 @@
-import { ImageSourcePropType } from 'react-native';
-
-enum CardType {
-  attack = 'attack',
-  defense = 'defense',
-  versatile = 'versatile',
-  scheme = 'scheme',
-}
-
-export type UnmatchedCard =
-  | {
-      name: string;
-      type: CardType.attack | CardType.defense | CardType.versatile;
-      value: number;
-      character: string;
-      amount: number;
-      boost: number;
-      description: string;
-      descripcion: string;
-    }
-  | {
-      name: string;
-      type: CardType.scheme;
-      value?: number;
-      character: string;
-      amount: number;
-      boost: number;
-      description: string;
-      descripcion: string;
-    };
-
-export type Character = {
-  name: string;
-  image?: ImageSourcePropType;
-  amount: number;
-  ability?: {
-    en: string;
-    es: string;
-  };
-  cards: UnmatchedCard[];
-};
+import { Character, FightCard, SchemeCard } from '@/types';
 
 export const unmatched: Character[] = [
   {
@@ -52,7 +12,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Ambush',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 2,
         character: 'any',
         amount: 2,
@@ -64,7 +24,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Baptism of Blood',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         character: 'Dracula',
         amount: 2,
         boost: 2,
@@ -74,7 +34,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Beastform',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 6,
         character: 'Dracula',
         amount: 2,
@@ -86,7 +46,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Dash',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'any',
         amount: 3,
@@ -96,7 +56,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Do My Bidding',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 3,
         character: 'Dracula',
         amount: 2,
@@ -108,7 +68,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Exploit',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 4,
         character: 'any',
         amount: 2,
@@ -118,7 +78,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feeding Frenzy',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 2,
         character: 'Dracula',
         amount: 2,
@@ -129,7 +89,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         character: 'any',
         amount: 3,
@@ -139,7 +99,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Look Into My Eyes',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 1,
         character: 'Dracula',
         amount: 2,
@@ -151,7 +111,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Mistform',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         character: 'Dracula',
         amount: 2,
         boost: 2,
@@ -160,7 +120,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Prey Upon',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         character: 'Dracula',
         amount: 2,
         boost: 4,
@@ -171,7 +131,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Ravening Seduction',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         character: 'Sister',
         amount: 3,
         boost: 2,
@@ -182,7 +142,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Thirst for Sustenance',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 3,
         character: 'Sister',
         amount: 3,
@@ -192,7 +152,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Después del combate: Si ganaste el combate, coloca a Drácula en cualquier espacio adyacente al luchador contrario.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Sherlock Holmes',
@@ -201,7 +161,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Administer Aid',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'Watson',
         boost: 2,
@@ -211,7 +171,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Confirm Suspicion',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         character: 'Holmes',
         boost: 1,
@@ -222,7 +182,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Counterpunch',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'Holmes',
         amount: 3,
@@ -233,7 +193,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Deduce Strategy',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'Holmes',
         amount: 3,
@@ -245,7 +205,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Education Never Ends',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'any',
         amount: 2,
@@ -257,7 +217,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Elementary',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 3,
         character: 'Holmes',
         amount: 2,
@@ -269,7 +229,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Eliminate the Impossible',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'Holmes',
         boost: 2,
@@ -278,7 +238,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         character: 'any',
         amount: 3,
@@ -288,7 +248,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Fixed Point in a Changing Age',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'Watson',
         amount: 2,
@@ -298,7 +258,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Master of Disguise',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'Holmes',
         boost: 2,
@@ -307,7 +267,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Service Revolver',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 5,
         character: 'Watson',
         amount: 2,
@@ -317,7 +277,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Study Methods',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'any',
         amount: 2,
@@ -327,7 +287,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Game is Afoot',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 5,
         character: 'Holmes',
         amount: 2,
@@ -335,7 +295,7 @@ export const unmatched: Character[] = [
         description: 'After combat: Move Holmes up to 3 spaces.',
         descripcion: 'Después del combate: Mueve a Holmes hasta 3 espacios.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Jekyll & Hyde',
@@ -348,7 +308,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Calming Research',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'Dr. Jekyll',
         boost: 3,
@@ -359,7 +319,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Distracted Triage',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         character: 'Dr. Jekyll',
         value: 3,
@@ -369,7 +329,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Duality of Man',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         character: 'any',
         value: 3,
@@ -381,7 +341,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 2,
@@ -391,7 +351,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Forever Hyde',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'Mr. Hyde',
         value: 5,
@@ -403,7 +363,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Madness Relents',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         character: 'Mr. Hyde',
         value: 4,
@@ -413,7 +373,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Pure Evil',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         character: 'Mr. Hyde',
         boost: 3,
@@ -423,7 +383,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Recoiling Blow',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'Mr. Hyde',
         value: 5,
@@ -434,7 +394,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Scientific Method',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         character: 'Dr. Jekyll',
         value: 2,
@@ -444,7 +404,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 4,
@@ -456,7 +416,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Strange Case',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'Mr. Hyde',
         boost: 2,
@@ -467,7 +427,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Succumb to Compulsion',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'Dr. Jekyll',
         value: 2,
@@ -477,7 +437,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'With Haste!',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         character: 'Dr. Jekyll',
         value: 4,
@@ -485,7 +445,7 @@ export const unmatched: Character[] = [
         description: 'After combat: Move Dr. Jekyll up to 4 spaces.',
         descripcion: 'Después del combate: Mueve a Dr. Jekyll hasta 4 espacios.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Invisible Man',
@@ -498,7 +458,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Coded Notes',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         character: 'any',
         value: 3,
@@ -510,7 +470,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Confound',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         character: 'any',
         value: 3,
@@ -522,7 +482,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Covert Preparation',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 2,
@@ -534,7 +494,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Dreaming of Revenge',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         character: 'any',
         value: 3,
@@ -546,7 +506,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Emerge From Mist',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'any',
         value: 3,
@@ -558,7 +518,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Impossible to See',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         character: 'any',
         value: 2,
@@ -570,7 +530,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Into Thin Air',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         character: 'any',
         value: 4,
@@ -582,7 +542,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Lurking',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         character: 'any',
         value: 2,
@@ -594,7 +554,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Reign of Terror',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'any',
         boost: 1,
@@ -604,7 +564,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Rolling Fog',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'any',
         boost: 1,
@@ -613,7 +573,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Slip Away',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         character: 'any',
         value: 3,
@@ -625,7 +585,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Step Lightly',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'any',
         boost: 1,
@@ -636,7 +596,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Surprise Attack',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'any',
         value: 5,
@@ -648,7 +608,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Vanish',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'any',
         boost: 3,
@@ -657,7 +617,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Recupera 1 salud. Remueve a Invisible Man del tablero. Al inicio de tu próximo turno, coloca a Invisible Man en cualquier espacio del tablero. (Si jugaste esta carta como tu primera acción, tu turno termina.)',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Robin Hood',
@@ -670,7 +630,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: "A Hunter's Eye",
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         character: 'Robin',
         value: 5,
@@ -680,7 +640,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Ambush',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'any',
         value: 2,
@@ -692,7 +652,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Defenders of Sherwood',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         character: 'any',
         value: 3,
@@ -703,7 +663,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Disarming Shot',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'Robin',
         value: 4,
@@ -715,7 +675,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 2,
@@ -725,7 +685,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Highway Robbery',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 4,
         character: 'Outlaw',
         value: 2,
@@ -736,7 +696,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Piercing Shot',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'Robin',
         value: 2,
@@ -746,7 +706,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 1,
@@ -757,7 +717,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Snark',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 3,
@@ -767,7 +727,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Steal From the Rich',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         character: 'Robin',
         boost: 3,
@@ -778,7 +738,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Wily Fighting',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 3,
@@ -786,7 +746,7 @@ export const unmatched: Character[] = [
         description: 'After combat: Deal 1 damage to each opposing fighter adjacent to your fighter.',
         descripcion: 'Después del combate: Haz 1 de daño a cada luchador contrario adyacente a tu luchador.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'BigFoot',
@@ -795,7 +755,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Crash Through the Trees',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'BigFoot',
         boost: 4,
@@ -805,7 +765,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Disengage',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'any',
         value: 4,
@@ -816,7 +776,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 2,
@@ -826,7 +786,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Hoax',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 4,
@@ -838,7 +798,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "It's Just Your Imagination",
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         character: 'any',
         value: 3,
@@ -848,7 +808,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jackalope Horns',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         character: 'Jackalope',
         boost: 2,
@@ -859,7 +819,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Larger Than Life',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         character: 'BigFoot',
         value: 6,
@@ -869,7 +829,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Momentous Shift',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 3,
@@ -881,7 +841,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 1,
@@ -892,7 +852,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Savagery',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         character: 'BigFoot',
         value: 4,
@@ -902,7 +862,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 4,
@@ -912,7 +872,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Después del combate: Si ganaste el combate, escoge uno de los luchadores del combate y muévelo hasta 2 espacios.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Ingen',
@@ -925,7 +885,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Call for Backup',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'Muldoon',
         boost: 3,
@@ -936,7 +896,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 2,
@@ -946,7 +906,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "I've Hunted Most Things That Can Hunt You",
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         character: 'Muldoon',
         value: 4,
@@ -958,7 +918,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Leap Away',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 4,
@@ -970,7 +930,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 1,
@@ -980,7 +940,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Remote Detonation',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         character: 'any',
         boost: 2,
@@ -991,7 +951,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Rending Shot',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 4,
         character: 'any',
         value: 3,
@@ -1001,7 +961,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Second Shot',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'any',
         value: 2,
@@ -1011,7 +971,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Shoot Her!',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'Muldoon',
         value: 3,
@@ -1021,7 +981,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Tactical Advance',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'Ingen Worker',
         value: 3,
@@ -1031,7 +991,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'They Should All Be Destroyed',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         character: 'Muldoon',
         value: 4,
@@ -1039,7 +999,7 @@ export const unmatched: Character[] = [
         description: 'During combat: +1 to this attack for each trap token adjacent to the opposing fighter.',
         descripcion: 'Durante el combate: +1 a este ataque por cada trampa adyacente al luchador contrario.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Raptors',
@@ -1048,7 +1008,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Ambush',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         character: 'any',
         value: 2,
@@ -1060,7 +1020,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Clever Girl',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         character: 'any',
         value: 3,
@@ -1071,7 +1031,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Coordinated Attack Pattern',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'any',
         boost: 2,
@@ -1082,7 +1042,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Decoy',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 4,
         character: 'any',
         value: 3,
@@ -1094,7 +1054,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Disengage',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'any',
         value: 4,
@@ -1105,7 +1065,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Eaten Alive',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 4,
@@ -1115,7 +1075,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Eviscerate',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'any',
         value: 5,
@@ -1125,7 +1085,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 2,
@@ -1135,7 +1095,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Pack Hunters',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         character: 'any',
         value: 4,
@@ -1147,7 +1107,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'They Remember',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 4,
         character: 'any',
         value: 2,
@@ -1157,7 +1117,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Working Things Out',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'any',
         boost: 2,
@@ -1166,7 +1126,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Mueve cada una de tus Raptors hasta 3 espacios. Puedes moverlas a través de luchadores opuestos. Gana 1 acción.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Bruce Lee',
@@ -1179,7 +1139,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: '"HOO! WHAAAAAA!"',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         character: 'any',
         boost: 3,
@@ -1188,7 +1148,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Be Like Water',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 4,
         character: 'any',
         value: 3,
@@ -1198,7 +1158,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Bring It On',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         character: 'any',
         boost: 3,
@@ -1209,7 +1169,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 2,
@@ -1219,7 +1179,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jeet Kune Do: Corkscrew Finger Jab',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1229,7 +1189,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jeet Kune Do: Downward Side Kick',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1239,7 +1199,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jeet Kune Do: High Straight Lead',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1251,7 +1211,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jeet Kune Do: Intercepting Fist',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1262,7 +1222,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jeet Kune Do: Short Lead Hook',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1272,7 +1232,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jeet Kune Do: Wrist Lock',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1282,7 +1242,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Little Dragon',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         character: 'any',
         value: 2,
@@ -1294,7 +1254,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Momentous Shift',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 3,
@@ -1306,7 +1266,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Nunchaku',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'any',
         boost: 3,
@@ -1315,7 +1275,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'One-Inch Punch',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         character: 'any',
         boost: 3,
@@ -1326,7 +1286,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 1,
@@ -1337,7 +1297,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         character: 'any',
         value: 4,
@@ -1349,7 +1309,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Taste of Blood',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1357,7 +1317,7 @@ export const unmatched: Character[] = [
         description: 'After combat: If Bruce Lee has 5 or less health, draw 3 cards.',
         descripcion: 'Después del combate: Si Bruce Lee tiene 5 de salud o menos, toma 3 cartas de tu mazo.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Deadpool',
@@ -1366,7 +1326,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: '3 of Hearts',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1376,7 +1336,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'And For My Next Move...',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 2,
@@ -1386,7 +1346,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Call Me',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1398,7 +1358,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Cha-Ching!',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 1,
@@ -1408,7 +1368,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Chimichanga Break!',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 2,
@@ -1418,7 +1378,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Deadpool™ Merc For Hire, LLC',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 5,
@@ -1429,7 +1389,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Dumpster Divin' Deadpool",
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         character: 'any',
         boost: 1,
@@ -1438,7 +1398,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Eat Me',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 1,
         character: 'any',
         value: 2,
@@ -1450,7 +1410,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Excuse me while I grow some limbs.',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1461,7 +1421,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Exploding Card!',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 1,
@@ -1472,7 +1432,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Faint',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         character: 'any',
         boost: 2,
@@ -1481,7 +1441,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 2,
@@ -1491,7 +1451,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Gaze of Stone',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 2,
@@ -1501,7 +1461,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Gimme Gimme Chimichanga',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1511,7 +1471,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Holy Mackerel!',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         character: 'any',
         boost: 2,
@@ -1522,7 +1482,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'I Always Get The Last Word',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1532,7 +1492,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "I'm Not Wearing Pants",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 2,
@@ -1544,7 +1504,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Klunkin' Heads",
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 4,
@@ -1556,7 +1516,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Non-Retinal Scan Access to Danger Room',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1566,7 +1526,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Passwords',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 1,
         character: 'any',
         value: 5,
@@ -1576,7 +1536,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Push to Teleport',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 2,
@@ -1586,7 +1546,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Rob's Pouch & Shoe Emporium",
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 4,
@@ -1596,7 +1556,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Super Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 4,
@@ -1608,7 +1568,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Sweeet!',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         character: 'any',
         boost: 2,
@@ -1618,7 +1578,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'They Have An Amazing Buffet',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1628,7 +1588,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Time out time out time out!',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 1,
         character: 'any',
         value: 0,
@@ -1640,7 +1600,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Transit Card',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 1,
         character: 'any',
         value: 2,
@@ -1650,7 +1610,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Underrated Super Heroes',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 6,
@@ -1660,7 +1620,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Wanna bet?',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 2,
@@ -1672,7 +1632,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Xavier Institute Faculty',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         character: 'any',
         value: 3,
@@ -1680,7 +1640,7 @@ export const unmatched: Character[] = [
         description: 'You may play this card as a ranged attack.',
         descripcion: 'Puedes jugar esta carta como un ataque a distancia.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Achilles',
@@ -1693,7 +1653,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: "Achilles' Heel",
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 4,
         boost: 2,
@@ -1703,7 +1663,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Battle Frenzy',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 2,
@@ -1713,7 +1673,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Battle Hardened',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 2,
@@ -1723,7 +1683,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Blessed By Hermes',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 1,
@@ -1735,7 +1695,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Brothers In Arms',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 2,
@@ -1745,7 +1705,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -1755,7 +1715,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 4,
         boost: 1,
@@ -1767,7 +1727,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Spear Throw',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 1,
         character: 'ACHILLES',
@@ -1776,7 +1736,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Test For Weakness',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 1,
         boost: 3,
@@ -1786,7 +1746,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Day of Your Doom',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 2,
@@ -1798,7 +1758,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Under Achilles' Helm",
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 2,
         boost: 4,
@@ -1810,7 +1770,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Wily Fighting',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 1,
@@ -1818,7 +1778,7 @@ export const unmatched: Character[] = [
         description: 'After combat: Deal 1 damage to each opposing fighter adjacent to your fighter.',
         descripcion: 'Después del combate: Haz 1 de daño a cada luchador opuesto adyacente a tu luchador.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Bloody Mary',
@@ -1831,7 +1791,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Bloody Requiem',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 3,
         amount: 3,
         character: 'any',
@@ -1843,7 +1803,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Broken Glass',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         amount: 3,
         character: 'any',
@@ -1855,7 +1815,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Closer Than She Appears',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'any',
         boost: 2,
@@ -1864,7 +1824,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Evade',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 3,
         amount: 3,
         character: 'any',
@@ -1874,7 +1834,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         character: 'any',
         amount: 2,
@@ -1884,7 +1844,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Ghostly Touch',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 1,
         amount: 2,
         character: 'any',
@@ -1896,7 +1856,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Infinity Mirror',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 4,
         amount: 2,
         character: 'any',
@@ -1906,7 +1866,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jump Scare',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         amount: 2,
         character: 'any',
@@ -1918,7 +1878,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Mirror Image',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 0,
         amount: 2,
         character: 'any',
@@ -1928,7 +1888,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Out Of The Mirror',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 1,
         amount: 2,
         character: 'any',
@@ -1940,7 +1900,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Speak Three Times',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 3,
         amount: 2,
         character: 'any',
@@ -1950,7 +1910,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Stolen Memories',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'any',
         boost: 3,
@@ -1961,7 +1921,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Trick of the Light',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         amount: 3,
         character: 'any',
@@ -1970,7 +1930,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Después del combate: Puedes colocar a Bloody Mary en cualquier espacio vacío adyacente al luchador oponente.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Sun Wukong',
@@ -1979,7 +1939,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: '72 Transformations',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         character: 'any',
         amount: 3,
@@ -1991,7 +1951,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Bewilderment',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 0,
         character: 'any',
         amount: 2,
@@ -2002,7 +1962,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Fiery Eyes That See',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         character: 'any',
         amount: 2,
         boost: 1,
@@ -2013,7 +1973,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Golden Chain Mail',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 4,
         character: 'any',
         amount: 2,
@@ -2024,7 +1984,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Infinite Strikes',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 2,
         character: 'any',
         amount: 3,
@@ -2036,7 +1996,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Ox Form',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 7,
         character: 'any',
         amount: 2,
@@ -2048,7 +2008,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Phoenix Form',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         character: 'any',
         amount: 1,
         boost: 1,
@@ -2057,7 +2017,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Riyu Jingo Bang',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 0,
         character: 'any',
         amount: 3,
@@ -2068,7 +2028,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Sly Monkey',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         character: 'any',
         amount: 4,
@@ -2080,7 +2040,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Taunting Laughter',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 3,
         character: 'any',
         amount: 3,
@@ -2092,7 +2052,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Tortoise Form',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 5,
         character: 'any',
         amount: 2,
@@ -2102,7 +2062,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Wily Fighting',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'any',
         amount: 3,
@@ -2110,7 +2070,7 @@ export const unmatched: Character[] = [
         description: 'After combat: Deal 1 damage to each opposing fighter adjacent to your fighter.',
         descripcion: 'Después del combate: Haz 1 daño a cada luchador contrario adyacente a tu luchador.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Yennenga',
@@ -2122,7 +2082,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Divide and Conquer',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 1,
@@ -2133,7 +2093,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jaws of the Beast',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 3,
@@ -2144,7 +2104,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Master of the Hunt',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'YENNENGA',
@@ -2153,7 +2113,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Momentous Shift',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -2165,7 +2125,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'One With The Land',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'YENNENGA',
@@ -2175,7 +2135,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Pin the Prey',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 1,
         boost: 2,
@@ -2185,7 +2145,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Point Blank',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -2195,7 +2155,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Rain of Arrows',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 3,
         boost: 3,
@@ -2205,7 +2165,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Shield Formation',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 3,
         boost: 3,
@@ -2217,7 +2177,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 2,
@@ -2229,7 +2189,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Stallion Charge',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 3,
@@ -2241,7 +2201,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Surprise Volley',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 3,
         boost: 3,
@@ -2251,7 +2211,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Inmediatamente: Puedes regresar un Arquero derrotado a un espacio en la zona del luchador contrario. Si lo haces, ese Arquero es ahora el atacante. Si no, gana 1 acción.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Luke Cage',
@@ -2264,7 +2224,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Commanding Impact',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 5,
         boost: 1,
@@ -2274,7 +2234,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Daughter of the Dragon',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 2,
@@ -2286,7 +2246,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Get Paid',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 4,
         boost: 2,
@@ -2296,7 +2256,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Got My Back?',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 1,
         boost: 2,
@@ -2308,7 +2268,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Hero For Hire',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 3,
         boost: 1,
@@ -2318,7 +2278,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Power Man',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 2,
         boost: 1,
@@ -2330,7 +2290,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Pushback',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 3,
@@ -2340,7 +2300,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 3,
@@ -2350,7 +2310,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skin Like Titanium',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 0,
         boost: 1,
@@ -2362,7 +2322,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Still Standing',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 4,
         boost: 2,
@@ -2374,7 +2334,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Sweet Christmas!',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 6,
         boost: 1,
@@ -2384,7 +2344,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Trash Talk',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 2,
         boost: 1,
@@ -2396,14 +2356,14 @@ export const unmatched: Character[] = [
       },
       {
         name: "Where's My Money?",
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 1,
         character: 'Luke Cage',
         description: 'Place Luke Cage adjacent to the nearest opposing fighter. Gain 1 action.',
         descripcion: 'Coloca Luke Cage adyacente al luchador contrario más cercano. Gana 1 acción.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Ghost Rider',
@@ -2416,7 +2376,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Blaze of Glory',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 2,
         boost: 3,
@@ -2428,7 +2388,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Chains of Hellfire',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'any',
@@ -2437,7 +2397,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Control The Demon',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 0,
         boost: 1,
@@ -2449,7 +2409,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Deal With The Devil',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 2,
         boost: 1,
@@ -2461,7 +2421,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 1,
@@ -2471,7 +2431,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Hell Rides With Me',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'any',
@@ -2482,7 +2442,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'I Brought The Devil With Me',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 3,
         boost: 2,
@@ -2492,7 +2452,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'I Finally Escaped Hell',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 1,
@@ -2502,7 +2462,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Penance Stare',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -2514,7 +2474,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Spirit Of Vengeance',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 5,
         boost: 2,
@@ -2524,7 +2484,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Stoke The Flames',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 2,
         boost: 2,
@@ -2535,7 +2495,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Wicked Will Burn',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -2543,7 +2503,7 @@ export const unmatched: Character[] = [
         description: 'After combat: If Ghost Rider started this turn in a different space, gain 2 Hellfire.',
         descripcion: 'Después del combate: Si Ghost Rider comenzó este turno en un espacio diferente, gana 2 Hellfire.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Moon Knight',
@@ -2555,7 +2515,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'A Totally Sane Thing To Do',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -2565,7 +2525,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -2575,7 +2535,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Fist of Khonshu',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -2585,7 +2545,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Good Enough For Us',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 1,
@@ -2595,7 +2555,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "I'm Not Real",
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 2,
@@ -2605,7 +2565,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Let Your Insanity Guide You',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 1,
         boost: 2,
@@ -2616,7 +2576,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Madness Will Keep You Alive',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'any',
@@ -2625,7 +2585,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Past and Present Intermingle',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -2636,7 +2596,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "That's The Part I Like",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -2648,7 +2608,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "That's Why I Always Win",
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 3,
         boost: 2,
@@ -2658,7 +2618,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Travelers of The Night',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'any',
@@ -2668,7 +2628,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "We're All In This Together",
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 3,
         boost: 2,
@@ -2676,7 +2636,7 @@ export const unmatched: Character[] = [
         description: 'After combat: If you won the combat, draw 1 card.',
         descripcion: 'Después del combate: Si ganaste el combate, toma 1 carta.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Dr. Ellie Sattler',
@@ -2689,7 +2649,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Chaotician',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         character: 'DR. MALCOLM',
         amount: 1,
@@ -2699,7 +2659,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         character: 'any',
         amount: 3,
@@ -2709,7 +2669,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Hey! Hey! Hey!',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'any',
         amount: 1,
@@ -2719,7 +2679,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "I Think We're Back In Business",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 0,
         character: 'DR. SATTLER',
         amount: 3,
@@ -2729,7 +2689,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Life Finds a Way',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         character: 'DR. MALCOLM',
         amount: 2,
@@ -2741,7 +2701,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Lock The Doors!',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 2,
         character: 'any',
         amount: 2,
@@ -2752,7 +2712,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Must Go Faster',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'any',
         amount: 1,
@@ -2763,7 +2723,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         character: 'any',
         value: 1,
@@ -2774,7 +2734,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Sexism in Survival Situations',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 1,
         character: 'DR. SATTLER',
         amount: 2,
@@ -2786,7 +2746,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Concept of Attraction',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 2,
         character: 'any',
         amount: 3,
@@ -2797,7 +2757,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Future Ex-Mrs. Malcolm',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         character: 'DR. MALCOLM',
         amount: 1,
         boost: 2,
@@ -2806,7 +2766,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Violently, If Necessary',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'DR. SATTLER',
         amount: 3,
@@ -2818,7 +2778,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Woman Inherits the Earth',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         character: 'DR. SATTLER',
         amount: 3,
@@ -2830,7 +2790,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "You Never Had Control, That's the Illusion",
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 2,
         character: 'DR. SATTLER',
         amount: 3,
@@ -2840,7 +2800,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Durante el combate: Aumenta el valor de esta carta por el número de fichas de conocimiento en el tablero. Quita todas las fichas de conocimiento del tablero.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'T. Rex',
@@ -2849,7 +2809,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: '15,000 Pounds of Muscle',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 3,
         character: 'any',
         amount: 2,
@@ -2860,7 +2820,7 @@ export const unmatched: Character[] = [
       },
       {
         name: '65 Million Years of Gut Instinct',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         character: 'any',
         amount: 2,
         boost: 3,
@@ -2871,7 +2831,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Closer Than She Appears',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         character: 'any',
         amount: 3,
         boost: 2,
@@ -2880,7 +2840,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Commanding Impact',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 5,
         character: 'any',
         amount: 3,
@@ -2890,7 +2850,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Momentous Shift',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'any',
         amount: 3,
@@ -2902,7 +2862,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Reckless Lunge',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 3,
         character: 'any',
         amount: 3,
@@ -2912,7 +2872,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Ripples in the Water',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         character: 'any',
         amount: 3,
         boost: 2,
@@ -2923,7 +2883,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Terrifying Roar',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         character: 'any',
         amount: 2,
@@ -2933,7 +2893,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Thrash',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         character: 'any',
         amount: 3,
@@ -2945,7 +2905,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'When Dinosaurs Ruled the Earth',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 2,
         character: 'any',
         amount: 4,
@@ -2957,7 +2917,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "You're Just Making Her Angry",
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 1,
         character: 'any',
         amount: 2,
@@ -2967,7 +2927,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Durante el combate: Puedes BOOST esta carta.\n\nDespués del combate: Si ganaste el combate, devuelve esta carta a tu mano.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Alice',
@@ -2980,7 +2940,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Claws That Catch',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 2,
@@ -2991,7 +2951,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Drink Me',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'ALICE',
@@ -3000,7 +2960,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Eat Me',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'ALICE',
@@ -3009,7 +2969,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -3019,7 +2979,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "I'm Late, I'm Late",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 3,
@@ -3029,7 +2989,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jaws That Bite',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 4,
         boost: 2,
@@ -3039,7 +2999,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Looking Glass',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 2,
         boost: 4,
@@ -3051,7 +3011,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Mad as a Hatter',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 1,
@@ -3061,7 +3021,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Manxome Foe',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -3072,7 +3032,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Momentous Shift',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 1,
@@ -3084,7 +3044,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'O Frabjous Day!',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 4,
         boost: 4,
@@ -3094,7 +3054,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 2,
@@ -3104,7 +3064,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 1,
@@ -3116,7 +3076,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Snicker-Snack',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 3,
         boost: 4,
@@ -3128,7 +3088,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Other Side of the Mushroom',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 3,
         boost: 4,
@@ -3136,7 +3096,7 @@ export const unmatched: Character[] = [
         description: 'After combat: Move Alice up to 3 spaces. Change size.',
         descripcion: 'Después del combate: Mueve a Alice hasta 3 espacios. Cambia de tamaño.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Medusa',
@@ -3148,7 +3108,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'A Momentary Glance',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 4,
         character: 'MEDUSA',
@@ -3157,7 +3117,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Clutching Claws',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -3167,7 +3127,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Dash',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 1,
@@ -3177,7 +3137,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -3187,7 +3147,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Gaze of Stone',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 2,
         boost: 4,
@@ -3197,7 +3157,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Hiss and Slither',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 4,
         boost: 3,
@@ -3207,7 +3167,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 2,
@@ -3217,7 +3177,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Second Shot',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 3,
         boost: 3,
@@ -3227,7 +3187,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Snipe',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 1,
@@ -3237,7 +3197,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Hounds of Mighty Zeus',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 3,
@@ -3247,7 +3207,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Winged Frenzy',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'MEDUSA',
@@ -3256,7 +3216,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Mueve cada uno de tus luchadores hasta 3 espacios. Puedes moverlos a través de espacios que contengan luchadores contrarios.\n\nLuego, devuelve un Harpy derrotado (si hay alguno) a cualquier espacio en la zona de Medusa.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Sinbad',
@@ -3269,7 +3229,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'By Fortune and Fate',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 3,
         boost: 1,
@@ -3279,7 +3239,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Commanding Impact',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 5,
         boost: 2,
@@ -3289,7 +3249,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Exploit',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 1,
@@ -3299,7 +3259,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -3309,7 +3269,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Leap Away',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 1,
@@ -3321,7 +3281,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Momentous Shift',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 1,
@@ -3333,7 +3293,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 1,
@@ -3343,7 +3303,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Riches Beyond Compare',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 1,
         character: 'Sinbad',
@@ -3352,7 +3312,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Toil and Danger',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 4,
         value: 3,
         boost: 1,
@@ -3362,7 +3322,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Voyage Home',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 2,
         boost: 1,
@@ -3374,7 +3334,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Voyage to the Cannibals With the Root of Madness',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 2,
         boost: 0,
@@ -3386,7 +3346,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Voyage to the City of the King of Serendib',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 2,
         boost: 0,
@@ -3398,7 +3358,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Voyage to the City of the Man-Eating Apes',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 2,
         boost: 0,
@@ -3410,7 +3370,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Voyage to the Creature With Eyes Like Coals of Fire',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 2,
         boost: 0,
@@ -3422,7 +3382,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Voyage to the Island That Was a Whale',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 2,
         boost: 0,
@@ -3434,7 +3394,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Voyage to the Valley of the Giant Snakes',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 2,
         boost: 0,
@@ -3444,7 +3404,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Durante el combate: El valor de esta carta es +1 por cada otra carta VOYAGE en tu descarte.\n\nDespués del combate: Observa las cartas en la mano del oponente.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'King Arthur',
@@ -3457,7 +3417,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Aid the Chosen One',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 4,
         boost: 2,
@@ -3467,7 +3427,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Bewilderment',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 0,
         boost: 2,
@@ -3478,7 +3438,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Command the Storms',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'MERLIN',
@@ -3487,7 +3447,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Divine Intervention',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -3497,7 +3457,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Excalibur',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 6,
         boost: 3,
@@ -3507,7 +3467,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -3517,7 +3477,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Momentous Shift',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 1,
@@ -3529,7 +3489,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Noble Sacrifice',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 2,
         boost: 3,
@@ -3541,7 +3501,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Prophecy',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         boost: 2,
         character: 'MERLIN',
@@ -3552,7 +3512,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 1,
@@ -3562,7 +3522,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Restless Spirits',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         boost: 2,
         character: 'MERLIN',
@@ -3573,7 +3533,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 4,
         boost: 1,
@@ -3585,7 +3545,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Swift Strike',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 2,
@@ -3595,7 +3555,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Aid of Morgana',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 4,
         boost: 2,
@@ -3605,7 +3565,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Holy Grail',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 1,
         value: 1,
         boost: 2,
@@ -3616,7 +3576,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Lady of the Lake',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         boost: 2,
         character: 'ARTHUR',
@@ -3625,7 +3585,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Busca la carta EXCALIBUR en tu mazo y en el descarte. Añadela a tu mano. Si buscaste en tu mazo, barajalo.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Buffy',
@@ -3638,7 +3598,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Cartwheel Kick',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 2,
         boost: 2,
@@ -3650,7 +3610,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Daring Strike',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 3,
@@ -3660,7 +3620,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -3670,7 +3630,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Insight',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         boost: 3,
         character: 'Giles',
@@ -3679,7 +3639,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Military Knowledge',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 3,
@@ -3689,7 +3649,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Mr. Pointy',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 5,
         boost: 4,
@@ -3699,7 +3659,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Rapid Recovery',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 3,
@@ -3709,7 +3669,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 1,
@@ -3719,7 +3679,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Right-hand Man',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 3,
@@ -3729,7 +3689,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 4,
         boost: 3,
@@ -3741,7 +3701,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Slayer's Strength",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 4,
         boost: 3,
@@ -3753,7 +3713,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Swift Strike',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 3,
         boost: 2,
@@ -3763,14 +3723,14 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Training',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'Giles',
         description: 'Draw 3 cards.',
         descripcion: 'Toma 3 cartas.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Angel',
@@ -3783,7 +3743,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Angelus, Scourge of Europe',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 5,
         boost: 3,
@@ -3793,7 +3753,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Brooding',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -3803,7 +3763,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Cursed with a Soul',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 4,
         boost: 3,
@@ -3813,7 +3773,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Disengage',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 2,
@@ -3824,7 +3784,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -3834,7 +3794,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Five by Five',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 5,
         boost: 3,
@@ -3844,7 +3804,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Haunted by the Faces',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 3,
         boost: 2,
@@ -3855,7 +3815,7 @@ export const unmatched: Character[] = [
       },
       {
         name: '	Killer of the Dead',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         boost: 3,
         character: 'Faith',
@@ -3864,7 +3824,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Momentous Shift',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 1,
@@ -3876,7 +3836,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 1,
@@ -3886,7 +3846,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Rogue Slayer',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 3,
@@ -3896,7 +3856,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Wisdom of Ages',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 2,
@@ -3904,7 +3864,7 @@ export const unmatched: Character[] = [
         description: 'After combat: Draw 1 card.',
         descripcion: 'Después del combate: Toma 1 carta.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Spike',
@@ -3917,7 +3877,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Always Surprising',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 2,
@@ -3929,7 +3889,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Arrogance',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 1,
         value: 4,
         boost: 2,
@@ -3941,7 +3901,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Bloody Hell!',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -3953,7 +3913,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Empathy',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 3,
@@ -3965,7 +3925,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -3975,7 +3935,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Leap Away',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 1,
@@ -3987,7 +3947,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Let's Dance",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 4,
         boost: 3,
@@ -3999,7 +3959,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 1,
@@ -4009,7 +3969,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Seek the Shadows',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 4,
         boost: 2,
         character: 'Spike',
@@ -4018,7 +3978,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 1,
@@ -4030,7 +3990,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Rush',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 3,
@@ -4042,7 +4002,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Sight',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'Drusilla',
@@ -4051,7 +4011,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Elige un oponente y mira su mano. Elige una carta para que la descarte. Si alguno de sus luchadores está en un espacio con un token de sombras, elige 2 cartas para que lo descarte en vez de 1.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Willow',
@@ -4064,7 +4024,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Black Magic',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 3,
@@ -4074,7 +4034,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -4084,7 +4044,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Flayed Alive',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 3,
@@ -4094,7 +4054,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Hacker',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 2,
@@ -4106,7 +4066,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Knowledge of the Craft',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 2,
@@ -4116,7 +4076,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Love and Loss',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'Willow',
@@ -4127,7 +4087,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Meditation',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 5,
         boost: 2,
@@ -4137,7 +4097,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 1,
@@ -4147,7 +4107,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Rending Shot',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 1,
@@ -4157,7 +4117,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Resurrect',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'Willow',
@@ -4168,7 +4128,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Revoke',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -4178,7 +4138,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Swift Strike',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 2,
@@ -4188,7 +4148,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'When Good Magic Fails',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 4,
         boost: 3,
@@ -4197,7 +4157,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Después del combate: (DARK) Mueve Willow a cualquier espacio de su zona. Descarta la carta superior de tu deck.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Daredevil',
@@ -4210,7 +4170,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Breather',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         boost: 2,
         character: 'any',
@@ -4219,7 +4179,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Devil of Hell's Kitchen",
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 4,
         boost: 3,
@@ -4231,7 +4191,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -4241,7 +4201,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Grappling Hook',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -4251,7 +4211,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Man Without Fear',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 2,
         boost: 3,
@@ -4263,7 +4223,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Son Of A Boxer',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 3,
         boost: 2,
@@ -4273,7 +4233,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Take A Knee',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -4284,7 +4244,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Through Adversity',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         boost: 2,
         character: 'any',
@@ -4293,7 +4253,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Mueve a Daredevil hasta 4 espacios. El puede moverse a través de luchadores oponentes. Inflige 1 de daño a cada luchador oponente a través del que Daredevil pase.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Bullseye',
@@ -4306,7 +4266,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Arrogant But Effective',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -4316,7 +4276,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 2,
@@ -4326,7 +4286,7 @@ export const unmatched: Character[] = [
       },
       {
         name: '	For My Next Trick',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 2,
         boost: 2,
@@ -4336,7 +4296,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'I Never Miss',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 4,
         value: 3,
         boost: 2,
@@ -4346,7 +4306,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'I Planned To Be Here',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 2,
         boost: 3,
@@ -4357,7 +4317,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "I'm Better And I'll Prove It",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 2,
@@ -4367,7 +4327,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Master Strategist',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 3,
@@ -4378,7 +4338,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Ricochet',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -4390,7 +4350,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Right Between The Eyes',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 3,
@@ -4400,7 +4360,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Study The Target',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'any',
@@ -4409,7 +4369,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Tactical Retreat',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 3,
         boost: 2,
@@ -4420,7 +4380,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "World's Greatest Assassin",
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 4,
         boost: 3,
@@ -4428,7 +4388,7 @@ export const unmatched: Character[] = [
         description: "Immediately: If you already won a combat this turn, ignore the value of your opponent's card.",
         descripcion: 'Inmediatamente: Si ya ganaste un combate este turno, ignora el valor de la carta del oponente.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Elektra',
@@ -4440,7 +4400,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Cloaked In Shadow',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 1,
@@ -4452,7 +4412,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Hands of Red',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 4,
         boost: 2,
@@ -4462,7 +4422,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Intercept',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 3,
         boost: 4,
@@ -4474,7 +4434,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Mesmerize',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'ELEKTRA',
@@ -4485,7 +4445,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Mystic Assassin',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 6,
         boost: 1,
@@ -4495,7 +4455,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Ninjitsu',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -4505,7 +4465,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Sai',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 3,
@@ -4515,7 +4475,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Snakeroot Clan',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 1,
         boost: 2,
@@ -4526,7 +4486,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Fist',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 3,
@@ -4538,7 +4498,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Whirlwind',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 1,
@@ -4546,7 +4506,7 @@ export const unmatched: Character[] = [
         description: 'After combat: RESURRECTED: Deal 1 damage to each adjacent opposing fighter.',
         descripcion: 'Después del combate: RESURRECTED: Inflige 1 de daño a cada luchador oponente adyacente.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Beowulf',
@@ -4559,7 +4519,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Epic Poem',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 2,
         boost: 2,
@@ -4571,7 +4531,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Fatal Struggle',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 2,
@@ -4583,7 +4543,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -4593,7 +4553,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Golden Drinking Horn',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'BEOWULF',
@@ -4604,7 +4564,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Hot for the Battle',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 3,
@@ -4614,7 +4574,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'No Contest Expecteth',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 3,
@@ -4626,7 +4586,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Remnant of Valor',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'WIGLAF',
@@ -4637,7 +4597,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 4,
         boost: 1,
@@ -4649,7 +4609,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Ancient Heirloom',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 1,
@@ -4661,7 +4621,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Equal of Grendel',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 3,
         boost: 1,
@@ -4673,7 +4633,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The War-King',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 3,
@@ -4684,7 +4644,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Vigor and Courage',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         boost: 2,
         character: 'BEOWULF',
@@ -4692,7 +4652,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Elige a un oponente. Ese oponente descarta 1 carta al azar. Gana Rabia igual al valor BOOST de esa carta.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Little Red Riding Hood',
@@ -4705,7 +4665,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'A Grimm Tale 🌹',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'HUNTSMAN',
         boost: 3,
@@ -4714,7 +4674,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Into the Woods 🐺🌹⚔️',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         character: 'LITTLE RED',
         boost: 2,
@@ -4723,7 +4683,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Long Have I Sought You ⚔️',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 4,
         amount: 3,
         character: 'HUNTSMAN',
@@ -4735,7 +4695,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Never Leave the Path 🐺',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'LITTLE RED',
         boost: 1,
@@ -4746,7 +4706,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Once Upon a Time 🌹',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         amount: 2,
         character: 'any',
@@ -4756,7 +4716,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Stones in the Belly 🌹',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         amount: 3,
         character: 'any',
@@ -4768,7 +4728,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "The Wolf's Skin ⚔️",
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 2,
         amount: 3,
         character: 'any',
@@ -4778,7 +4738,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'What a Terrible Big Mouth You Have',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 2,
         amount: 2,
         character: 'LITTLE RED',
@@ -4789,7 +4749,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'What Big Ears You Have 🐺',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 4,
         amount: 2,
         character: 'LITTLE RED',
@@ -4799,7 +4759,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'What Big Eyes You Have 🐺',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         amount: 2,
         character: 'LITTLE RED',
@@ -4811,7 +4771,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'What Large Hands You Have 🐺',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 2,
         amount: 2,
         character: 'LITTLE RED',
@@ -4823,7 +4783,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "What's That In My Basket? 🌟",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 4,
         amount: 4,
         character: 'LITTLE RED',
@@ -4831,7 +4791,7 @@ export const unmatched: Character[] = [
         description: '(🌟 counts as any one 🐺🌹⚔️ symbol.)',
         descripcion: '(🌟 cuenta como cualquier uno de los siguientes símbolos 🐺🌹⚔️.)',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Houdini',
@@ -4843,7 +4803,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'A Magician Never Reveals His Secrets',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         character: 'HOUDINI',
         boost: 4,
@@ -4854,7 +4814,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'All Part of the Show',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 2,
         amount: 2,
         character: 'any',
@@ -4866,7 +4826,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'An Illusion of My Own Design',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 4,
         amount: 2,
         character: 'HOUDINI',
@@ -4877,7 +4837,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'And the Beautiful Bess!',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         amount: 2,
         character: 'BESS',
@@ -4889,7 +4849,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Flourish',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 3,
         amount: 4,
         character: 'any',
@@ -4899,7 +4859,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'For My Next Trick',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 2,
         amount: 2,
         character: 'any',
@@ -4909,7 +4869,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Grand Escape',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 2,
         amount: 3,
         character: 'HOUDINI',
@@ -4921,7 +4881,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Misdirection',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         amount: 3,
         character: 'any',
@@ -4933,7 +4893,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Set the Stage',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'BESS',
         boost: 2,
@@ -4944,7 +4904,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Sleight of Hand',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 1,
         amount: 2,
         character: 'any',
@@ -4956,7 +4916,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Smoke and Mirrors',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         amount: 2,
         character: 'any',
@@ -4968,7 +4928,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Big Reveal',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 2,
         amount: 2,
         character: 'HOUDINI',
@@ -4980,7 +4940,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Vanishing Act',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         amount: 3,
         character: 'HOUDINI',
@@ -4990,7 +4950,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Después del combate: Elige a uno de los luchadores en el combate y muévelo hasta 3 espacios. Pueden moverse a través de sus luchadores opuestos.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'The Genie',
@@ -5002,7 +4962,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Back In The Lamp',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 0,
         boost: 1,
@@ -5012,7 +4972,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Careful What You Wish For',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 2,
@@ -5022,7 +4982,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -5032,7 +4992,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'I Am Freed',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 2,
@@ -5043,7 +5003,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'I Grant You Death',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -5053,7 +5013,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "I've Made Sultans Out of Less",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 1,
@@ -5063,7 +5023,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Imprisoned Wrath',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 1,
@@ -5074,7 +5034,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Prisoner's Torment",
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 1,
         boost: 2,
@@ -5084,7 +5044,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'This is No Parlor Trick',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 1,
         boost: 2,
@@ -5094,7 +5054,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Three Wishes',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         boost: 3,
         character: 'any',
@@ -5105,7 +5065,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Wishing For More Wishes',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -5115,7 +5075,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Your Wish is My Command',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 1,
@@ -5123,7 +5083,7 @@ export const unmatched: Character[] = [
         description: 'After combat: If you won the combat, you may discard 2 cards to gain 1 action.',
         descripcion: 'Después del combate: Si ganaste el combate, puedes descartar 2 cartas para ganar 1 acción.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Black Panther',
@@ -5135,7 +5095,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Analyze and Adjust',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 3,
         amount: 3,
         character: 'any',
@@ -5146,7 +5106,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Ancestral Insight',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 4,
         amount: 3,
         character: 'BLACK PANTHER',
@@ -5158,7 +5118,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Anti-Metal Claws',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 1,
         amount: 2,
         character: 'BLACK PANTHER',
@@ -5170,7 +5130,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Cat-Like Reflexes',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         amount: 2,
         character: 'any',
@@ -5181,7 +5141,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Evade',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 3,
         amount: 2,
         character: 'any',
@@ -5191,7 +5151,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         amount: 2,
         character: 'any',
@@ -5201,7 +5161,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Microweave Mesh',
-        type: CardType.defense,
+        type: FightCard.defense,
         value: 2,
         amount: 2,
         character: 'BLACK PANTHER',
@@ -5211,7 +5171,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Nanotriage Processor',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 2,
         amount: 2,
         character: 'SHURI',
@@ -5223,7 +5183,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Regroup',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 1,
         amount: 2,
         character: 'any',
@@ -5233,7 +5193,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Stalking Panther',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         character: 'any',
         boost: 2,
@@ -5244,7 +5204,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Tactical Remote Scanning',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         character: 'SHURI',
         boost: 3,
@@ -5254,7 +5214,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Vibranium Shockwave',
-        type: CardType.attack,
+        type: FightCard.attack,
         value: 2,
         amount: 2,
         character: 'BLACK PANTHER',
@@ -5264,7 +5224,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Wakanda Forever!',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         value: 3,
         amount: 3,
         character: 'BLACK PANTHER',
@@ -5274,7 +5234,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Durante el combate: Puedes BOOST esta carta hasta dos veces. (Roba una carta por la habilidad especial de Black Panther cada vez que BOOST.)',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Black Widow',
@@ -5286,7 +5246,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Acting Director of S.H.I.E.L.D.',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 4,
         boost: 3,
@@ -5298,7 +5258,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Caught in a Web',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -5308,7 +5268,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Double Identity',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 3,
         boost: 2,
@@ -5320,7 +5280,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Fake Out',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 1,
         boost: 1,
@@ -5330,7 +5290,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -5340,7 +5300,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Life Model Decoy',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 0,
         boost: 0,
@@ -5352,7 +5312,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Budapest Gambit',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         boost: 4,
         character: 'BLACK WIDOW',
@@ -5363,7 +5323,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Firenze Agenda',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         boost: 4,
         character: 'BLACK WIDOW',
@@ -5374,7 +5334,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Kinshasa Directive',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         boost: 4,
         character: 'BLACK WIDOW',
@@ -5385,7 +5345,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Madripoor Sanction',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         boost: 4,
         character: 'BLACK WIDOW',
@@ -5396,7 +5356,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Moscow Protocol',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 1,
         boost: 4,
         character: 'BLACK WIDOW',
@@ -5407,7 +5367,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Widow's Bite",
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 1,
@@ -5417,7 +5377,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Widow's Kiss",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 2,
@@ -5427,7 +5387,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Widow's Line",
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -5437,7 +5397,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Widow's Sting",
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 5,
         boost: 2,
@@ -5445,7 +5405,7 @@ export const unmatched: Character[] = [
         description: 'After combat: Move Black Widow up to 3 spaces.',
         descripcion: 'Después del combate: Mueve a Black Widow hasta 3 espacios.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Winter Soldier',
@@ -5457,7 +5417,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'A Boy Named Bucky',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'any',
@@ -5466,7 +5426,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Bionic Armn',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 2,
         boost: 1,
@@ -5478,7 +5438,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Born in the Barracks',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -5488,7 +5448,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Complete the Mission',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 3,
         boost: 2,
@@ -5500,7 +5460,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -5510,7 +5470,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Manipulation',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'any',
@@ -5521,7 +5481,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Marksman',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 1,
         boost: 1,
@@ -5533,7 +5493,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Programmed to Kill',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 4,
         boost: 2,
@@ -5543,7 +5503,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Reflex Memories',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 5,
         boost: 2,
@@ -5553,7 +5513,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Reprogram',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -5563,7 +5523,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Wily Fighting',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 1,
@@ -5573,7 +5533,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Without Remorse',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 6,
         boost: 2,
@@ -5581,7 +5541,7 @@ export const unmatched: Character[] = [
         description: 'After combat: {RED ROOM} Your opponent may draw 1 card.',
         descripcion: 'Después del combate: {RED ROOM} Tu oponente puede robar 1 carta.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Spider-Man',
@@ -5593,7 +5553,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Counter-Attack',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 3,
         boost: 1,
@@ -5605,7 +5565,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Disarming Shot',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 4,
         boost: 3,
@@ -5617,7 +5577,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Friendly Neighborhood Spider-Man',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'any',
@@ -5626,7 +5586,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Momentous Shift',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -5638,7 +5598,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Right in the Face!',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 2,
@@ -5648,7 +5608,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Snark',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 1,
@@ -5658,7 +5618,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Spider-Sense Tingling!',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -5668,7 +5628,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Swinging Kick',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 6,
         boost: 2,
@@ -5680,7 +5640,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Thwip!',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 1,
@@ -5690,7 +5650,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Wall Crawler',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 1,
@@ -5700,7 +5660,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Web Shooters',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 3,
         boost: 2,
@@ -5710,14 +5670,14 @@ export const unmatched: Character[] = [
       },
       {
         name: 'With Great Power',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'any',
         description: "All of Spider-Man's attacks this turn are +1 value. Draw 1 card. Gain 1 action.",
         descripcion: 'Todos los ataques de Spider-Man este turno tienen un valor +1. Roba 1 carta. Gana 1 acción.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'She-Hulk',
@@ -5729,7 +5689,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Cease and Desist',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 1,
         boost: 2,
@@ -5741,7 +5701,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Double Jeopardy',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'any',
@@ -5750,7 +5710,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Green Energy',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 4,
         boost: 1,
@@ -5761,7 +5721,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Jennifer Walters, Esq.',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 1,
         character: 'any',
@@ -5770,7 +5730,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Lady Justice',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 0,
         boost: 2,
@@ -5782,7 +5742,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Leap Toward',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 1,
         character: 'any',
@@ -5793,7 +5753,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Legalese',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -5805,7 +5765,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Nerve Cluster Strike',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 1,
@@ -5817,7 +5777,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Omega-Level Threat',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 5,
         boost: 2,
@@ -5828,7 +5788,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Sensational',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 2,
@@ -5840,7 +5800,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Defense Rests',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 2,
         boost: 2,
@@ -5850,7 +5810,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Savage She-Hulk',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 3,
@@ -5859,7 +5819,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Durante el combate: Puedes gastar una acción adicional para que el valor de esta carta sea 9 en vez de 3.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Doctor Strange',
@@ -5871,7 +5831,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Bolts of Balthakk',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 4,
         value: 2,
         boost: 3,
@@ -5883,7 +5843,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Cloak of Levitation',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 1,
@@ -5895,7 +5855,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Eye of Agamotto',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'DOCTOR STRANGE',
@@ -5904,7 +5864,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Feint',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 1,
@@ -5914,7 +5874,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Master of Kamar-Taj',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -5924,7 +5884,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "No Really, I'm a Doctor",
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'DOCTOR STRANGE',
@@ -5935,7 +5895,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Seven Suns of Cinnibus',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -5947,7 +5907,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Steadfast Disciple',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -5959,7 +5919,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Mists of Munnopor',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 2,
         boost: 2,
@@ -5971,7 +5931,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Rings of Raggadorr',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 1,
@@ -5983,7 +5943,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Winds of Watoomb',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 1,
@@ -5993,7 +5953,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Después del combate: Tu oponente coloca a Dr. Strange en un espacio inicial. Coloca al luchador contrario en otro espacio inicial. Todos los jugadores barajan sus mazos.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Nikola Tesla',
@@ -6005,7 +5965,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: '7 Hertz',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 4,
         boost: 3,
@@ -6017,7 +5977,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Death Ray',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 3,
         boost: 4,
@@ -6029,7 +5989,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Fully Charged',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 1,
         character: 'any',
@@ -6038,7 +5998,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Intense Experimentation',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 3,
         boost: 2,
@@ -6050,7 +6010,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Kinetic Induction',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -6060,7 +6020,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Lightning Storm',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 1,
@@ -6072,7 +6032,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Polyphase Coils',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 1,
@@ -6084,7 +6044,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Remote Control',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'any',
@@ -6093,7 +6053,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Repulsion Blast',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -6105,7 +6065,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Alternating Current',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 5,
         boost: 3,
@@ -6117,7 +6077,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'X-Ray Radiation',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 4,
         boost: 1,
@@ -6127,7 +6087,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Durante el combate: Revela la carta superior del mazo de tu oponente. Puedes descargar bobinas:\n\n- 1 Bobina: Descarta esa carta.\n\n- 2 Bobinas: Además, añade su valor de boost al valor de esta carta.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Dr. Jill Trent',
@@ -6139,7 +6099,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'Ace Fighte',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 5,
         boost: 3,
@@ -6149,7 +6109,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Battle of Wits',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 2,
         boost: 4,
@@ -6161,7 +6121,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Caught Red-Handed',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 1,
         boost: 2,
@@ -6173,7 +6133,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Energizing Spray',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 5,
         boost: 1,
@@ -6183,7 +6143,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Gyroscopic Jetpack',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 4,
         boost: 2,
@@ -6194,7 +6154,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Helpful Assistant',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 3,
         character: 'DAISY',
@@ -6203,7 +6163,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Hypnotist',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 3,
         boost: 1,
@@ -6215,7 +6175,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Indestructible Cloth',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 5,
         boost: 2,
@@ -6226,7 +6186,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Insightful Deduction',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -6238,7 +6198,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Laser Pen',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -6248,7 +6208,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Sisters in Arms',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 1,
@@ -6260,7 +6220,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Stasis Diffuser',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 1,
@@ -6273,7 +6233,7 @@ export const unmatched: Character[] = [
 
       {
         name: 'Utility Belt',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 3,
@@ -6283,7 +6243,7 @@ export const unmatched: Character[] = [
         descripcion:
           'Después del combate: Elige uno:\n\n-Jill Trent recupera 1 de salud,\n\n-Mueve a Jill Trent 1 espacio,\n\n-Roba 1 carta',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Golden Bat',
@@ -6295,7 +6255,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'A Punch to Shake the Earth',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 1,
         boost: 1,
@@ -6307,7 +6267,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Alpine Fortress',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         boost: 3,
         character: 'any',
@@ -6318,7 +6278,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Arrive Just in Time',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'any',
@@ -6327,7 +6287,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'He Laughs at Your Feebleness',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 5,
         boost: 3,
@@ -6337,7 +6297,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Imposing Presence',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 3,
         boost: 2,
@@ -6347,7 +6307,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Insight of the Ancients',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -6358,7 +6318,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Like a Flash of Golden Light',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 2,
@@ -6370,7 +6330,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Sight Beyond Sight',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 2,
         boost: 1,
@@ -6381,7 +6341,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Skirmish',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 4,
         boost: 1,
@@ -6393,7 +6353,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Super Strength',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 5,
         boost: 1,
@@ -6403,7 +6363,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Terrifying Roar',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 1,
@@ -6413,7 +6373,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Vaporizing Eyebeams',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 2,
         boost: 2,
@@ -6421,7 +6381,7 @@ export const unmatched: Character[] = [
         description: 'After combat: Your opponent discards 1 random card.',
         descripcion: 'Después del combate: Tu oponente descarta 1 carta aleatoria.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
   {
     name: 'Annie Christmas',
@@ -6433,7 +6393,7 @@ export const unmatched: Character[] = [
     cards: [
       {
         name: 'A Few More Pearls',
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 3,
         boost: 2,
         character: 'ANNIE',
@@ -6442,7 +6402,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Better Together',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 4,
         value: 4,
         boost: 1,
@@ -6454,7 +6414,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Bottom Dealing',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 2,
         value: 3,
         boost: 2,
@@ -6466,7 +6426,7 @@ export const unmatched: Character[] = [
       },
       {
         name: "Captain's Orders",
-        type: CardType.scheme,
+        type: SchemeCard.scheme,
         amount: 2,
         boost: 2,
         character: 'ANNIE',
@@ -6477,7 +6437,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Keep Your Hands to Yourself',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 3,
         value: 3,
         boost: 2,
@@ -6487,7 +6447,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Lagniappe',
-        type: CardType.attack,
+        type: FightCard.attack,
         amount: 3,
         value: 5,
         boost: 2,
@@ -6499,7 +6459,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Long Shot',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 1,
@@ -6511,7 +6471,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Mississippi Queen',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 3,
         value: 2,
         boost: 3,
@@ -6521,7 +6481,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Quite a Pair',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 3,
         boost: 2,
@@ -6533,7 +6493,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Slick Talker',
-        type: CardType.defense,
+        type: FightCard.defense,
         amount: 2,
         value: 3,
         boost: 3,
@@ -6545,7 +6505,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'Striking Beauty',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 1,
         boost: 3,
@@ -6557,7 +6517,7 @@ export const unmatched: Character[] = [
       },
       {
         name: 'The Turn and the River',
-        type: CardType.versatile,
+        type: FightCard.versatile,
         amount: 2,
         value: 2,
         boost: 3,
@@ -6565,6 +6525,6 @@ export const unmatched: Character[] = [
         description: 'After combat: Draw 2 cards.',
         descripcion: 'Después del combate: Roba 2 cartas.',
       },
-    ] as UnmatchedCard[],
+    ],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
