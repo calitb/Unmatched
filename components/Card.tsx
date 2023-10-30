@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { useReducer } from 'react';
+import { Pressable, StyleSheet, Text } from 'react-native';
 
 import { SchemeCard, type UnmatchedCard } from 'types';
 
@@ -19,17 +20,33 @@ export default function Card(props: Props) {
   const { name, descripcion, type, value, amount, character, boost } = props.card;
   const typeIcon = types[type];
 
+  const [open, toggle] = useReducer((state) => !state, false);
+
   return (
-    <View style={styles.itemContainer}>
+    <Pressable
+      onPress={toggle}
+      style={({ pressed }) => [
+        styles.itemContainer,
+        {
+          backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'white',
+        },
+      ]}
+    >
       <Text style={styles.title}>
+        {name}
+        {'\n'}
         {amount}x{value !== undefined ? ` ${VALUES[value]}${typeIcon}` : ''}
         {type === SchemeCard.scheme ? ` ${typeIcon}` : ''}
         {boost > 0 ? ` ${VALUES[boost]}${BOOST}` : ''}
-        {` ${name}${character !== 'any' ? ` (${character})` : ''}`}
-        {'\n'}
-        <Text style={styles.description}>{descripcion}</Text>
+        {character !== 'any' ? ` (${character})` : ''}
+        {open && (
+          <Text style={styles.description}>
+            {'\n'}
+            {descripcion.length > 0 ? descripcion : '---'}
+          </Text>
+        )}
       </Text>
-    </View>
+    </Pressable>
   );
 }
 
@@ -50,6 +67,7 @@ const VALUES = {
 const styles = StyleSheet.create({
   itemContainer: {
     paddingHorizontal: 10,
+    borderRadius: 8,
   },
   title: {
     fontSize: 17,

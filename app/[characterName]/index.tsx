@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   cardContainer: {
-    gap: 16,
+    gap: 10,
     paddingHorizontal: 16,
     paddingVertical: 4,
   },
