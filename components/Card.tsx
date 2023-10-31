@@ -1,3 +1,4 @@
+import useIsMobile from '@/utils/useIsMobile';
 import * as React from 'react';
 import { useReducer } from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
@@ -20,13 +21,16 @@ export default function Card(props: Props) {
   const { name, descripcion, type, value, amount, character, boost } = props.card;
   const typeIcon = types[type];
 
-  const [open, toggle] = useReducer((state) => !state, false);
+  const isMobile = useIsMobile();
+
+  const [open, toggle] = useReducer((state) => !state, !isMobile);
 
   return (
     <Pressable
       onPress={toggle}
       style={({ pressed }) => [
         styles.itemContainer,
+        isMobile ? {} : { width: '50%' },
         {
           backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'white',
         },

@@ -3,6 +3,7 @@ import * as React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
 import { List } from 'react-native-paper';
 
+import useIsMobile from '@/utils/useIsMobile';
 import { unmatched } from 'assets/unmatched';
 import Ability from 'components/Ability';
 import Attack from 'components/Attack';
@@ -12,6 +13,8 @@ import ReferenceCard from 'components/ReferenceCard';
 export default function Details() {
   const { characterName } = useLocalSearchParams();
   const selectedCharacter = unmatched.filter((character) => character.name === characterName)[0];
+
+  const isMobile = useIsMobile();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -52,7 +55,7 @@ export default function Details() {
           titleStyle={styles.accordionTitle}
           title={`${selectedCharacter.amount} Cartas`}
         >
-          <View style={styles.cardContainer}>
+          <View style={isMobile ? styles.cardContainerMobile : styles.cardContainerWeb}>
             {selectedCharacter.cards.map((card) => (
               <Card key={card.name} card={card} />
             ))}
@@ -80,9 +83,15 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
   },
-  cardContainer: {
+  cardContainerMobile: {
     gap: 10,
     paddingHorizontal: 16,
     paddingVertical: 4,
+  },
+  cardContainerWeb: {
+    rowGap: 10,
+    paddingVertical: 4,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
 });
