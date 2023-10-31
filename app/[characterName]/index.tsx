@@ -1,4 +1,4 @@
-import { Stack, router, useLocalSearchParams } from 'expo-router';
+import { Redirect, Stack, router, useLocalSearchParams } from 'expo-router';
 import * as React from 'react';
 import { Image, Pressable, SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
 import { List } from 'react-native-paper';
@@ -11,10 +11,16 @@ import Card from 'components/Card';
 import ReferenceCard from 'components/ReferenceCard';
 
 export default function Details() {
-  const { characterName } = useLocalSearchParams();
-  const selectedCharacter = unmatched.filter((character) => character.name === characterName)[0];
-
   const isMobile = useIsMobile();
+
+  const { characterName } = useLocalSearchParams();
+  const selectedCharacter = unmatched.filter(
+    (character) => character.name === decodeURI((characterName ?? '').toString()),
+  )[0];
+
+  if (!selectedCharacter) {
+    return <Redirect href="/" />;
+  }
 
   return (
     <SafeAreaView style={styles.container}>
