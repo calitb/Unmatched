@@ -23,7 +23,7 @@ export default function Home() {
             key={character.name}
             style={styles.itemContainer}
             onPress={() => {
-              router.push(`/${character.name}`);
+              router.push(`/${character.id}`);
             }}
             onHoverIn={() => {
               setHoveredCharacter(character);

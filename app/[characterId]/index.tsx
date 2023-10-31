@@ -13,10 +13,8 @@ import ReferenceCard from 'components/ReferenceCard';
 export default function Details() {
   const isMobile = useIsMobile();
 
-  const { characterName } = useLocalSearchParams();
-  const selectedCharacter = unmatched.filter(
-    (character) => character.name === decodeURI((characterName ?? '').toString()),
-  )[0];
+  const { characterId } = useLocalSearchParams();
+  const selectedCharacter = unmatched.filter((character) => character.id === characterId)[0];
 
   if (!selectedCharacter) {
     return <Redirect href="/" />;

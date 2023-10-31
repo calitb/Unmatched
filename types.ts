@@ -33,6 +33,7 @@ export type UnmatchedCard =
     };
 
 export type Character = {
+  id: string;
   name: string;
   image?: ImageSourcePropType;
   amount: number;
