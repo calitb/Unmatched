@@ -1,6 +1,6 @@
-import { Stack, useLocalSearchParams } from 'expo-router';
+import { Stack, router, useLocalSearchParams } from 'expo-router';
 import * as React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
+import { Image, Pressable, SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
 import { List } from 'react-native-paper';
 
 import useIsMobile from '@/utils/useIsMobile';
@@ -22,6 +22,13 @@ export default function Details() {
         options={{
           title: selectedCharacter.name,
           headerBackTitle: 'Volver',
+          headerLeft: !router.canGoBack()
+            ? () => (
+                <Pressable onPress={() => router.replace('/')}>
+                  <Image style={styles.backIcon} source={require('assets/back-icon/back-icon.png')} />
+                </Pressable>
+              )
+            : undefined,
         }}
       />
       <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -93,5 +100,11 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     flexDirection: 'row',
     flexWrap: 'wrap',
+  },
+  backIcon: {
+    tintColor: 'white',
+    width: 24,
+    height: 24,
+    marginHorizontal: 15,
   },
 });
