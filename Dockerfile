@@ -5,9 +5,9 @@ LABEL maintainer="Carlos Thurber B."
 ENV NODE_ENV production
 EXPOSE 3000
 
-WORKDIR .
+WORKDIR /usr/app
 
 COPY . ./
-RUN yarn && yarn global add serve && npx expo export -p web
+RUN yarn && npx expo export -p web && yarn global add serve
 
 CMD npx serve dist --single
