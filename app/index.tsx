@@ -1,10 +1,14 @@
+import { Image } from 'expo-image';
 import { useRouter } from 'expo-router';
+import { cssInterop } from 'nativewind';
 import * as React from 'react';
-import { Image, Platform, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Platform, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { unmatched } from 'assets/unmatched';
 import { useState } from 'react';
 import { Character } from 'types';
+
+cssInterop(Image, { className: 'style' });
 
 const DEFAULT_CARD = { width: 124.4, height: 175 };
 const WIDTH = DEFAULT_CARD.width * (Platform.OS === 'web' ? 1 : 0.75);
@@ -16,12 +20,13 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
+    <SafeAreaView className="bg-white flex-1 flex-row">
+      <ScrollView contentContainerClassName="flex flex-row justify-center flex-wrap gap-1 p-2">
         {unmatched.map((character) => (
           <Pressable
             key={character.name}
             style={styles.itemContainer}
+            className="border border-gray-500 rounded-md items-center"
             onPress={() => {
               router.push(`/${character.id}`);
             }}
@@ -30,12 +35,12 @@ export default function Home() {
             }}
           >
             {character.image ? <Image source={character.image} style={styles.card} /> : <View style={styles.card} />}
-            <Text style={styles.text}>{character.name}</Text>
+            <Text className="text-center p-1">{character.name}</Text>
           </Pressable>
         ))}
       </ScrollView>
       {hoveredCharacter && (
-        <View style={styles.infoContainer}>
+        <View className="m-2 p-2 w-80 border border-gray-500 rounded-md">
           <Text>{hoveredCharacter?.ability?.es}</Text>
         </View>
       )}
@@ -44,38 +49,13 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
-    flex: 1,
-    flexDirection: 'row',
-  },
-  scrollContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    paddingVertical: 10,
-    gap: 3,
-  },
-  infoContainer: {
-    borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 10,
-    width: 320,
-    margin: 10,
-    padding: 10,
-  },
   itemContainer: {
-    borderColor: 'gray',
-    borderWidth: 1,
-    alignItems: 'center',
     width: WIDTH,
   },
   card: {
     height: HEIGHT,
     width: WIDTH,
-  },
-  text: {
-    textAlign: 'center',
-    padding: 2,
+    borderTopLeftRadius: 6,
+    borderTopRightRadius: 6,
   },
 });

@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 export default function ReferenceCard() {
   return (
-    <View style={styles.container}>
-      <View style={styles.whiteContainer}>
-        <Text style={styles.text}>
+    <View className="border border-black rounded-md mt-1 mx-2">
+      <View className="p-2">
+        <Text className="text-lg">
           Debes tomar 2 acciones. Puedes escoger dos acciones diferentes o la misma acción dos veces.
         </Text>
       </View>
@@ -13,12 +13,10 @@ export default function ReferenceCard() {
         Toma una carta. (Obligatorio){'\n'}Mueve tus luchadores (opcional){'\n'}
         Puedes descartar una carta para aplicar BOOST a tu movimiento.
       </ActionRow>
-      <Line />
       <ActionRow title="ESTRATEGIA">Juega una carta ⚡️.</ActionRow>
-      <Line />
       <ActionRow title="ATACAR">Ataca jugando una carta de ataque o versatil boca abajo.</ActionRow>
-      <View style={[styles.blackContainer, { borderBottomStartRadius: 8, borderBottomEndRadius: 8 }]}>
-        <Text style={[styles.text, { color: 'white', textAlign: 'center' }]}>
+      <View className="bg-black p-2 border rounded-b-md">
+        <Text className="text-lg text-white text-center">
           Al final de tu turno, descarta hasta que tengas un máximo de 7 cartas.
         </Text>
       </View>
@@ -29,46 +27,18 @@ export default function ReferenceCard() {
 interface ActionRowProps {
   title: string;
   children: React.ReactNode;
+  titleClassName?: string;
 }
 
-export function ActionRow({ children, title }: ActionRowProps) {
+export function ActionRow({ children, title, titleClassName }: ActionRowProps) {
   return (
     <View>
-      <View style={[styles.whiteContainer, { backgroundColor: 'red' }]}>
-        <Text style={styles.title}>{title}</Text>
+      <View className={'p-2 bg-red-600 border-y-[1px] ' + titleClassName}>
+        <Text className="text-white font-bold text-xl">{title}</Text>
       </View>
-      <View style={[styles.whiteContainer]}>
-        <Text style={styles.text}>{children}</Text>
+      <View className="p-2">
+        <Text className="text-lg">{children}</Text>
       </View>
     </View>
   );
 }
-
-export function Line() {
-  return <View style={{ height: 0.5, backgroundColor: 'black' }} />;
-}
-
-const styles = StyleSheet.create({
-  container: {
-    borderWidth: 1,
-    borderColor: 'black',
-    borderRadius: 8,
-    marginTop: 5,
-    marginHorizontal: 10,
-  },
-  blackContainer: {
-    backgroundColor: 'black',
-    padding: 10,
-  },
-  whiteContainer: {
-    padding: 10,
-  },
-  title: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 20,
-  },
-  text: {
-    fontSize: 18,
-  },
-});

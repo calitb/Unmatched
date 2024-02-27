@@ -1,7 +1,7 @@
 import useIsMobile from '@/utils/useIsMobile';
 import * as React from 'react';
 import { useReducer } from 'react';
-import { Pressable, StyleSheet, Text } from 'react-native';
+import { Pressable, Text } from 'react-native';
 
 import { SchemeCard, type UnmatchedCard } from 'types';
 
@@ -26,17 +26,8 @@ export default function Card(props: Props) {
   const [open, toggle] = useReducer((state) => !state, !isMobile);
 
   return (
-    <Pressable
-      onPress={toggle}
-      style={({ pressed }) => [
-        styles.itemContainer,
-        isMobile ? {} : { width: '50%' },
-        {
-          backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'white',
-        },
-      ]}
-    >
-      <Text style={styles.title}>
+    <Pressable onPress={toggle} className={'active:bg-[#D2E6FF] px-2 rounded-md ' + (isMobile ? '' : 'w-1/2')}>
+      <Text className="font-bold text-lg">
         {name}
         {'\n'}
         {amount}x{value !== undefined ? ` ${VALUES[value]}${typeIcon}` : ''}
@@ -44,7 +35,7 @@ export default function Card(props: Props) {
         {boost > 0 ? ` ${VALUES[boost]}${BOOST}` : ''}
         {character !== 'any' ? ` (${character})` : ''}
         {open && (
-          <Text style={styles.description}>
+          <Text className="font-normal text-sm">
             {'\n'}
             {descripcion.length > 0 ? descripcion : '---'}
           </Text>
@@ -67,18 +58,3 @@ const VALUES = {
   9: '9️⃣',
   10: '🔟',
 };
-
-const styles = StyleSheet.create({
-  itemContainer: {
-    paddingHorizontal: 10,
-    borderRadius: 8,
-  },
-  title: {
-    fontSize: 17,
-    fontWeight: 'bold',
-  },
-  description: {
-    fontSize: 15,
-    fontWeight: 'normal',
-  },
-});

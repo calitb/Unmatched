@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import type { Character } from 'types';
 
@@ -9,26 +9,10 @@ interface Props {
 
 export default function Ability(props: Props) {
   return (
-    <View style={styles.container}>
-      <View style={styles.whiteContainer}>
-        <Text style={styles.text}>{props.character.ability?.es ?? '... '}</Text>
+    <View className="border rounded-md mt-1 mx-2">
+      <View className="p-2">
+        <Text className="text-lg">{props.character.ability?.es ?? '... '}</Text>
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    borderWidth: 1,
-    borderColor: 'black',
-    borderRadius: 8,
-    marginTop: 5,
-    marginHorizontal: 10,
-  },
-  whiteContainer: {
-    padding: 10,
-  },
-  text: {
-    fontSize: 18,
-  },
-});
