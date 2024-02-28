@@ -12,14 +12,6 @@
 npx expo start
 ```
 
-### Building and launching web version using Docker
-
-```shell
-docker-compose up --build
-```
-
-Then launch a browser and open [http://localhost:3010/](http://localhost:3010/)
-
 ## Run Linter
 
 ```shell
