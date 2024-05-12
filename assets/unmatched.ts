@@ -2,6 +2,7 @@ import { Character, FightCard, SchemeCard } from 'types';
 
 export const unmatched: Character[] = [
   {
+    domain: 'Public Domain',
     name: 'Achilles',
     amount: 30,
     image: require('assets/backs/achilles.jpg'),
@@ -141,6 +142,7 @@ export const unmatched: Character[] = [
     id: 'achilles',
   },
   {
+    domain: 'Public Domain',
     name: 'Alice',
     amount: 30,
     image: require('assets/backs/alice.jpg'),
@@ -311,6 +313,7 @@ export const unmatched: Character[] = [
     id: 'alice',
   },
   {
+    domain: 'BuffyVerse',
     name: 'Angel',
     amount: 30,
     image: require('assets/backs/angel.jpg'),
@@ -446,6 +449,7 @@ export const unmatched: Character[] = [
     id: 'angel',
   },
   {
+    domain: 'Public Domain',
     name: 'Annie Christmas',
     image: require('assets/backs/annie.jpg'),
     amount: 30,
@@ -592,6 +596,7 @@ export const unmatched: Character[] = [
     id: 'annie',
   },
   {
+    domain: 'Public Domain',
     name: 'Beowulf',
     amount: 30,
     image: require('assets/backs/beowulf.jpg'),
@@ -739,6 +744,7 @@ export const unmatched: Character[] = [
     id: 'beowulf',
   },
   {
+    domain: 'Public Domain',
     name: 'BigFoot',
     image: require('assets/backs/bigfoot.jpg'),
     ability: {
@@ -870,6 +876,7 @@ export const unmatched: Character[] = [
     id: 'bigfoot',
   },
   {
+    domain: 'Marvel',
     name: 'Black Panther',
     image: require('assets/backs/blackpanther.jpg'),
     amount: 30,
@@ -1023,6 +1030,7 @@ export const unmatched: Character[] = [
     id: 'blackpanther',
   },
   {
+    domain: 'Marvel',
     name: 'Black Widow',
     image: require('assets/backs/blackwidow.jpg'),
     amount: 31,
@@ -1196,6 +1204,7 @@ export const unmatched: Character[] = [
     id: 'blackwidow',
   },
   {
+    domain: 'Public Domain',
     name: 'Bloody Mary',
     amount: 30,
     image: require('assets/backs/bloodymary.jpg'),
@@ -1349,6 +1358,7 @@ export const unmatched: Character[] = [
     id: 'bloodymary',
   },
   {
+    domain: 'Bruce Lee',
     name: 'Bruce Lee',
     amount: 30,
     image: require('assets/backs/brucelee.jpg'),
@@ -1541,6 +1551,7 @@ export const unmatched: Character[] = [
     id: 'brucelee',
   },
   {
+    domain: 'BuffyVerse',
     name: 'Buffy',
     amount: 30,
     image: require('assets/backs/buffy.jpg'),
@@ -1687,6 +1698,7 @@ export const unmatched: Character[] = [
     id: 'buffy',
   },
   {
+    domain: 'Marvel',
     name: 'Bullseye',
     amount: 30,
     image: require('assets/backs/bullseye.jpg'),
@@ -1823,6 +1835,7 @@ export const unmatched: Character[] = [
     id: 'bullseye',
   },
   {
+    domain: 'Marvel',
     name: 'Daredevil',
     amount: 22,
     image: require('assets/backs/daredevil.jpg'),
@@ -1920,6 +1933,7 @@ export const unmatched: Character[] = [
     id: 'daredevil',
   },
   {
+    domain: 'Marvel',
     name: 'Deadpool',
     ability: {
       en: "After you attack, Deadpool recovers 1 health.\nAlso, if your opponent's real name is Logan, all your attacks are +5.",
@@ -2248,6 +2262,7 @@ export const unmatched: Character[] = [
     id: 'deadpool',
   },
   {
+    domain: 'Marvel',
     name: 'Doctor Strange',
     image: require('assets/backs/strange.jpg'),
     amount: 30,
@@ -2384,6 +2399,7 @@ export const unmatched: Character[] = [
     id: 'strange',
   },
   {
+    domain: 'Jurassic Park',
     name: 'Dr. Ellie Sattler',
     amount: 30,
     image: require('assets/backs/sattler.jpg'),
@@ -2549,6 +2565,7 @@ export const unmatched: Character[] = [
     id: 'sattler',
   },
   {
+    domain: 'Public Domain',
     name: 'Dr. Jill Trent',
     image: require('assets/backs/trent.jpg'),
     amount: 30,
@@ -2706,6 +2723,7 @@ export const unmatched: Character[] = [
     id: 'trent',
   },
   {
+    domain: 'Public Domain',
     name: 'Dracula',
     image: require('assets/backs/dracula.jpg'),
     amount: 30,
@@ -2860,6 +2878,7 @@ export const unmatched: Character[] = [
     id: 'dracula',
   },
   {
+    domain: 'Marvel',
     name: 'Elektra',
     image: require('assets/backs/elektra.jpg'),
     amount: 20,
@@ -2980,6 +2999,7 @@ export const unmatched: Character[] = [
     id: 'elektra',
   },
   {
+    domain: 'Marvel',
     name: 'Ghost Rider',
     image: require('assets/backs/ghostrider.jpg'),
     amount: 30,
@@ -3121,6 +3141,7 @@ export const unmatched: Character[] = [
     id: 'ghostrider',
   },
   {
+    domain: 'Public Domain',
     name: 'Golden Bat',
     image: require('assets/backs/goldenbat.jpg'),
     amount: 30,
@@ -3261,6 +3282,7 @@ export const unmatched: Character[] = [
     id: 'goldenbat',
   },
   {
+    domain: 'Public Domain',
     name: 'Houdini',
     image: require('assets/backs/houdini.jpg'),
     amount: 30,
@@ -3421,6 +3443,7 @@ export const unmatched: Character[] = [
     id: 'houdini',
   },
   {
+    domain: 'Jurassic Park',
     name: 'Ingen',
     image: require('assets/backs/ingen.jpg'),
     amount: 30,
@@ -3549,6 +3572,7 @@ export const unmatched: Character[] = [
     id: 'ingen',
   },
   {
+    domain: 'Public Domain',
     name: 'Invisible Man',
     image: require('assets/backs/invisible.jpg'),
     ability: {
@@ -3722,6 +3746,7 @@ export const unmatched: Character[] = [
     id: 'invisible',
   },
   {
+    domain: 'Public Domain',
     name: 'Jekyll & Hyde',
     image: require('assets/backs/jekyll.jpg'),
     amount: 30,
@@ -3873,6 +3898,7 @@ export const unmatched: Character[] = [
     id: 'jekyll',
   },
   {
+    domain: 'Public Domain',
     name: 'King Arthur',
     amount: 30,
     image: require('assets/backs/kingarthur.jpg'),
@@ -4055,6 +4081,7 @@ export const unmatched: Character[] = [
     id: 'kingarthur',
   },
   {
+    domain: 'Public Domain',
     name: 'Little Red Riding Hood',
     amount: 30,
     image: require('assets/backs/littlered.jpg'),
@@ -4194,6 +4221,7 @@ export const unmatched: Character[] = [
     id: 'littlered',
   },
   {
+    domain: 'Marvel',
     name: 'Luke Cage',
     image: require('assets/backs/luke.jpg'),
     amount: 30,
@@ -4347,6 +4375,7 @@ export const unmatched: Character[] = [
     id: 'luke',
   },
   {
+    domain: 'Public Domain',
     name: 'Medusa',
     image: require('assets/backs/medusa.jpg'),
     amount: 30,
@@ -4469,6 +4498,7 @@ export const unmatched: Character[] = [
     id: 'medusa',
   },
   {
+    domain: 'Marvel',
     name: 'Moon Knight',
     image: require('assets/backs/moonknight.jpg'),
     amount: 30,
@@ -4604,6 +4634,7 @@ export const unmatched: Character[] = [
     id: 'moonknight',
   },
   {
+    domain: 'Public Domain',
     name: 'Nikola Tesla',
     image: require('assets/backs/tesla.jpg'),
     amount: 30,
@@ -4739,6 +4770,7 @@ export const unmatched: Character[] = [
     id: 'tesla',
   },
   {
+    domain: 'Jurassic Park',
     name: 'Raptors',
     ability: {
       en: 'Raptors add 1 to the value of their attack cards for each of your other Raptors adjacent to the defender.',
@@ -4871,6 +4903,7 @@ export const unmatched: Character[] = [
     id: 'raptors',
   },
   {
+    domain: 'Public Domain',
     name: 'Robin Hood',
     image: require('assets/backs/robinhood.jpg'),
     ability: {
@@ -5001,6 +5034,7 @@ export const unmatched: Character[] = [
     id: 'robinhood',
   },
   {
+    domain: 'Marvel',
     name: 'She-Hulk',
     image: require('assets/backs/shehulk.jpg'),
     amount: 30,
@@ -5145,6 +5179,7 @@ export const unmatched: Character[] = [
     id: 'shehulk',
   },
   {
+    domain: 'Public Domain',
     name: 'Sherlock Holmes',
     ability: {
       en: 'Effects on HOLMES and DR. WATSON cards cannot be cancelled by an opponent.\n(Effects on ANY cards can be cancelled.)',
@@ -5293,6 +5328,7 @@ export const unmatched: Character[] = [
     id: 'sherlock',
   },
   {
+    domain: 'Public Domain',
     name: 'Sinbad',
     amount: 30,
     image: require('assets/backs/simbad.jpg'),
@@ -5482,6 +5518,7 @@ export const unmatched: Character[] = [
     id: 'simbad',
   },
   {
+    domain: 'Marvel',
     name: 'Spider-Man',
     image: require('assets/backs/spiderman.jpg'),
     amount: 30,
@@ -5620,6 +5657,7 @@ export const unmatched: Character[] = [
     id: 'spiderman',
   },
   {
+    domain: 'BuffyVerse',
     name: 'Spike',
     amount: 30,
     image: require('assets/backs/spike.jpg'),
@@ -5768,6 +5806,7 @@ export const unmatched: Character[] = [
     id: 'spike',
   },
   {
+    domain: 'Public Domain',
     name: 'Sun Wukong',
     ability: {
       en: 'At the start of your turn, you may take 1 damage to summon a Clone in an empty space adjacent to Sun Wukong.\nDo not start with any Clones on the board.',
@@ -5913,6 +5952,7 @@ export const unmatched: Character[] = [
     id: 'sunwukong',
   },
   {
+    domain: 'Jurassic Park',
     name: 'T. Rex',
     ability: {
       en: 'T-Rex is a large fighter. (She can attack up to 2 spaces away.) At the end of your turn, draw a card.\nLarge fighters have an extended base that can occupy up to two spaces. Large fighters may start moving from any space they are in. When they do, rotate them so that the head is moving into the new space. Their tail always follows behind their head, entering the space the left. Large fighters also ignore one-way arrows on maps and cannot use secret passages.\nLarge fighters can attack up to 2 spaces away, even over fighters that occupy one of those spaces.',
@@ -6045,6 +6085,7 @@ export const unmatched: Character[] = [
     id: 'trex',
   },
   {
+    domain: 'Public Domain',
     name: 'The Genie',
     image: require('assets/backs/genie.jpg'),
     amount: 30,
@@ -6180,6 +6221,7 @@ export const unmatched: Character[] = [
     id: 'genie',
   },
   {
+    domain: 'BuffyVerse',
     name: 'Willow',
     amount: 30,
     image: require('assets/backs/willow.jpg'),
@@ -6327,6 +6369,7 @@ export const unmatched: Character[] = [
     id: 'willow',
   },
   {
+    domain: 'Marvel',
     name: 'Winter Soldier',
     image: require('assets/backs/wintersoldier.jpg'),
     amount: 30,
@@ -6465,146 +6508,58 @@ export const unmatched: Character[] = [
     id: 'wintersoldier',
   },
   {
-    name: 'Yennenga',
-    image: require('assets/backs/yennenga.jpg'),
+    domain: 'Marvel',
+    name: 'Ms. Marvel',
     amount: 30,
     ability: {
-      en: 'If Yennenga would take damage, you may assign any amount of that damage to one or more Archers in her zone instead. (You may not assign more damage to an Archer than their remaining health.)\nIf damage would be dealt to Yennenga and an Archer at the same time, Yennenga cannot assign damage from herself to that Archer if the Archer would already be defeated by the damage it took. (Yennenga cannot use her ability to make damage disappear.)',
-      es: 'Si Yennenga va a recibir daño, puedes asignar cualquier cantidad de ese daño a uno o más Arqueros en su zona en su lugar. (No puedes asignar más daño a un Arquero que su salud restante.)\nSi el daño se le va a hacer a Yennenga y a un Arquero al mismo tiempo, Yennenga no puede asignar daño de ella misma a ese Arquero si el Arquero ya estaría derrotado por el daño que recibió. (Yennenga no puede usar su habilidad para hacer que el daño desaparezca.)',
+      en: 'At the start of your turn, you may move Ms. Marvel 1 space.\n\nMs. Marvel can attack from up to 2 spaces away (ignoring zones).',
+      es: 'Al comienzo de tu turno, puedes mover a Ms. Marvel 1 espacio.\n\nMs. Marvel puede atacar hasta 2 espacios de distancia (ignorando zonas).',
     },
-    cards: [
-      {
-        name: 'Divide and Conquer',
-        type: FightCard.versatile,
-        amount: 2,
-        value: 2,
-        boost: 1,
-        character: 'ARCHER',
-        description: "During combat: If your fighter is not in Yennenga's zone, the value of this card is a 4 instead.",
-        descripcion:
-          'Durante el combate: Si tu luchador no está en la zona de Yennenga, el valor de esta carta es 4 en su lugar.',
-      },
-      {
-        name: 'Jaws of the Beast',
-        type: FightCard.versatile,
-        amount: 3,
-        value: 3,
-        boost: 3,
-        character: 'YENNENGA',
-        description: 'During combat: For each zone the opposing fighter is in, increase the value of this card by +1.',
-        descripcion:
-          'Durante el combate: Por cada zona en la que se encuentre el luchador contrario, aumenta el valor de esta carta en +1.',
-      },
-      {
-        name: 'Master of the Hunt',
-        type: SchemeCard.scheme,
-        amount: 2,
-        boost: 3,
-        character: 'YENNENGA',
-        description: 'Gain 2 actions.',
-        descripcion: 'Gana 2 acciones.',
-      },
-      {
-        name: 'Momentous Shift',
-        type: FightCard.versatile,
-        amount: 3,
-        value: 3,
-        boost: 2,
-        character: 'any',
-        description:
-          "During combat: If your fighter started this turn in a different space, this card's value is 5 instead.",
-        descripcion:
-          'Durante el combate: Si tu peleador comenzó este turno en un espacio diferente, el valor de esta carta es 5 en su lugar.',
-      },
-      {
-        name: 'One With The Land',
-        type: SchemeCard.scheme,
-        amount: 2,
-        boost: 2,
-        character: 'YENNENGA',
-        description: 'Move each of your fighters up to 2 spaces. Each of your fighters recovers 1 health. Draw 1 card.',
-        descripcion:
-          'Mueve cada uno de tus luchadores hasta 2 espacios. Cada uno de tus luchadores recupera 1 de salud. Toma 1 carta.',
-      },
-      {
-        name: 'Pin the Prey',
-        type: FightCard.versatile,
-        amount: 2,
-        value: 1,
-        boost: 2,
-        character: 'ARCHER',
-        description: 'After combat: Move the opposing fighter up to 4 spaces. Your opponent discards 1 card.',
-        descripcion: 'Después del combate: Mueve el luchador contrario hasta 4 espacios. Tu oponente descarta 1 carta.',
-      },
-      {
-        name: 'Point Blank',
-        type: FightCard.versatile,
-        amount: 3,
-        value: 2,
-        boost: 2,
-        character: 'YENNENGA',
-        description: 'After combat: If the opposing fighter is adjacent to Yennenga, deal them 2 damage.',
-        descripcion: 'Después del combate: Si el luchador contrario está adyacente a Yennenga, hazle 2 de daño.',
-      },
-      {
-        name: 'Rain of Arrows',
-        type: FightCard.attack,
-        amount: 3,
-        value: 3,
-        boost: 3,
-        character: 'YENNENGA',
-        description: 'After combat: VOLLEY: 3 ATK',
-        descripcion: 'Después del combate: VOLLEY',
-      },
-      {
-        name: 'Shield Formation',
-        type: FightCard.defense,
-        amount: 2,
-        value: 3,
-        boost: 3,
-        character: 'YENNENGA',
-        description:
-          "Immediately: Your opponent may discard a card. If they don't, return a defeated Archer to a space in Yennenga's zone.",
-        descripcion:
-          'Inmediatamente: Tu oponente puede descartar una carta. Si no lo hace, regresa un Arquero derrotado a un espacio en la zona de Yennenga.',
-      },
-      {
-        name: 'Skirmish',
-        type: FightCard.versatile,
-        amount: 2,
-        value: 4,
-        boost: 2,
-        character: 'any',
-        description:
-          'After combat: If you won the combat, choose one of the fighters in the combat and move them up to 2 spaces.',
-        descripcion:
-          'Después del combate: Si ganaste el combate, escoge uno de los luchadores en el combate y muevelo hasta 2 espacios.',
-      },
-      {
-        name: 'Stallion Charge',
-        type: FightCard.versatile,
-        amount: 3,
-        value: 3,
-        boost: 3,
-        character: 'YENNENGA',
-        description:
-          'After combat: Move Yennenga up to 5 spaces. She may move through opposing fighters. Then, deal 1 damage to each opposing fighter she moved through.',
-        descripcion:
-          'Después del combate: Mueve a Yennenga hasta 5 espacios. Ella puede moverse a través de luchadores opuestos. Luego, haz 1 de daño a cada luchador contrario que haya atravesado.',
-      },
-      {
-        name: 'Surprise Volley',
-        type: FightCard.attack,
-        amount: 3,
-        value: 3,
-        boost: 3,
-        character: 'any',
-        description:
-          "Immediately: You may return a defeated Archer to a space in the opposing fighter's zone. If you do, that Archer is now the attacker. If not, gain 1 action.",
-        descripcion:
-          'Inmediatamente: Puedes regresar un Arquero derrotado a un espacio en la zona del luchador contrario. Si lo haces, ese Arquero es ahora el atacante. Si no, gana 1 acción.',
-      },
-    ],
-    id: 'yennenga',
+    cards: [],
+    id: 'ms. marvel',
+  },
+  {
+    domain: 'Marvel',
+    name: 'Squirrel Girl',
+    amount: 30,
+    ability: {
+      en: 'At the start of your turn, summon a squirrel in a space adjacent to Squirrel Girl.\nSquirrels are small fighters. Do not start with any squirrels on the board.\n\nUp to 4 small fighters may share a space with another fighter. When a squirrel is dealt damage, each other squirrel in their space is dealt that much damage as well.',
+      es: 'Al comienzo de tu turno, invoca una ardilla en un espacio adyacente a Squirrel\nLas ardillas son luchadores pequeños. No comienzas con ninguna ardilla en el tablero.\n\nHasta 4 luchadores pequeños pueden compartir un espacio con otro luchador. Cuando una ardilla recibe daño, cada otra ardilla en su espacio recibe ese mismo daño también.',
+    },
+    cards: [],
+    id: 'squirrelgirl',
+  },
+  {
+    domain: 'Marvel',
+    name: 'Cloak and Dagger',
+    amount: 30,
+    ability: {
+      en: 'After you attack, if Cloak dealt at least 2 combat damage, your opponent discards 1 card.\n\nAfter you attack, if Dagger dealt at least 2 combat damage, gain 1 action.',
+      es: 'Después que atacas, si Cloak infligió al menos 2 de daño de combate, tu oponente descarta 1 carta.\n\nDespués que atacas, si Dagger infligió al menos 2 de daño de combate, gana 1 acción.',
+    },
+    cards: [],
+    id: 'cloakanddagger',
+  },
+  {
+    domain: 'Public Domain',
+    name: 'Oda Nobunaga',
+    amount: 30,
+    ability: {
+      en: "Other friendly fighters in Oda Nobunaga's zone add +1 to the value of their played combat cards. (Oda Nobunaga does not benefit from this ability.)",
+      es: 'Otros luchadores aliados en la zona de Oda Nobunaga añaden +1 al valor de sus cartas de combate jugadas. (Oda Nobunaga no se beneficia de esta habilidad.)',
+    },
+    cards: [],
+    id: 'odanobunaga',
+  },
+  {
+    domain: 'Public Domain',
+    name: 'Tomoe Gozen',
+    amount: 30,
+    ability: {
+      en: "When an opposing hero leaves Tomoe Gozen's zone, deal 1 damage to that hero.\n\nTomoe's ability applies any time an opposing hero leaves her zone by moving, placing outside of her zone, or leaving the board.",
+      es: 'Cuando un héroe oponente abandona la zona de Tomoe Gozen, inflige 1 de daño a ese héroe.\n\nLa habilidad de Tomoe se aplica en cualquier momento en que un héroe oponente abandona su zona moviéndose, colocándose fuera de su zona o abandonando el tablero.',
+    },
+    cards: [],
+    id: 'tomoegozen',
   },
 ];

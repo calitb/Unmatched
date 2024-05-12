@@ -33,6 +33,7 @@ export type UnmatchedCard =
     };
 
 export type Character = {
+  domain: 'Public Domain' | 'BuffyVerse' | 'Marvel' | 'Jurassic Park' | 'Bruce Lee' | 'Missing';
   id: string;
   name: string;
   image?: ImageSourcePropType;
