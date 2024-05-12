@@ -34,6 +34,7 @@ export type UnmatchedCard =
 
 export type Character = {
   domain: 'Public Domain' | 'BuffyVerse' | 'Marvel' | 'Jurassic Park' | 'Bruce Lee' | 'Missing';
+  lang?: ('en' | 'es')[];
   id: string;
   name: string;
   image?: ImageSourcePropType;

@@ -57,7 +57,7 @@ export default function Home() {
                   <Pressable
                     key={character.name}
                     style={styles.itemContainer}
-                    className="border border-gray-500 rounded-md items-center"
+                    className="border border-gray-500 rounded-md items-center relative"
                     onPress={() => {
                       if (character.cards.length === 0) return;
                       router.push(`/${character.id}`);
@@ -72,6 +72,11 @@ export default function Home() {
                       <View style={styles.card} />
                     )}
                     <Text className="text-center p-1">{character.name}</Text>
+                    {(character.lang ?? ['en']).includes('es') && (
+                      <View className="absolute top-0 right-1 bg-white rounded-full w-6 h-6 flex justify-center items-center">
+                        <Text className="text-xl">🇪🇸</Text>
+                      </View>
+                    )}
                   </Pressable>
                 )}
               />
