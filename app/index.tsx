@@ -22,23 +22,31 @@ export default function Home() {
   const data = [
     {
       title: 'Public Domain',
-      data: unmatched.filter((character) => character.domain === 'Public Domain'),
+      data: unmatched
+        .filter((character) => character.domain === 'Public Domain')
+        .sort((a, b) => a.name.localeCompare(b.name)),
     },
     {
       title: 'Marvel',
-      data: unmatched.filter((character) => character.domain === 'Marvel'),
+      data: unmatched.filter((character) => character.domain === 'Marvel').sort((a, b) => a.name.localeCompare(b.name)),
     },
     {
       title: 'BuffyVerse',
-      data: unmatched.filter((character) => character.domain === 'BuffyVerse'),
+      data: unmatched
+        .filter((character) => character.domain === 'BuffyVerse')
+        .sort((a, b) => a.name.localeCompare(b.name)),
     },
     {
       title: 'Jurassic Park',
-      data: unmatched.filter((character) => character.domain === 'Jurassic Park'),
+      data: unmatched
+        .filter((character) => character.domain === 'Jurassic Park')
+        .sort((a, b) => a.name.localeCompare(b.name)),
     },
     {
       title: 'Bruce Lee',
-      data: unmatched.filter((character) => character.domain === 'Bruce Lee'),
+      data: unmatched
+        .filter((character) => character.domain === 'Bruce Lee')
+        .sort((a, b) => a.name.localeCompare(b.name)),
     },
   ];
 
@@ -71,7 +79,11 @@ export default function Home() {
                     ) : (
                       <View style={styles.card} />
                     )}
-                    <Text className="text-center p-1">{character.name}</Text>
+                    <div className="p-1 h-10 flex justify-center items-center">
+                      <Text className="text-center" numberOfLines={2}>
+                        {character.name}
+                      </Text>
+                    </div>
                     {(character.lang ?? ['en']).includes('es') && (
                       <View className="absolute top-0 right-1 bg-white rounded-full w-6 h-6 flex justify-center items-center">
                         <Text className="text-xl">🇪🇸</Text>

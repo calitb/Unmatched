@@ -6706,4 +6706,48 @@ export const unmatched: Character[] = [
     cards: [],
     id: 'tomoegozen',
   },
+  {
+    domain: 'Public Domain',
+    name: 'Shakespeare',
+    amount: 30,
+    ability: {
+      en: 'After you attack or defend, add your card to your line.\n\nWhen your line has 10 or more syllabes, discard your line. If there are exactly 10 syllables, resolve the completion effect on the last card.',
+      es: 'Después que atacas o defiendes, añade tu carta a tu línea.\n\nCuando tu línea tiene 10 o más sílabas, descarta tu línea. Si hay exactamente 10 sílabas, resuelve el efecto de completado en la última carta.',
+    },
+    cards: [],
+    id: 'shakespeare',
+  },
+  {
+    domain: 'Public Domain',
+    name: 'The Wayward Sisters',
+    amount: 30,
+    ability: {
+      en: 'Your cards go into your cauldron instead of your discard pile.\n\nAfter you attack, you may cast one spell that you have the ingredients for. If you do, discard all the cards in your cauldron.',
+      es: 'Tus cartas van a tu caldero en lugar de tu pila de descarte.\n\nDespués que atacas, puedes lanzar un hechizo para el que tengas los ingredientes. Si lo haces, descarta todas las cartas en tu caldero.',
+    },
+    cards: [],
+    id: 'waywardsisters',
+  },
+  {
+    domain: 'Public Domain',
+    name: 'Hamlet',
+    amount: 30,
+    ability: {
+      en: "At the start of your turn, choose TO BE or NOT TO BE. If you choose NOT TO BE, deal 2 damage to one of your fighters.\n\nTO BE: When you maneuver, draw 1 additional card.\n\nNOT TO BE: Add +2 to the value of Hamlet's attacks",
+      es: 'Al comienzo de tu turno, elige SER o NO SER. Si eliges NO SER, inflige 2 de daño a uno de tus luchadores.\n\nSER: Cuando maniobres, roba 1 carta adicional.\n\nNO SER: Añade +2 al valor de los ataques de Hamlet',
+    },
+    cards: [],
+    id: 'hamlet',
+  },
+  {
+    domain: 'Public Domain',
+    name: 'Titania',
+    amount: 30,
+    ability: {
+      en: 'If you do not have a face-up glamour at the start of your turn, flip the top card of your glamour deck face-up.\nIts effect is ongoing while it remains face-up.',
+      es: 'Si no tienes un glamour boca arriba al comienzo de tu turno, voltea la carta superior de tu mazo de glamour boca arriba.\nSu efecto es continuo mientras permanezca boca arriba.',
+    },
+    cards: [],
+    id: 'titania',
+  },
 ];
