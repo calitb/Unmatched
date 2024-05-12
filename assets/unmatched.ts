@@ -6508,6 +6508,150 @@ export const unmatched: Character[] = [
     id: 'wintersoldier',
   },
   {
+    domain: 'Public Domain',
+    name: 'Yennenga',
+    image: require('assets/backs/yennenga.jpg'),
+    amount: 30,
+    ability: {
+      en: 'If Yennenga would take damage, you may assign any amount of that damage to one or more Archers in her zone instead. (You may not assign more damage to an Archer than their remaining health.)\nIf damage would be dealt to Yennenga and an Archer at the same time, Yennenga cannot assign damage from herself to that Archer if the Archer would already be defeated by the damage it took. (Yennenga cannot use her ability to make damage disappear.)',
+      es: 'Si Yennenga va a recibir daño, puedes asignar cualquier cantidad de ese daño a uno o más Arqueros en su zona en su lugar. (No puedes asignar más daño a un Arquero que su salud restante.)\nSi el daño se le va a hacer a Yennenga y a un Arquero al mismo tiempo, Yennenga no puede asignar daño de ella misma a ese Arquero si el Arquero ya estaría derrotado por el daño que recibió. (Yennenga no puede usar su habilidad para hacer que el daño desaparezca.)',
+    },
+    cards: [
+      {
+        name: 'Divide and Conquer',
+        type: FightCard.versatile,
+        amount: 2,
+        value: 2,
+        boost: 1,
+        character: 'ARCHER',
+        description: "During combat: If your fighter is not in Yennenga's zone, the value of this card is a 4 instead.",
+        descripcion:
+          'Durante el combate: Si tu luchador no está en la zona de Yennenga, el valor de esta carta es 4 en su lugar.',
+      },
+      {
+        name: 'Jaws of the Beast',
+        type: FightCard.versatile,
+        amount: 3,
+        value: 3,
+        boost: 3,
+        character: 'YENNENGA',
+        description: 'During combat: For each zone the opposing fighter is in, increase the value of this card by +1.',
+        descripcion:
+          'Durante el combate: Por cada zona en la que se encuentre el luchador contrario, aumenta el valor de esta carta en +1.',
+      },
+      {
+        name: 'Master of the Hunt',
+        type: SchemeCard.scheme,
+        amount: 2,
+        boost: 3,
+        character: 'YENNENGA',
+        description: 'Gain 2 actions.',
+        descripcion: 'Gana 2 acciones.',
+      },
+      {
+        name: 'Momentous Shift',
+        type: FightCard.versatile,
+        amount: 3,
+        value: 3,
+        boost: 2,
+        character: 'any',
+        description:
+          "During combat: If your fighter started this turn in a different space, this card's value is 5 instead.",
+        descripcion:
+          'Durante el combate: Si tu peleador comenzó este turno en un espacio diferente, el valor de esta carta es 5 en su lugar.',
+      },
+      {
+        name: 'One With The Land',
+        type: SchemeCard.scheme,
+        amount: 2,
+        boost: 2,
+        character: 'YENNENGA',
+        description: 'Move each of your fighters up to 2 spaces. Each of your fighters recovers 1 health. Draw 1 card.',
+        descripcion:
+          'Mueve cada uno de tus luchadores hasta 2 espacios. Cada uno de tus luchadores recupera 1 de salud. Toma 1 carta.',
+      },
+      {
+        name: 'Pin the Prey',
+        type: FightCard.versatile,
+        amount: 2,
+        value: 1,
+        boost: 2,
+        character: 'ARCHER',
+        description: 'After combat: Move the opposing fighter up to 4 spaces. Your opponent discards 1 card.',
+        descripcion: 'Después del combate: Mueve el luchador contrario hasta 4 espacios. Tu oponente descarta 1 carta.',
+      },
+      {
+        name: 'Point Blank',
+        type: FightCard.versatile,
+        amount: 3,
+        value: 2,
+        boost: 2,
+        character: 'YENNENGA',
+        description: 'After combat: If the opposing fighter is adjacent to Yennenga, deal them 2 damage.',
+        descripcion: 'Después del combate: Si el luchador contrario está adyacente a Yennenga, hazle 2 de daño.',
+      },
+      {
+        name: 'Rain of Arrows',
+        type: FightCard.attack,
+        amount: 3,
+        value: 3,
+        boost: 3,
+        character: 'YENNENGA',
+        description: 'After combat: VOLLEY: 3 ATK',
+        descripcion: 'Después del combate: VOLLEY',
+      },
+      {
+        name: 'Shield Formation',
+        type: FightCard.defense,
+        amount: 2,
+        value: 3,
+        boost: 3,
+        character: 'YENNENGA',
+        description:
+          "Immediately: Your opponent may discard a card. If they don't, return a defeated Archer to a space in Yennenga's zone.",
+        descripcion:
+          'Inmediatamente: Tu oponente puede descartar una carta. Si no lo hace, regresa un Arquero derrotado a un espacio en la zona de Yennenga.',
+      },
+      {
+        name: 'Skirmish',
+        type: FightCard.versatile,
+        amount: 2,
+        value: 4,
+        boost: 2,
+        character: 'any',
+        description:
+          'After combat: If you won the combat, choose one of the fighters in the combat and move them up to 2 spaces.',
+        descripcion:
+          'Después del combate: Si ganaste el combate, escoge uno de los luchadores en el combate y muevelo hasta 2 espacios.',
+      },
+      {
+        name: 'Stallion Charge',
+        type: FightCard.versatile,
+        amount: 3,
+        value: 3,
+        boost: 3,
+        character: 'YENNENGA',
+        description:
+          'After combat: Move Yennenga up to 5 spaces. She may move through opposing fighters. Then, deal 1 damage to each opposing fighter she moved through.',
+        descripcion:
+          'Después del combate: Mueve a Yennenga hasta 5 espacios. Ella puede moverse a través de luchadores opuestos. Luego, haz 1 de daño a cada luchador contrario que haya atravesado.',
+      },
+      {
+        name: 'Surprise Volley',
+        type: FightCard.attack,
+        amount: 3,
+        value: 3,
+        boost: 3,
+        character: 'any',
+        description:
+          "Immediately: You may return a defeated Archer to a space in the opposing fighter's zone. If you do, that Archer is now the attacker. If not, gain 1 action.",
+        descripcion:
+          'Inmediatamente: Puedes regresar un Arquero derrotado a un espacio en la zona del luchador contrario. Si lo haces, ese Arquero es ahora el atacante. Si no, gana 1 acción.',
+      },
+    ],
+    id: 'yennenga',
+  },
+  {
     domain: 'Marvel',
     name: 'Ms. Marvel',
     amount: 30,
