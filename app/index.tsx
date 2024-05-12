@@ -79,11 +79,11 @@ export default function Home() {
                     ) : (
                       <View style={styles.card} />
                     )}
-                    <div className="p-1 h-10 flex justify-center items-center">
+                    <View className="p-1 h-10 flex justify-center items-center">
                       <Text className="text-center" numberOfLines={2}>
                         {character.name}
                       </Text>
-                    </div>
+                    </View>
                     {(character.lang ?? ['en']).includes('es') && (
                       <View className="absolute top-0 right-1 bg-white rounded-full w-6 h-6 flex justify-center items-center">
                         <Text className="text-xl">🇪🇸</Text>
