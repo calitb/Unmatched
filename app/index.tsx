@@ -48,6 +48,22 @@ export default function Home() {
         .filter((character) => character.domain === 'Bruce Lee')
         .sort((a, b) => a.name.localeCompare(b.name)),
     },
+    {
+      title: 'Tales to Amaze',
+      data: unmatched
+        .filter((character) => character.domain === 'Tales to Amaze')
+        .sort((a, b) => a.name.localeCompare(b.name)),
+    },
+    {
+      title: 'Witcher',
+      data: unmatched
+        .filter((character) => character.domain === 'Witcher')
+        .sort((a, b) => a.name.localeCompare(b.name)),
+    },
+    {
+      title: 'TMNT',
+      data: unmatched.filter((character) => character.domain === 'TMNT').sort((a, b) => a.name.localeCompare(b.name)),
+    },
   ];
 
   return (
