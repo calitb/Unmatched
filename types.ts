@@ -35,12 +35,12 @@ export type UnmatchedCard =
 export type Character = {
   domain:
     | 'Public Domain'
-    | 'Tales to Amaze'
+    // | 'Tales to Amaze'
     | 'BuffyVerse'
     | 'Marvel'
     | 'Jurassic Park'
     | 'Bruce Lee'
-    | 'TMNT'
+    // | 'TMNT'
     | 'Witcher'
     | 'Missing';
   lang?: ('en' | 'es')[];
