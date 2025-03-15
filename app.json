@@ -34,9 +34,12 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "12daff59-ad8f-4a72-b868-92b579fdb9a0"
+        "projectId": "42017547-28a9-4770-9d25-51ad75564703"
+      },
+      "router": {
+        "origin": false
       }
     },
-    "owner": "calitb"
+    "owner": "calitb-org"
   }
 }

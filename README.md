@@ -23,3 +23,11 @@ yarn lint
 ```shell
 yarn ts
 ```
+
+### EAS Hosting:
+
+```
+npx expo export -p web
+npx eas deploy --environment development --alias dev
+npx eas deploy --environment production --prod
+```

@@ -11,7 +11,7 @@ import { unmatched } from 'assets/unmatched';
 export default function Layout() {
   const scheme = useColorScheme();
 
-  const owned = unmatched.filter((character) => character.image != null);
+  const owned = unmatched.filter((character) => Boolean(character.image));
 
   return (
     <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
