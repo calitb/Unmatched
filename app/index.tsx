@@ -48,12 +48,12 @@ export default function Home() {
         .filter((character) => character.domain === 'Bruce Lee')
         .sort((a, b) => a.name.localeCompare(b.name)),
     },
-    {
-      title: 'Tales to Amaze',
-      data: unmatched
-        .filter((character) => character.domain === 'Tales to Amaze')
-        .sort((a, b) => a.name.localeCompare(b.name)),
-    },
+    // {
+    //   title: 'Tales to Amaze',
+    //   data: unmatched
+    //     .filter((character) => character.domain === 'Tales to Amaze')
+    //     .sort((a, b) => a.name.localeCompare(b.name)),
+    // },
     {
       title: 'Witcher',
       data: unmatched
